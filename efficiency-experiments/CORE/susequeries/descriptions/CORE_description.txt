@@ -1,0 +1,6 @@
+DECLARE EVENT eventA(id string, eventtype string, timestamp long)
+DECLARE EVENT eventB(id string, eventtype string, timestamp long)
+DECLARE EVENT eventC(id string, eventtype string, timestamp long)
+DECLARE EVENT eventD(id string, eventtype string, timestamp long)
+
+DECLARE STREAM S(eventA, eventB, eventC, eventD)

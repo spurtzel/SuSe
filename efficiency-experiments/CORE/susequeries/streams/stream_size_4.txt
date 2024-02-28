@@ -1,0 +1,5 @@
+eventtype_identifier;date;id;eventtype;timestamp
+eventA;2024-02-08 15:45:30;1;A;1
+eventB;2024-02-08 15:45:31;2;B;2
+eventC;2024-02-08 15:45:32;3;C;3
+eventD;2024-02-08 15:45:33;4;D;4
