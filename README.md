@@ -43,18 +43,18 @@
   
 
 ## Parameters
-- When running the program, you can change the following start paramters in the `execution_script.sh` file.
+- When running the program, you can change the following start parameters in the `execution_script.sh` file.
 
 ### QUERIES
 -  `QUERIES=("ABC" "A(B*C)*D")`: Specifies the Regular Expression (RegEx) queries.
 
   
 ### SUMMARY_SIZES
--  `SUMMARY_SIZES=(10 100 1000)`: Specifies the StateSummary sizes.
+-  `SUMMARY_SIZES=(10 100 1000)`: Specifies the summary sizes.
 
 
 ### TIME_WINDOW_SIZES
--  `TIME_WINDOW_SIZES=(100 250 500)`: Specifies the time-window sizes.
+-  `TIME_WINDOW_SIZES=(100 250 500)`: Specifies the time window sizes.
 
 
 ### STREAM_SIZES
