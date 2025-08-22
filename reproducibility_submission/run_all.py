@@ -142,9 +142,9 @@ def run_background(cmd: str, cwd: Path, log_file: Path, env=None) -> BgProc:
 
 def group_priority(rel: Path) -> int:
     s = rel.as_posix()
-    if s.startswith('sensitivity_analysis/'): return 3
+    if s.startswith('sensitivity_analysis/'): return 0
     if s.startswith('effectiveness/'): return 1
-    if s.startswith('real_world_experiments/'): return 0
+    if s.startswith('real_world_experiments/'): return 3
     if s.startswith('efficiency/'): return 2
     return 4
 
