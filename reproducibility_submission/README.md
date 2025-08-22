@@ -107,7 +107,7 @@ Moved paper/summarySelector_sigmod25_cameraReady.pdf -> runs/paper_plots_reprodu
 
 - **Reproducibility hardware.** We ran the reproducibility on a system with an Intel i7-1265U processor (**10 cores/12 threads; @4.80 GHz**) and **32GB RAM**. 
   
-- **Smaller sample sizes.** Experiments can also be run with sample sizes reduced by 80% compared to the paper (see §5 Running options & orchestration). This allows much faster execution while still yielding results and trends close to those in the paper. We especially recommend this option for weaker systems.
+- **Smaller sample sizes.** Experiments can also be run with sample sizes reduced by 80% compared to the paper (see §3.1 & §5). This allows much faster execution while still yielding results and trends close to those in the paper. We especially recommend this option for weaker systems.
   
 ## 2.1 Docker image overview
 
@@ -119,7 +119,7 @@ Moved paper/summarySelector_sigmod25_cameraReady.pdf -> runs/paper_plots_reprodu
 `run_repro.sh` downloads the Citi Bike **trip dataset** used in our real‑world experiments. This happens **once** on the first run, before any experiments start. This step requires internet access. 
 - **Storage location.** The file `202307-citibike-tripdata.csv` is saved under `real_world_experiments/citi_bike/query0/` and `real_world_experiments/citi_bike/query1/`.
 - **Re-use.** If `202307-citibike-tripdata.csv` is already present, it is **not** downloaded again.
-  
+
 ## 3. How long will it take? (Experiment durations)
 
 In total, the experiments took about **5 days** on our specified hardware with the *smaller* sample sizes. We estimate roughly twice as long when using the larger sample sizes. 
@@ -149,6 +149,19 @@ In total, the experiments took about **5 days** on our specified hardware with t
 
 **Note**
 - We also ran parts of the experiments on a **virtual machine (4 cores @ 3GHz, 32GB RAM)**, where execution was approximately **> 2 times slower** per experiment.
+
+## 3.1 Default vs. paper-scale sampling (reduced sample sizes)
+
+Many of the experiments average results over **multiple independent runs** (different randomized streams, evaluation timestamps). In the paper, we used larger values for `NUM_OF_RUNS`. For quicker end-to-end reproduction, this repository defaults to **reduced sample sizes** (~20% of the paper). This preserves qualitative trends while substantially reducing runtime.
+
+- **What changes?** Only the **number of repeated runs per parameter configuration**. Seeds are fixed and propagated, so results remain deterministic; fewer runs may increase variance in some metrics (e.g., relative recall improvement, throughput).
+
+- **Which experiments?**  
+  - All `sensitivity_analysis/` experiments  
+  - `effectiveness/ablation_study`  
+  - `effectiveness/changing_summary_time_window_sizes`  
+  - `efficiency/flink_core_rematch`: reduced tested x-values from 4096 to 2048 for REmatch and CORE. The two dropped data points add ~2 days runtime, and the trend is already clear with the given x-values.
+
 
 ## 4. What gets produced? (figures, reports, paper PDFs)
 
@@ -354,7 +367,7 @@ All artifact directories below live at `./runs/<experiment_group>/<artifact_dir>
 |  10a   | `efficiency/runtime_summary_size_time_window_size` | `execution_time_summary_time_window_comparison.pdf` | **Figure10a_execution_time_summary_time_window_comparison** |
 |  10b   | `efficiency/runtime_summary_size_time_window_size` | `throughput_boxplot.pdf`                            | **Figure10b_throughput_boxplot**                            |
 |  10c   | `efficiency/runtime_summary_size_time_window_size` | `latency_boxplot.pdf`                               | **Figure10c_latency_boxplot**                               |
-|  10d   | `efficiency/memory_experiment`                     | -                                                   | **Figure10d_memory_experiment**                             |
+|  10d   | `efficiency/memory_experiment`                     | `average_maximum_memory_usage.pdf`                  | **Figure10d_memory_experiment**                             |
 
 #### Real‑world experiments
 | Figure | Experiment directory               | PDF (explicit)                     | Artifact directory name                    |
