@@ -1,6 +1,6 @@
 # SuSe Reproducibility Submission (SIGMOD 2025)
 
-This repository contains the code and scripts to reproduce the experimental results and plots for the paper: **SuSe: Summary Selection for Regular Expression Subsequence Aggregation over Streams.** The instructions below explain the end‑to‑end reproducibility (*single command*), where results, figures, paper PDFs, and outputs are organized, and information about the experiments.
+This repository contains the code and scripts to reproduce the experimental results and plots for the paper: **SuSe: Summary Selection for Regular Expression Subsequence Aggregation over Streams.** The instructions below explain the end‑to‑end reproducibility (*single-command*), where results, figures, paper PDFs, and outputs are organized, and information about the experiments.
 
 > Figures and experimental design follow the [SuSe paper](https://dl.acm.org/doi/pdf/10.1145/3725359) (§7; Figures 6-12)
 
@@ -392,8 +392,8 @@ All artifact directories below live at `./runs/<experiment_group>/<artifact_dir>
 #### Efficiency
 | Figure | Experiment                                          | Description                                                                                                           |
 | :----: | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-|   9a   | StateSummary vs FlinkCEP / CORE / REmatch — time    | **Execution times** for increasing input lengths using pattern `ABCD`; compares to FlinkCEP, CORE (CEP), and REmatch. |
-|   9b   | StateSummary vs FlinkCEP / CORE / REmatch — speedup | **Throughput gain** over baselines for increasing input lengths using pattern `ABCD`.                                 |
+|   9a   | StateSummary vs FlinkCEP / CORE / REmatch - time    | **Execution times** for increasing input lengths using pattern `ABCD`; compares to FlinkCEP, CORE (CEP), and REmatch. |
+|   9b   | StateSummary vs FlinkCEP / CORE / REmatch - speedup | **Throughput gain** over baselines for increasing input lengths using pattern `ABCD`.                                 |
 |  10a   | Runtime vs summary / time window size               | **Execution time** for processing **100,000** elements while varying summary and time window sizes.                   |
 |  10b   | Throughput vs summary / time window size            | **Throughput** for **100,000** elements while varying summary and time window sizes.                                  |
 |  10c   | Latency vs summary / time window size               | **Latency** per element for **100,000** elements while varying summary and time window sizes.                         |
