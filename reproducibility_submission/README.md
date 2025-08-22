@@ -39,7 +39,7 @@ This makes it easy to monitor progress or terminate the application if needed.
   `202307-citibike-tripdata.csv` under `real_world_experiments/citi_bike/query0/` and `real_world_experiments/citi_bike/query1/`. Existing files are reused on subsequent runs.
 
   
-- Prepares the **FlinkCEP** baseline (used in Fig. 9a–9b). If
+- Prepares the **FlinkCEP** baseline (used in Fig. 9a-9b). If
   `reproducibility_submission/efficiency/flink_core_rematch/FLINK/flink_cep/java-cep/target/beispiel-1.0-SNAPSHOT.jar`  is missing, the script unpacks it from
   `.../target/beispiel-1.0-SNAPSHOT.jar.tar.gz`. 
 
@@ -160,7 +160,7 @@ Many of the experiments average results over **multiple independent runs** (diff
   - All `sensitivity_analysis/` experiments  
   - `effectiveness/ablation_study`  
   - `effectiveness/changing_summary_time_window_sizes`  
-  - `efficiency/flink_core_rematch`: reduced tested x-values from 4096 to 2048 for REmatch and CORE. The two dropped data points add ~2 days runtime, and the trend is already clear with the given x-values.
+  - `efficiency/flink_core_rematch`: reduced length of tested words from 4096 to 2048 for REmatch and CORE. The two dropped data points add ~2 days runtime, and the trend is already clear with the given word lengths.
 
 
 ## 4. What gets produced? (figures, reports, paper PDFs)
