@@ -52,7 +52,7 @@ This makes it easy to monitor progress or terminate the application if needed.
   ```
 
 #### Orchestrator `run_all.py`
- - **Runs & resumes experiments.** Executes experiment directories in the order (1) *sensitivity analysis*, (2) *effectiveness*, (3) *efficiency*, and (4) *real-world experiments*. Skips experiments that already have `report*.csv`, and streams logs to `./runs/_logs/`.
+ - **Runs & resumes experiments.** Executes experiment directories in the order (1) *sensitivity analysis*, (2) *effectiveness*, (3) *efficiency*, and (4) *real-world experiments*. On a fresh run, the first experiment executed is `sensitivity_analysis/changing_number_of_disjunction_operators`. Skips experiments that already have `report*.csv`, and streams logs to `./runs/_logs/`. 
 
  - **Post‑processes & organizes.** Runs plot scripts, creates reproduced + comparison PDFs, copies reports into figure‑named directories under `./runs/`, and incrementally rebuilds the reproduced paper PDF (`./runs/paper_plots_reproduced.pdf`) upon finishing an experiment.
 
@@ -78,6 +78,10 @@ Plotting: effectiveness/changing_probability_distribution -> probability_distrib
 Transcript written on summarySelector_sigmod25_cameraReady.log.
 Moved paper/summarySelector_sigmod25_cameraReady.pdf -> runs/paper_plots_reproduced.pdf
 ```
+- **First message on a fresh run.** After the Docker image has been built and the first experiment starts, the first progress line you should see in `repro.out` is:
+  
+  `[1/18 experiments] sensitivity_analysis/changing_number_of_disjunction_operators -> evaluation_script.sh`
+
 
 #### Artifacts  
 - Plots, results, and reproduced paper PDFs are stored in `./runs/` (see *§4. What gets produced* for details).
@@ -89,9 +93,9 @@ Moved paper/summarySelector_sigmod25_cameraReady.pdf -> runs/paper_plots_reprodu
 
 ## 2. Requirements (Environment & Hardware)
   
-- **Docker workflow.** Reproducibility is executed inside a Docker image built from the repository’s `Dockerfile` and tagged `paper-repro:latest`.
+- **Docker workflow.** The user must be able to run `docker` (via `sudo` or by being in the `docker` group ([see here](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user))). Reproducibility is executed inside a Docker image built from the repository’s `Dockerfile` and tagged `paper-repro:latest`. 
   
-- **Host system requirements.** A recent **x86_64 Linux** (e.g., Ubuntu 20.04/24.04 LTS, Arch, Debian 12) with **Docker Engine >= 20.10** and internet access to build the image. The user must be able to run `docker` (via `sudo` or by being in the `docker` group). We recommend **>= 50 GB** free disk space, **32 GB RAM**, and **>= 4 CPU cores**. No GPU required. Avoid running the container with strict memory caps (e.g., `docker run -m <24 GB>`), as some experiments will OOM.
+- **Host system requirements.** A recent **x86_64 Linux** (e.g., Ubuntu 20.04/24.04 LTS, Arch, Debian 12) with **Docker Engine >= 20.10** and internet access to build the image.  We recommend **>= 50 GB** free disk space, **32 GB RAM**, and **>= 4 CPU cores**. No GPU required. Avoid running the container with strict memory caps (e.g., `docker run -m <24 GB>`), as some experiments will OOM.
 
 - **Reproducibility hardware.** We ran the reproducibility on a system with an Intel i7-1265U processor (**10 cores/12 threads; @4.80 GHz**) and **32GB RAM**. 
   
@@ -418,6 +422,7 @@ All artifact directories below live at `./runs/<experiment_group>/<artifact_dir>
 - **No plots but CSVs are present.** Re-run quickstart command to trigger plot post‑processing.
 - **Paper PDF wasn’t produced.** Ensure the `paper/` directory and `summarySelector_sigmod25_cameraReady.tex` are present; inspect `./runs/_logs/paper__pdflatex__*.log`.
 - **I want to re-run only plotting.** Remove figure PDFs under the experiment directory and run the quickstart command again.
+- **Docker.** You must be able to run `docker` (via `sudo` or by being in the `docker` group ([see here](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user))).
 - **Execution rights.** If a script fails with ,,Permission denied'', restore execute bits from the `./reproducibility_submission/` directory via:
 ```bash
 find . -type f \
