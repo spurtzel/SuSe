@@ -1,0 +1,4 @@
+SELECT * FROM S
+WHERE ( eventA ; eventB ; eventC ; eventD )
+WITHIN 100000 [timestamp]
+CONSUME BY NONE

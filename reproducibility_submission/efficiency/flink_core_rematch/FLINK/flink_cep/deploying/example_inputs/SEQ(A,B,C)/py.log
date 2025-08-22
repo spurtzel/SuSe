@@ -1,0 +1,514 @@
+read: /work/efficiency/flink_core_rematch/FLINK/flink_cep/deploying/example_inputs/SEQ(A,B,C)/trace_0.csv
+00:34:22:116248
+simple | 1 | 00:34:22:116248 | A 
+
+Message sent!
+00:34:22:116288
+simple | 2 | 00:34:22:116288 | A 
+
+Message sent!
+00:34:22:116300
+simple | 3 | 00:34:22:116300 | A 
+
+Message sent!
+00:34:22:116308
+simple | 4 | 00:34:22:116308 | A 
+
+Message sent!
+00:34:22:116315
+simple | 5 | 00:34:22:116315 | A 
+
+Message sent!
+00:34:22:116323
+simple | 6 | 00:34:22:116323 | A 
+
+Message sent!
+00:34:22:116331
+simple | 7 | 00:34:22:116331 | A 
+
+Message sent!
+00:34:22:116338
+simple | 8 | 00:34:22:116338 | A 
+
+Message sent!
+00:34:22:116346
+simple | 9 | 00:34:22:116346 | A 
+
+Message sent!
+00:34:22:116354
+simple | 10 | 00:34:22:116354 | A 
+
+Message sent!
+00:34:22:116362
+simple | 11 | 00:34:22:116362 | A 
+
+Message sent!
+00:34:22:116369
+simple | 12 | 00:34:22:116369 | A 
+
+Message sent!
+00:34:22:116377
+simple | 13 | 00:34:22:116377 | A 
+
+Message sent!
+00:34:22:116385
+simple | 14 | 00:34:22:116385 | A 
+
+Message sent!
+00:34:22:116392
+simple | 15 | 00:34:22:116392 | A 
+
+Message sent!
+00:34:22:116400
+simple | 16 | 00:34:22:116400 | A 
+
+Message sent!
+00:34:22:116407
+simple | 17 | 00:34:22:116407 | A 
+
+Message sent!
+00:34:22:116415
+simple | 18 | 00:34:22:116415 | A 
+
+Message sent!
+00:34:22:116422
+simple | 19 | 00:34:22:116422 | A 
+
+Message sent!
+00:34:22:116428
+simple | 20 | 00:34:22:116428 | A 
+
+Message sent!
+00:34:22:116435
+simple | 21 | 00:34:22:116435 | A 
+
+Message sent!
+00:34:22:116443
+simple | 22 | 00:34:22:116443 | A 
+
+Message sent!
+00:34:22:116449
+simple | 23 | 00:34:22:116449 | A 
+
+Message sent!
+00:34:22:116456
+simple | 24 | 00:34:22:116456 | A 
+
+Message sent!
+00:34:22:116462
+simple | 25 | 00:34:22:116462 | A 
+
+Message sent!
+00:34:22:116469
+simple | 26 | 00:34:22:116469 | A 
+
+Message sent!
+00:34:22:116475
+simple | 27 | 00:34:22:116475 | A 
+
+Message sent!
+00:34:22:116482
+simple | 28 | 00:34:22:116482 | A 
+
+Message sent!
+00:34:22:116488
+simple | 29 | 00:34:22:116488 | A 
+
+Message sent!
+00:34:22:116495
+simple | 30 | 00:34:22:116495 | A 
+
+Message sent!
+00:34:22:116501
+simple | 31 | 00:34:22:116501 | A 
+
+Message sent!
+00:34:22:116508
+simple | 32 | 00:34:22:116508 | A 
+
+Message sent!
+00:34:22:116514
+simple | 33 | 00:34:22:116514 | B 
+
+Message sent!
+00:34:22:116521
+simple | 34 | 00:34:22:116521 | B 
+
+Message sent!
+00:34:22:116527
+simple | 35 | 00:34:22:116527 | B 
+
+Message sent!
+00:34:22:116534
+simple | 36 | 00:34:22:116534 | B 
+
+Message sent!
+00:34:22:116540
+simple | 37 | 00:34:22:116540 | B 
+
+Message sent!
+00:34:22:116547
+simple | 38 | 00:34:22:116547 | B 
+
+Message sent!
+00:34:22:116553
+simple | 39 | 00:34:22:116553 | B 
+
+Message sent!
+00:34:22:116560
+simple | 40 | 00:34:22:116560 | B 
+
+Message sent!
+00:34:22:116566
+simple | 41 | 00:34:22:116566 | B 
+
+Message sent!
+00:34:22:116573
+simple | 42 | 00:34:22:116573 | B 
+
+Message sent!
+00:34:22:116579
+simple | 43 | 00:34:22:116579 | B 
+
+Message sent!
+00:34:22:116586
+simple | 44 | 00:34:22:116586 | B 
+
+Message sent!
+00:34:22:116592
+simple | 45 | 00:34:22:116592 | B 
+
+Message sent!
+00:34:22:116598
+simple | 46 | 00:34:22:116598 | B 
+
+Message sent!
+00:34:22:116605
+simple | 47 | 00:34:22:116605 | B 
+
+Message sent!
+00:34:22:116611
+simple | 48 | 00:34:22:116611 | B 
+
+Message sent!
+00:34:22:116618
+simple | 49 | 00:34:22:116618 | B 
+
+Message sent!
+00:34:22:116624
+simple | 50 | 00:34:22:116624 | B 
+
+Message sent!
+00:34:22:116631
+simple | 51 | 00:34:22:116631 | B 
+
+Message sent!
+00:34:22:116637
+simple | 52 | 00:34:22:116637 | B 
+
+Message sent!
+00:34:22:116643
+simple | 53 | 00:34:22:116643 | B 
+
+Message sent!
+00:34:22:116650
+simple | 54 | 00:34:22:116650 | B 
+
+Message sent!
+00:34:22:116656
+simple | 55 | 00:34:22:116656 | B 
+
+Message sent!
+00:34:22:116663
+simple | 56 | 00:34:22:116663 | B 
+
+Message sent!
+00:34:22:116669
+simple | 57 | 00:34:22:116669 | B 
+
+Message sent!
+00:34:22:116676
+simple | 58 | 00:34:22:116676 | B 
+
+Message sent!
+00:34:22:116682
+simple | 59 | 00:34:22:116682 | B 
+
+Message sent!
+00:34:22:116689
+simple | 60 | 00:34:22:116689 | B 
+
+Message sent!
+00:34:22:116695
+simple | 61 | 00:34:22:116695 | B 
+
+Message sent!
+00:34:22:116707
+simple | 62 | 00:34:22:116707 | B 
+
+Message sent!
+00:34:22:116713
+simple | 63 | 00:34:22:116713 | B 
+
+Message sent!
+00:34:22:116720
+simple | 64 | 00:34:22:116720 | B 
+
+Message sent!
+00:34:22:116726
+simple | 65 | 00:34:22:116726 | C 
+
+Message sent!
+00:34:22:116733
+simple | 66 | 00:34:22:116733 | C 
+
+Message sent!
+00:34:22:116739
+simple | 67 | 00:34:22:116739 | C 
+
+Message sent!
+00:34:22:116746
+simple | 68 | 00:34:22:116746 | C 
+
+Message sent!
+00:34:22:116752
+simple | 69 | 00:34:22:116752 | C 
+
+Message sent!
+00:34:22:116759
+simple | 70 | 00:34:22:116759 | C 
+
+Message sent!
+00:34:22:116765
+simple | 71 | 00:34:22:116765 | C 
+
+Message sent!
+00:34:22:116771
+simple | 72 | 00:34:22:116771 | C 
+
+Message sent!
+00:34:22:116778
+simple | 73 | 00:34:22:116778 | C 
+
+Message sent!
+00:34:22:116784
+simple | 74 | 00:34:22:116784 | C 
+
+Message sent!
+00:34:22:116791
+simple | 75 | 00:34:22:116791 | C 
+
+Message sent!
+00:34:22:116797
+simple | 76 | 00:34:22:116797 | C 
+
+Message sent!
+00:34:22:116804
+simple | 77 | 00:34:22:116804 | C 
+
+Message sent!
+00:34:22:116810
+simple | 78 | 00:34:22:116810 | C 
+
+Message sent!
+00:34:22:116816
+simple | 79 | 00:34:22:116816 | C 
+
+Message sent!
+00:34:22:116823
+simple | 80 | 00:34:22:116823 | C 
+
+Message sent!
+00:34:22:116829
+simple | 81 | 00:34:22:116829 | C 
+
+Message sent!
+00:34:22:116835
+simple | 82 | 00:34:22:116835 | C 
+
+Message sent!
+00:34:22:116842
+simple | 83 | 00:34:22:116842 | C 
+
+Message sent!
+00:34:22:116848
+simple | 84 | 00:34:22:116848 | C 
+
+Message sent!
+00:34:22:116855
+simple | 85 | 00:34:22:116855 | C 
+
+Message sent!
+00:34:22:116861
+simple | 86 | 00:34:22:116861 | C 
+
+Message sent!
+00:34:22:116868
+simple | 87 | 00:34:22:116868 | C 
+
+Message sent!
+00:34:22:116874
+simple | 88 | 00:34:22:116874 | C 
+
+Message sent!
+00:34:22:116881
+simple | 89 | 00:34:22:116881 | C 
+
+Message sent!
+00:34:22:116887
+simple | 90 | 00:34:22:116887 | C 
+
+Message sent!
+00:34:22:116893
+simple | 91 | 00:34:22:116893 | C 
+
+Message sent!
+00:34:22:116900
+simple | 92 | 00:34:22:116900 | C 
+
+Message sent!
+00:34:22:116906
+simple | 93 | 00:34:22:116906 | C 
+
+Message sent!
+00:34:22:116913
+simple | 94 | 00:34:22:116913 | C 
+
+Message sent!
+00:34:22:116919
+simple | 95 | 00:34:22:116919 | C 
+
+Message sent!
+00:34:22:116926
+simple | 96 | 00:34:22:116926 | C 
+
+Message sent!
+00:34:22:116932
+simple | 97 | 00:34:22:116932 | D 
+
+Message sent!
+00:34:22:116939
+simple | 98 | 00:34:22:116939 | D 
+
+Message sent!
+00:34:22:116945
+simple | 99 | 00:34:22:116945 | D 
+
+Message sent!
+00:34:22:116951
+simple | 100 | 00:34:22:116951 | D 
+
+Message sent!
+00:34:22:116958
+simple | 101 | 00:34:22:116958 | D 
+
+Message sent!
+00:34:22:116964
+simple | 102 | 00:34:22:116964 | D 
+
+Message sent!
+00:34:22:116971
+simple | 103 | 00:34:22:116971 | D 
+
+Message sent!
+00:34:22:116977
+simple | 104 | 00:34:22:116977 | D 
+
+Message sent!
+00:34:22:116984
+simple | 105 | 00:34:22:116984 | D 
+
+Message sent!
+00:34:22:116990
+simple | 106 | 00:34:22:116990 | D 
+
+Message sent!
+00:34:22:116997
+simple | 107 | 00:34:22:116997 | D 
+
+Message sent!
+00:34:22:117003
+simple | 108 | 00:34:22:117003 | D 
+
+Message sent!
+00:34:22:117010
+simple | 109 | 00:34:22:117010 | D 
+
+Message sent!
+00:34:22:117016
+simple | 110 | 00:34:22:117016 | D 
+
+Message sent!
+00:34:22:117022
+simple | 111 | 00:34:22:117022 | D 
+
+Message sent!
+00:34:22:117029
+simple | 112 | 00:34:22:117029 | D 
+
+Message sent!
+00:34:22:117035
+simple | 113 | 00:34:22:117035 | D 
+
+Message sent!
+00:34:22:117042
+simple | 114 | 00:34:22:117042 | D 
+
+Message sent!
+00:34:22:117048
+simple | 115 | 00:34:22:117048 | D 
+
+Message sent!
+00:34:22:117054
+simple | 116 | 00:34:22:117054 | D 
+
+Message sent!
+00:34:22:117062
+simple | 117 | 00:34:22:117062 | D 
+
+Message sent!
+00:34:22:117069
+simple | 118 | 00:34:22:117069 | D 
+
+Message sent!
+00:34:22:117076
+simple | 119 | 00:34:22:117076 | D 
+
+Message sent!
+00:34:22:117083
+simple | 120 | 00:34:22:117083 | D 
+
+Message sent!
+00:34:22:117091
+simple | 121 | 00:34:22:117091 | D 
+
+Message sent!
+00:34:22:117098
+simple | 122 | 00:34:22:117098 | D 
+
+Message sent!
+00:34:22:117105
+simple | 123 | 00:34:22:117105 | D 
+
+Message sent!
+00:34:22:117114
+simple | 124 | 00:34:22:117114 | D 
+
+Message sent!
+00:34:22:117122
+simple | 125 | 00:34:22:117122 | D 
+
+Message sent!
+00:34:22:117129
+simple | 126 | 00:34:22:117129 | D 
+
+Message sent!
+00:34:22:117136
+simple | 127 | 00:34:22:117136 | D 
+
+Message sent!
+00:34:22:117144
+simple | 128 | 00:34:22:117144 | D 
+
+Message sent!
+end-of-the-stream!!

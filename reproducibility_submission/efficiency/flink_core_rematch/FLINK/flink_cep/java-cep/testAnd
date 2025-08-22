@@ -1,0 +1,2119 @@
+Forwarding:
+  Send mode: broadcast
+  Recipient: []
+Processing:
+  Query name: AND(A,B)
+  Output selection: [A, B]
+  Input 1: A
+  Input 2: B
+  Selectivity: 0.5
+  Sequence constraints: []
+  ID constraints: []
+  Time window size: 60
+  Predicate checks: 3
+Parsed JSON successfully
+WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+15:46:41,065 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporters, slf4j
+15:46:41,071 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.slf4j.factory.class, org.apache.flink.metrics.slf4j.Slf4jReporterFactory
+15:46:41,071 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.slf4j.interval, 2 SECONDS
+15:46:41,336 INFO  org.apache.flink.core.fs.FileSystem                          [] - Hadoop is not in the classpath/dependencies. The extended set of supported File Systems via Hadoop is not available.
+15:46:41,524 INFO  org.apache.flink.api.java.typeutils.TypeExtractor            [] - class com.huberlin.event.Event does not contain a setter for field is_simple
+15:46:41,525 INFO  org.apache.flink.api.java.typeutils.TypeExtractor            [] - Class class com.huberlin.event.Event cannot be used as a POJO type because not all fields are valid POJO fields, and must be processed as GenericType. Please read the Flink documentation on "Data Types & Serialization" for details of the effect on performance.
+15:46:41,658 INFO  org.apache.flink.api.java.typeutils.TypeExtractor            [] - class com.huberlin.event.Event does not contain a setter for field is_simple
+15:46:41,660 INFO  org.apache.flink.api.java.typeutils.TypeExtractor            [] - Class class com.huberlin.event.Event cannot be used as a POJO type because not all fields are valid POJO fields, and must be processed as GenericType. Please read the Flink documentation on "Data Types & Serialization" for details of the effect on performance.
+15:46:41,742 INFO  org.apache.flink.api.java.typeutils.TypeExtractor            [] - class com.huberlin.event.ComplexEvent does not contain a getter for field eventList
+15:46:41,743 INFO  org.apache.flink.api.java.typeutils.TypeExtractor            [] - class com.huberlin.event.ComplexEvent does not contain a setter for field eventList
+15:46:41,744 INFO  org.apache.flink.api.java.typeutils.TypeExtractor            [] - Class class com.huberlin.event.ComplexEvent cannot be used as a POJO type because not all fields are valid POJO fields, and must be processed as GenericType. Please read the Flink documentation on "Data Types & Serialization" for details of the effect on performance.
+15:46:42,245 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils [] - The configuration option taskmanager.cpu.cores required for local execution is not set, setting it to the maximal possible value.
+15:46:42,246 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils [] - The configuration option taskmanager.memory.task.heap.size required for local execution is not set, setting it to the maximal possible value.
+15:46:42,246 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils [] - The configuration option taskmanager.memory.task.off-heap.size required for local execution is not set, setting it to the maximal possible value.
+15:46:42,248 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils [] - The configuration option taskmanager.memory.network.min required for local execution is not set, setting it to its default value 64 mb.
+15:46:42,248 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils [] - The configuration option taskmanager.memory.network.max required for local execution is not set, setting it to its default value 64 mb.
+15:46:42,249 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils [] - The configuration option taskmanager.memory.managed.size required for local execution is not set, setting it to its default value 128 mb.
+15:46:42,255 INFO  org.apache.flink.runtime.minicluster.MiniCluster             [] - Starting Flink Mini Cluster
+15:46:43,015 INFO  org.apache.flink.runtime.minicluster.MiniCluster             [] - Starting Metrics Registry
+15:46:43,219 WARN  org.apache.flink.runtime.metrics.ReporterSetup               [] - The reporter factory (org.apache.flink.metrics.slf4j.Slf4jReporterFactory) could not be found for reporter slf4j. Available factories: [].
+15:46:43,227 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - No metrics reporter configured, no metrics will be exposed/reported.
+15:46:43,228 INFO  org.apache.flink.runtime.minicluster.MiniCluster             [] - Starting RPC Service(s)
+15:46:43,271 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Trying to start local actor system
+15:46:45,559 INFO  akka.event.slf4j.Slf4jLogger                                 [] - Slf4jLogger started
+15:46:46,027 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Actor system started at akka://flink
+15:46:46,111 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Trying to start local actor system
+15:46:46,204 INFO  akka.event.slf4j.Slf4jLogger                                 [] - Slf4jLogger started
+15:46:46,292 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Actor system started at akka://flink-metrics
+15:46:46,362 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at akka://flink-metrics/user/rpc/MetricQueryService .
+15:46:46,443 INFO  org.apache.flink.runtime.minicluster.MiniCluster             [] - Starting high-availability services
+15:46:46,536 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Created BLOB server storage directory /tmp/blobStore-a98663ec-ff4b-492b-b563-1487960ef43c
+15:46:46,558 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Started BLOB server at 0.0.0.0:38819 - max concurrent requests: 50 - max backlog: 1000
+15:46:46,575 INFO  org.apache.flink.runtime.blob.PermanentBlobCache             [] - Created BLOB cache storage directory /tmp/blobStore-e09cbb1a-a45d-4037-a4e7-fb99d99989c6
+15:46:46,578 INFO  org.apache.flink.runtime.blob.TransientBlobCache             [] - Created BLOB cache storage directory /tmp/blobStore-daaf0961-2b4b-4052-a9ae-92f495692563
+15:46:46,585 INFO  org.apache.flink.runtime.minicluster.MiniCluster             [] - Starting 1 TaskManger(s)
+15:46:46,608 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Starting TaskManager with ResourceID: 6a848b93-6259-449e-a4c3-991083f40ac9
+15:46:46,653 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerServices    [] - Temporary file directory '/tmp': total 468 GB, usable 205 GB (43,80% usable)
+15:46:46,668 INFO  org.apache.flink.runtime.io.disk.iomanager.IOManager         [] - Created a new FileChannelManager for spilling of task related data to disk (joins, sorting, ...). Used directories:
+	/tmp/flink-io-7b904a95-2bc8-4987-a5b7-1596a6297424
+15:46:46,683 INFO  org.apache.flink.runtime.io.network.NettyShuffleServiceFactory [] - Created a new FileChannelManager for storing result partitions of BLOCKING shuffles. Used directories:
+	/tmp/flink-netty-shuffle-e659c4a2-93bd-485b-a5ac-352e08ce8c22
+15:46:46,786 INFO  org.apache.flink.runtime.io.network.buffer.NetworkBufferPool [] - Allocated 64 MB for network buffer pool (number of memory segments: 2048, bytes per segment: 32768).
+15:46:46,805 INFO  org.apache.flink.runtime.io.network.NettyShuffleEnvironment  [] - Starting the network environment and its components.
+15:46:46,810 INFO  org.apache.flink.runtime.taskexecutor.KvStateService         [] - Starting the kvState service and its components.
+15:46:46,842 INFO  org.apache.flink.configuration.Configuration                 [] - Config uses fallback configuration key 'akka.ask.timeout' instead of key 'taskmanager.slot.timeout'
+15:46:46,874 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.taskexecutor.TaskExecutor at akka://flink/user/rpc/taskmanager_0 .
+15:46:46,908 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Start job leader service.
+15:46:46,917 INFO  org.apache.flink.runtime.filecache.FileCache                 [] - User file cache uses directory /tmp/flink-dist-cache-fe147cf9-bdda-4e1f-b33b-f0842f3be10b
+15:46:47,050 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Starting rest endpoint.
+15:46:47,712 WARN  org.apache.flink.runtime.webmonitor.WebMonitorUtils          [] - Log file environment variable 'log.file' is not set.
+15:46:47,713 WARN  org.apache.flink.runtime.webmonitor.WebMonitorUtils          [] - JobManager log files are unavailable in the web dashboard. Log file location not found in environment variable 'log.file' or configuration key 'web.log.path'.
+15:46:48,094 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Rest endpoint listening at localhost:8081
+15:46:48,099 INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService [] - Proposing leadership to contender http://localhost:8081
+15:46:48,110 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Web frontend listening at http://localhost:8081.
+15:46:48,110 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - http://localhost:8081 was granted leadership with leaderSessionID=3990eba9-3841-4c2c-95f5-8ec21946792d
+15:46:48,111 INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService [] - Received confirmation of leadership for leader http://localhost:8081 , session=3990eba9-3841-4c2c-95f5-8ec21946792d
+15:46:48,155 INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService [] - Proposing leadership to contender LeaderContender: DefaultDispatcherRunner
+15:46:48,157 INFO  org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl [] - Starting resource manager service.
+15:46:48,159 INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService [] - Proposing leadership to contender LeaderContender: ResourceManagerServiceImpl
+15:46:48,160 INFO  org.apache.flink.runtime.dispatcher.runner.DefaultDispatcherRunner [] - DefaultDispatcherRunner was granted leadership with leader id 149acc3d-d422-42e5-8794-1a0cff2a7b4a. Creating new DispatcherLeaderProcess.
+15:46:48,175 INFO  org.apache.flink.runtime.minicluster.MiniCluster             [] - Flink Mini Cluster started successfully
+15:46:48,175 INFO  org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl [] - Resource manager service is granted leadership with session id 99030eb6-2970-450d-9865-959f3d13fa30.
+15:46:48,203 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Start SessionDispatcherLeaderProcess.
+15:46:48,206 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Recover all persisted job graphs.
+15:46:48,207 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Successfully recovered 0 persisted job graphs.
+15:46:48,228 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.dispatcher.StandaloneDispatcher at akka://flink/user/rpc/dispatcher_1 .
+15:46:48,251 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.resourcemanager.StandaloneResourceManager at akka://flink/user/rpc/resourcemanager_2 .
+15:46:48,276 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Starting the resource manager.
+15:46:48,289 INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService [] - Received confirmation of leadership for leader akka://flink/user/rpc/dispatcher_1 , session=149acc3d-d422-42e5-8794-1a0cff2a7b4a
+15:46:48,331 INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService [] - Received confirmation of leadership for leader akka://flink/user/rpc/resourcemanager_2 , session=99030eb6-2970-450d-9865-959f3d13fa30
+15:46:48,403 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Connecting to ResourceManager akka://flink/user/rpc/resourcemanager_2(9865959f3d13fa3099030eb62970450d).
+15:46:48,425 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Resolved ResourceManager address, beginning registration
+15:46:48,435 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Received JobGraph submission 'Flink Java API Skeleton' (172bb3a5c3b3263b24d04822e7fe0b10).
+15:46:48,440 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Submitting job 'Flink Java API Skeleton' (172bb3a5c3b3263b24d04822e7fe0b10).
+15:46:48,445 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering TaskManager with ResourceID 6a848b93-6259-449e-a4c3-991083f40ac9 (akka://flink/user/rpc/taskmanager_0) at ResourceManager
+15:46:48,452 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Successful registration at resource manager akka://flink/user/rpc/resourcemanager_2 under registration id 10615816329160eddcf720cf5007a0c1.
+15:46:48,486 INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService [] - Proposing leadership to contender LeaderContender: JobMasterServiceLeadershipRunner
+15:46:48,518 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.jobmaster.JobMaster at akka://flink/user/rpc/jobmanager_3 .
+15:46:48,546 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Initializing job 'Flink Java API Skeleton' (172bb3a5c3b3263b24d04822e7fe0b10).
+15:46:48,612 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using restart back off time strategy NoRestartBackoffTimeStrategy for Flink Java API Skeleton (172bb3a5c3b3263b24d04822e7fe0b10).
+15:46:48,717 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Running initialization on master for job Flink Java API Skeleton (172bb3a5c3b3263b24d04822e7fe0b10).
+15:46:48,717 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Successfully ran initialization on master in 0 ms.
+15:46:48,771 INFO  org.apache.flink.runtime.scheduler.adapter.DefaultExecutionTopology [] - Built 1 pipelined regions in 0 ms
+15:46:48,838 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@4fab331
+15:46:48,838 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+15:46:48,840 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Checkpoint storage is set to 'jobmanager'
+15:46:48,880 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - No checkpoint found during restore.
+15:46:48,893 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using failover strategy org.apache.flink.runtime.executiongraph.failover.flip1.RestartPipelinedRegionFailoverStrategy@7fa84050 for Flink Java API Skeleton (172bb3a5c3b3263b24d04822e7fe0b10).
+15:46:48,927 INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService [] - Received confirmation of leadership for leader akka://flink/user/rpc/jobmanager_3 , session=7707fc74-69ff-44bc-8c0d-cb3ebdc3f014
+15:46:48,942 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting execution of job 'Flink Java API Skeleton' (172bb3a5c3b3263b24d04822e7fe0b10) under job master id 8c0dcb3ebdc3f0147707fc7469ff44bc.
+15:46:48,944 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting scheduling with scheduling strategy [org.apache.flink.runtime.scheduler.strategy.PipelinedRegionSchedulingStrategy]
+15:46:48,945 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job Flink Java API Skeleton (172bb3a5c3b3263b24d04822e7fe0b10) switched from state CREATED to RUNNING.
+15:46:48,963 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source -> Map (1/1) (a8539022a4a5c62277fcba8f823f4b83) switched from CREATED to SCHEDULED.
+15:46:48,963 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - GlobalCepOperator -> Filter -> Sink: Unnamed (1/1) (c16be32ac09764b19ef922f41a25b285) switched from CREATED to SCHEDULED.
+15:46:49,018 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Connecting to ResourceManager akka://flink/user/rpc/resourcemanager_2(9865959f3d13fa3099030eb62970450d)
+15:46:49,022 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Resolved ResourceManager address, beginning registration
+15:46:49,024 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering job manager 8c0dcb3ebdc3f0147707fc7469ff44bc@akka://flink/user/rpc/jobmanager_3 for job 172bb3a5c3b3263b24d04822e7fe0b10.
+15:46:49,037 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registered job manager 8c0dcb3ebdc3f0147707fc7469ff44bc@akka://flink/user/rpc/jobmanager_3 for job 172bb3a5c3b3263b24d04822e7fe0b10.
+15:46:49,043 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - JobManager successfully registered at ResourceManager, leader id: 9865959f3d13fa3099030eb62970450d.
+15:46:49,050 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager [] - Received resource requirements from job 172bb3a5c3b3263b24d04822e7fe0b10: [ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}]
+15:46:49,058 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Receive slot request c2f4131337e6122d5f447d869fec5e42 for job 172bb3a5c3b3263b24d04822e7fe0b10 from resource manager with leader id 9865959f3d13fa3099030eb62970450d.
+15:46:49,069 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Allocated slot for c2f4131337e6122d5f447d869fec5e42.
+15:46:49,071 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Add job 172bb3a5c3b3263b24d04822e7fe0b10 for job leader monitoring.
+15:46:49,073 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Try to register at job manager akka://flink/user/rpc/jobmanager_3 with leader id 7707fc74-69ff-44bc-8c0d-cb3ebdc3f014.
+15:46:49,076 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Resolved JobManager address, beginning registration
+15:46:49,094 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Successful registration at job manager akka://flink/user/rpc/jobmanager_3 for job 172bb3a5c3b3263b24d04822e7fe0b10.
+15:46:49,105 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Establish JobManager connection for job 172bb3a5c3b3263b24d04822e7fe0b10.
+15:46:49,110 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Offer reserved slots to the leader of job 172bb3a5c3b3263b24d04822e7fe0b10.
+15:46:49,149 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source -> Map (1/1) (a8539022a4a5c62277fcba8f823f4b83) switched from SCHEDULED to DEPLOYING.
+15:46:49,151 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying Source: Custom Source -> Map (1/1) (attempt #0) with attempt id a8539022a4a5c62277fcba8f823f4b83 to 6a848b93-6259-449e-a4c3-991083f40ac9 @ localhost (dataPort=-1) with allocation id c2f4131337e6122d5f447d869fec5e42
+15:46:49,167 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot c2f4131337e6122d5f447d869fec5e42.
+15:46:49,170 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - GlobalCepOperator -> Filter -> Sink: Unnamed (1/1) (c16be32ac09764b19ef922f41a25b285) switched from SCHEDULED to DEPLOYING.
+15:46:49,170 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying GlobalCepOperator -> Filter -> Sink: Unnamed (1/1) (attempt #0) with attempt id c16be32ac09764b19ef922f41a25b285 to 6a848b93-6259-449e-a4c3-991083f40ac9 @ localhost (dataPort=-1) with allocation id c2f4131337e6122d5f447d869fec5e42
+15:46:49,213 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - StateChangelogStorageLoader initialized with shortcut names {memory}.
+15:46:49,216 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - Creating a changelog storage with name 'memory'.
+15:46:49,287 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Received task Source: Custom Source -> Map (1/1)#0 (a8539022a4a5c62277fcba8f823f4b83), deploy into slot with allocation id c2f4131337e6122d5f447d869fec5e42.
+15:46:49,296 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: Custom Source -> Map (1/1)#0 (a8539022a4a5c62277fcba8f823f4b83) switched from CREATED to DEPLOYING.
+15:46:49,301 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot c2f4131337e6122d5f447d869fec5e42.
+15:46:49,308 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Loading JAR files for task Source: Custom Source -> Map (1/1)#0 (a8539022a4a5c62277fcba8f823f4b83) [DEPLOYING].
+15:46:49,389 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Received task GlobalCepOperator -> Filter -> Sink: Unnamed (1/1)#0 (c16be32ac09764b19ef922f41a25b285), deploy into slot with allocation id c2f4131337e6122d5f447d869fec5e42.
+15:46:49,391 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot c2f4131337e6122d5f447d869fec5e42.
+15:46:49,390 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - GlobalCepOperator -> Filter -> Sink: Unnamed (1/1)#0 (c16be32ac09764b19ef922f41a25b285) switched from CREATED to DEPLOYING.
+15:46:49,393 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Loading JAR files for task GlobalCepOperator -> Filter -> Sink: Unnamed (1/1)#0 (c16be32ac09764b19ef922f41a25b285) [DEPLOYING].
+15:46:49,421 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@204176ff
+15:46:49,422 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+15:46:49,422 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - Checkpoint storage is set to 'jobmanager'
+15:46:49,426 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@342ebe05
+15:46:49,427 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+15:46:49,427 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - Checkpoint storage is set to 'jobmanager'
+15:46:49,436 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - GlobalCepOperator -> Filter -> Sink: Unnamed (1/1)#0 (c16be32ac09764b19ef922f41a25b285) switched from DEPLOYING to INITIALIZING.
+15:46:49,438 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: Custom Source -> Map (1/1)#0 (a8539022a4a5c62277fcba8f823f4b83) switched from DEPLOYING to INITIALIZING.
+15:46:49,444 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source -> Map (1/1) (a8539022a4a5c62277fcba8f823f4b83) switched from DEPLOYING to INITIALIZING.
+15:46:49,445 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - GlobalCepOperator -> Filter -> Sink: Unnamed (1/1) (c16be32ac09764b19ef922f41a25b285) switched from DEPLOYING to INITIALIZING.
+15:46:49,640 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: Custom Source -> Map (1/1)#0 (a8539022a4a5c62277fcba8f823f4b83) switched from INITIALIZING to RUNNING.
+15:46:49,641 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source -> Map (1/1) (a8539022a4a5c62277fcba8f823f4b83) switched from INITIALIZING to RUNNING.
+15:46:49,667 INFO  org.apache.flink.runtime.state.heap.HeapKeyedStateBackendBuilder [] - Finished to build heap keyed state-backend.
+15:46:49,694 INFO  org.apache.flink.runtime.state.heap.HeapKeyedStateBackend    [] - Initializing heap keyed state backend with stream factory.
+15:46:49,746 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - GlobalCepOperator -> Filter -> Sink: Unnamed (1/1)#0 (c16be32ac09764b19ef922f41a25b285) switched from INITIALIZING to RUNNING.
+15:46:49,747 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - GlobalCepOperator -> Filter -> Sink: Unnamed (1/1) (c16be32ac09764b19ef922f41a25b285) switched from INITIALIZING to RUNNING.
+15:46:53,576 INFO  com.huberlin.communication.OldSourceFunction                 [] - New client connected
+simple | 20a06616 | 15:46:53:575755 | A was received at: 15:46:53:579196
+simple | 49244d28 | 15:46:58:580456 | A was received at: 15:46:58:581031
+simple | ff696a7c | 15:47:01:583354 | A was received at: 15:47:01:584255
+simple | 598b0847 | 15:47:02:585024 | A was received at: 15:47:02:585968
+simple | b66fbba7 | 15:47:03:586760 | A was received at: 15:47:03:587623
+simple | 9b0fe25c | 15:47:04:587593 | B was received at: 15:47:04:588888
+complex | 15:47:04:701587 | AND(A,B) | 2 | (15:46:53:575755, 20a06616, A) ;(15:47:04:587593, 9b0fe25c, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 113
+complex | 15:47:04:780582 | AND(A,B) | 2 | (15:46:58:580456, 49244d28, A) ;(15:47:04:587593, 9b0fe25c, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 192
+simple | bf80fd7b | 15:47:05:589361 | A was received at: 15:47:05:590989
+simple | 3d5550fe | 15:47:05:589975 | A was received at: 15:47:05:592493
+complex | 15:47:05:602182 | AND(A,B) | 2 | (15:47:04:587593, 9b0fe25c, B) ;(15:47:05:589361, bf80fd7b, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 12
+complex | 15:47:05:707084 | AND(A,B) | 2 | (15:47:04:587593, 9b0fe25c, B) ;(15:47:05:589975, 3d5550fe, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 117
+simple | a6856fb3 | 15:47:08:591268 | B was received at: 15:47:08:592444
+complex | 15:47:08:606262 | AND(A,B) | 2 | (15:46:58:580456, 49244d28, A) ;(15:47:08:591268, a6856fb3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 14
+complex | 15:47:08:608325 | AND(A,B) | 2 | (15:47:01:583354, ff696a7c, A) ;(15:47:08:591268, a6856fb3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 17
+complex | 15:47:08:610007 | AND(A,B) | 2 | (15:47:02:585024, 598b0847, A) ;(15:47:08:591268, a6856fb3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 18
+complex | 15:47:08:611826 | AND(A,B) | 2 | (15:47:05:589361, bf80fd7b, A) ;(15:47:08:591268, a6856fb3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 20
+simple | 0b9444c4 | 15:47:09:593071 | A was received at: 15:47:09:593911
+simple | 39be0dee | 15:47:10:594678 | B was received at: 15:47:10:595353
+complex | 15:47:10:620876 | AND(A,B) | 2 | (15:47:01:583354, ff696a7c, A) ;(15:47:10:594678, 39be0dee, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+complex | 15:47:10:622766 | AND(A,B) | 2 | (15:47:05:589975, 3d5550fe, A) ;(15:47:10:594678, 39be0dee, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 28
+complex | 15:47:10:624640 | AND(A,B) | 2 | (15:47:09:593071, 0b9444c4, A) ;(15:47:10:594678, 39be0dee, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 29
+simple | 2a0b4c24 | 15:47:17:599222 | B was received at: 15:47:17:600055
+simple | 19ac4841 | 15:47:17:599795 | A was received at: 15:47:17:601844
+simple | e5f717dc | 15:47:17:600292 | A was received at: 15:47:17:603713
+complex | 15:47:17:636028 | AND(A,B) | 2 | (15:46:53:575755, 20a06616, A) ;(15:47:17:599222, 2a0b4c24, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+complex | 15:47:17:641741 | AND(A,B) | 2 | (15:46:58:580456, 49244d28, A) ;(15:47:17:599222, 2a0b4c24, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 42
+complex | 15:47:17:645201 | AND(A,B) | 2 | (15:47:05:589975, 3d5550fe, A) ;(15:47:17:599222, 2a0b4c24, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 45
+complex | 15:47:17:646751 | AND(A,B) | 2 | (15:47:09:593071, 0b9444c4, A) ;(15:47:17:599222, 2a0b4c24, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 47
+complex | 15:47:17:652573 | AND(A,B) | 2 | (15:47:10:594678, 39be0dee, B) ;(15:47:17:599795, 19ac4841, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 52
+complex | 15:47:17:655365 | AND(A,B) | 2 | (15:47:17:599222, 2a0b4c24, B) ;(15:47:17:599795, 19ac4841, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 55
+complex | 15:47:17:666483 | AND(A,B) | 2 | (15:47:10:594678, 39be0dee, B) ;(15:47:17:600292, e5f717dc, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 66
+simple | dd7cac4c | 15:47:19:602735 | A was received at: 15:47:19:603753
+complex | 15:47:19:634427 | AND(A,B) | 2 | (15:47:04:587593, 9b0fe25c, B) ;(15:47:19:602735, dd7cac4c, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 31
+complex | 15:47:19:637039 | AND(A,B) | 2 | (15:47:08:591268, a6856fb3, B) ;(15:47:19:602735, dd7cac4c, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 34
+complex | 15:47:19:638895 | AND(A,B) | 2 | (15:47:10:594678, 39be0dee, B) ;(15:47:19:602735, dd7cac4c, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+complex | 15:47:19:640605 | AND(A,B) | 2 | (15:47:17:599222, 2a0b4c24, B) ;(15:47:19:602735, dd7cac4c, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 37
+simple | be88def2 | 15:47:20:603589 | A was received at: 15:47:20:604261
+complex | 15:47:20:636645 | AND(A,B) | 2 | (15:47:04:587593, 9b0fe25c, B) ;(15:47:20:603589, be88def2, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 33
+complex | 15:47:20:638490 | AND(A,B) | 2 | (15:47:08:591268, a6856fb3, B) ;(15:47:20:603589, be88def2, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 34
+complex | 15:47:20:639925 | AND(A,B) | 2 | (15:47:10:594678, 39be0dee, B) ;(15:47:20:603589, be88def2, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+complex | 15:47:20:644628 | AND(A,B) | 2 | (15:47:17:599222, 2a0b4c24, B) ;(15:47:20:603589, be88def2, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 41
+simple | 264bc9dd | 15:47:21:604153 | A was received at: 15:47:21:605234
+complex | 15:47:21:636260 | AND(A,B) | 2 | (15:47:10:594678, 39be0dee, B) ;(15:47:21:604153, 264bc9dd, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 32
+simple | 3761bdc5 | 15:47:25:607932 | A was received at: 15:47:25:609496
+complex | 15:47:25:654113 | AND(A,B) | 2 | (15:47:08:591268, a6856fb3, B) ;(15:47:25:607932, 3761bdc5, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 46
+simple | 0164185f | 15:47:27:610773 | B was received at: 15:47:27:611895
+complex | 15:47:27:656090 | AND(A,B) | 2 | (15:47:05:589361, bf80fd7b, A) ;(15:47:27:610773, 0164185f, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 45
+complex | 15:47:27:658677 | AND(A,B) | 2 | (15:47:17:600292, e5f717dc, A) ;(15:47:27:610773, 0164185f, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 47
+complex | 15:47:27:661693 | AND(A,B) | 2 | (15:47:20:603589, be88def2, A) ;(15:47:27:610773, 0164185f, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 50
+complex | 15:47:27:664549 | AND(A,B) | 2 | (15:47:21:604153, 264bc9dd, A) ;(15:47:27:610773, 0164185f, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 53
+simple | 84f9f557 | 15:47:29:612086 | A was received at: 15:47:29:613025
+complex | 15:47:29:657605 | AND(A,B) | 2 | (15:47:04:587593, 9b0fe25c, B) ;(15:47:29:612086, 84f9f557, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 45
+complex | 15:47:29:661957 | AND(A,B) | 2 | (15:47:08:591268, a6856fb3, B) ;(15:47:29:612086, 84f9f557, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 49
+complex | 15:47:29:666688 | AND(A,B) | 2 | (15:47:17:599222, 2a0b4c24, B) ;(15:47:29:612086, 84f9f557, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 54
+simple | 55b29b04 | 15:47:38:621241 | A was received at: 15:47:38:623380
+complex | 15:47:38:692927 | AND(A,B) | 2 | (15:47:17:599222, 2a0b4c24, B) ;(15:47:38:621241, 55b29b04, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 71
+simple | 97a25146 | 15:47:40:624914 | A was received at: 15:47:40:627375
+complex | 15:47:40:684658 | AND(A,B) | 2 | (15:47:08:591268, a6856fb3, B) ;(15:47:40:624914, 97a25146, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 59
+complex | 15:47:40:688185 | AND(A,B) | 2 | (15:47:10:594678, 39be0dee, B) ;(15:47:40:624914, 97a25146, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 63
+complex | 15:47:40:690665 | AND(A,B) | 2 | (15:47:17:599222, 2a0b4c24, B) ;(15:47:40:624914, 97a25146, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 65
+complex | 15:47:40:694586 | AND(A,B) | 2 | (15:47:27:610773, 0164185f, B) ;(15:47:40:624914, 97a25146, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 69
+simple | 2d2b102d | 15:47:44:631221 | A was received at: 15:47:44:632648
+complex | 15:47:44:684220 | AND(A,B) | 2 | (15:47:10:594678, 39be0dee, B) ;(15:47:44:631221, 2d2b102d, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 52
+complex | 15:47:44:689894 | AND(A,B) | 2 | (15:47:17:599222, 2a0b4c24, B) ;(15:47:44:631221, 2d2b102d, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 58
+simple | a0ab49f6 | 15:47:46:634338 | A was received at: 15:47:46:635627
+complex | 15:47:46:697029 | AND(A,B) | 2 | (15:47:08:591268, a6856fb3, B) ;(15:47:46:634338, a0ab49f6, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 62
+complex | 15:47:46:700264 | AND(A,B) | 2 | (15:47:10:594678, 39be0dee, B) ;(15:47:46:634338, a0ab49f6, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 65
+complex | 15:47:46:707829 | AND(A,B) | 2 | (15:47:27:610773, 0164185f, B) ;(15:47:46:634338, a0ab49f6, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 73
+simple | df13c18e | 15:47:48:638059 | A was received at: 15:47:48:639188
+complex | 15:47:48:688144 | AND(A,B) | 2 | (15:47:17:599222, 2a0b4c24, B) ;(15:47:48:638059, df13c18e, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 50
+simple | 3168ba15 | 15:47:49:639150 | A was received at: 15:47:49:639556
+simple | e94ad798 | 15:47:49:639400 | B was received at: 15:47:49:640045
+complex | 15:47:49:690827 | AND(A,B) | 2 | (15:47:04:587593, 9b0fe25c, B) ;(15:47:49:639150, 3168ba15, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 51
+complex | 15:47:49:702150 | AND(A,B) | 2 | (15:47:08:591268, a6856fb3, B) ;(15:47:49:639150, 3168ba15, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 63
+complex | 15:47:49:710022 | AND(A,B) | 2 | (15:47:10:594678, 39be0dee, B) ;(15:47:49:639150, 3168ba15, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 70
+complex | 15:47:49:716847 | AND(A,B) | 2 | (15:47:17:599222, 2a0b4c24, B) ;(15:47:49:639150, 3168ba15, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 77
+complex | 15:47:49:721000 | AND(A,B) | 2 | (15:46:53:575755, 20a06616, A) ;(15:47:49:639400, e94ad798, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 81
+complex | 15:47:49:721641 | AND(A,B) | 2 | (15:46:58:580456, 49244d28, A) ;(15:47:49:639400, e94ad798, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 82
+complex | 15:47:49:722082 | AND(A,B) | 2 | (15:47:01:583354, ff696a7c, A) ;(15:47:49:639400, e94ad798, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 82
+complex | 15:47:49:722493 | AND(A,B) | 2 | (15:47:03:586760, b66fbba7, A) ;(15:47:49:639400, e94ad798, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 83
+complex | 15:47:49:723129 | AND(A,B) | 2 | (15:47:09:593071, 0b9444c4, A) ;(15:47:49:639400, e94ad798, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 83
+complex | 15:47:49:723710 | AND(A,B) | 2 | (15:47:17:599795, 19ac4841, A) ;(15:47:49:639400, e94ad798, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 84
+complex | 15:47:49:724241 | AND(A,B) | 2 | (15:47:17:600292, e5f717dc, A) ;(15:47:49:639400, e94ad798, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 84
+complex | 15:47:49:724737 | AND(A,B) | 2 | (15:47:19:602735, dd7cac4c, A) ;(15:47:49:639400, e94ad798, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 85
+complex | 15:47:49:725365 | AND(A,B) | 2 | (15:47:21:604153, 264bc9dd, A) ;(15:47:49:639400, e94ad798, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 85
+complex | 15:47:49:725807 | AND(A,B) | 2 | (15:47:29:612086, 84f9f557, A) ;(15:47:49:639400, e94ad798, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 86
+complex | 15:47:49:726235 | AND(A,B) | 2 | (15:47:40:624914, 97a25146, A) ;(15:47:49:639400, e94ad798, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 86
+complex | 15:47:49:726694 | AND(A,B) | 2 | (15:47:44:631221, 2d2b102d, A) ;(15:47:49:639400, e94ad798, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 87
+complex | 15:47:49:727261 | AND(A,B) | 2 | (15:47:46:634338, a0ab49f6, A) ;(15:47:49:639400, e94ad798, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 87
+complex | 15:47:49:727746 | AND(A,B) | 2 | (15:47:48:638059, df13c18e, A) ;(15:47:49:639400, e94ad798, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 88
+simple | 6667d2e5 | 15:47:50:640659 | B was received at: 15:47:50:641810
+simple | 7f3c60eb | 15:47:50:641195 | A was received at: 15:47:50:642662
+complex | 15:47:50:696532 | AND(A,B) | 2 | (15:46:53:575755, 20a06616, A) ;(15:47:50:640659, 6667d2e5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 55
+complex | 15:47:50:697291 | AND(A,B) | 2 | (15:46:58:580456, 49244d28, A) ;(15:47:50:640659, 6667d2e5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 56
+complex | 15:47:50:697725 | AND(A,B) | 2 | (15:47:03:586760, b66fbba7, A) ;(15:47:50:640659, 6667d2e5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 57
+complex | 15:47:50:698082 | AND(A,B) | 2 | (15:47:05:589975, 3d5550fe, A) ;(15:47:50:640659, 6667d2e5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 57
+complex | 15:47:50:698430 | AND(A,B) | 2 | (15:47:17:599795, 19ac4841, A) ;(15:47:50:640659, 6667d2e5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 57
+complex | 15:47:50:698779 | AND(A,B) | 2 | (15:47:19:602735, dd7cac4c, A) ;(15:47:50:640659, 6667d2e5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 58
+complex | 15:47:50:699136 | AND(A,B) | 2 | (15:47:21:604153, 264bc9dd, A) ;(15:47:50:640659, 6667d2e5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 58
+complex | 15:47:50:699655 | AND(A,B) | 2 | (15:47:46:634338, a0ab49f6, A) ;(15:47:50:640659, 6667d2e5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 58
+complex | 15:47:50:701881 | AND(A,B) | 2 | (15:47:04:587593, 9b0fe25c, B) ;(15:47:50:641195, 7f3c60eb, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 60
+complex | 15:47:50:702383 | AND(A,B) | 2 | (15:47:08:591268, a6856fb3, B) ;(15:47:50:641195, 7f3c60eb, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 61
+complex | 15:47:50:702741 | AND(A,B) | 2 | (15:47:17:599222, 2a0b4c24, B) ;(15:47:50:641195, 7f3c60eb, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 61
+complex | 15:47:50:703051 | AND(A,B) | 2 | (15:47:49:639400, e94ad798, B) ;(15:47:50:641195, 7f3c60eb, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 61
+complex | 15:47:50:703418 | AND(A,B) | 2 | (15:47:50:640659, 6667d2e5, B) ;(15:47:50:641195, 7f3c60eb, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 62
+simple | 5a699726 | 15:47:52:643371 | B was received at: 15:47:52:643617
+complex | 15:47:52:695912 | AND(A,B) | 2 | (15:47:01:583354, ff696a7c, A) ;(15:47:52:643371, 5a699726, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 52
+complex | 15:47:52:696733 | AND(A,B) | 2 | (15:47:03:586760, b66fbba7, A) ;(15:47:52:643371, 5a699726, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 53
+complex | 15:47:52:697351 | AND(A,B) | 2 | (15:47:05:589361, bf80fd7b, A) ;(15:47:52:643371, 5a699726, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 53
+complex | 15:47:52:697919 | AND(A,B) | 2 | (15:47:05:589975, 3d5550fe, A) ;(15:47:52:643371, 5a699726, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 54
+complex | 15:47:52:698747 | AND(A,B) | 2 | (15:47:17:599795, 19ac4841, A) ;(15:47:52:643371, 5a699726, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 55
+complex | 15:47:52:699506 | AND(A,B) | 2 | (15:47:19:602735, dd7cac4c, A) ;(15:47:52:643371, 5a699726, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 56
+complex | 15:47:52:700251 | AND(A,B) | 2 | (15:47:25:607932, 3761bdc5, A) ;(15:47:52:643371, 5a699726, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 56
+complex | 15:47:52:700991 | AND(A,B) | 2 | (15:47:29:612086, 84f9f557, A) ;(15:47:52:643371, 5a699726, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 57
+complex | 15:47:52:701639 | AND(A,B) | 2 | (15:47:44:631221, 2d2b102d, A) ;(15:47:52:643371, 5a699726, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 58
+complex | 15:47:52:702277 | AND(A,B) | 2 | (15:47:48:638059, df13c18e, A) ;(15:47:52:643371, 5a699726, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 58
+simple | 8de39871 | 15:47:59:647138 | A was received at: 15:47:59:647601
+complex | 15:47:59:705096 | AND(A,B) | 2 | (15:47:27:610773, 0164185f, B) ;(15:47:59:647138, 8de39871, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 57
+complex | 15:47:59:708254 | AND(A,B) | 2 | (15:47:49:639400, e94ad798, B) ;(15:47:59:647138, 8de39871, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 61
+complex | 15:47:59:709472 | AND(A,B) | 2 | (15:47:52:643371, 5a699726, B) ;(15:47:59:647138, 8de39871, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 62
+simple | bbdeacba | 15:48:06:652857 | A was received at: 15:48:06:653206
+complex | 15:48:06:715781 | AND(A,B) | 2 | (15:47:10:594678, 39be0dee, B) ;(15:48:06:652857, bbdeacba, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 62
+complex | 15:48:06:716180 | AND(A,B) | 2 | (15:47:17:599222, 2a0b4c24, B) ;(15:48:06:652857, bbdeacba, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 63
+simple | 583ce3ce | 15:48:10:657587 | A was received at: 15:48:10:659436
+complex | 15:48:10:720739 | AND(A,B) | 2 | (15:47:50:640659, 6667d2e5, B) ;(15:48:10:657587, 583ce3ce, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 63
+simple | 332793fe | 15:48:14:661809 | A was received at: 15:48:14:663145
+complex | 15:48:14:725927 | AND(A,B) | 2 | (15:47:52:643371, 5a699726, B) ;(15:48:14:661809, 332793fe, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 64
+simple | bcc57783 | 15:48:17:663129 | B was received at: 15:48:17:663439
+simple | de094439 | 15:48:17:663294 | B was received at: 15:48:17:663769
+complex | 15:48:17:728361 | AND(A,B) | 2 | (15:47:20:603589, be88def2, A) ;(15:48:17:663129, bcc57783, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 65
+complex | 15:48:17:728724 | AND(A,B) | 2 | (15:47:21:604153, 264bc9dd, A) ;(15:48:17:663129, bcc57783, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 65
+complex | 15:48:17:728984 | AND(A,B) | 2 | (15:47:29:612086, 84f9f557, A) ;(15:48:17:663129, bcc57783, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 65
+complex | 15:48:17:729209 | AND(A,B) | 2 | (15:47:40:624914, 97a25146, A) ;(15:48:17:663129, bcc57783, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 66
+complex | 15:48:17:729407 | AND(A,B) | 2 | (15:47:46:634338, a0ab49f6, A) ;(15:48:17:663129, bcc57783, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 66
+complex | 15:48:17:729613 | AND(A,B) | 2 | (15:47:50:641195, 7f3c60eb, A) ;(15:48:17:663129, bcc57783, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 66
+complex | 15:48:17:730949 | AND(A,B) | 2 | (15:47:19:602735, dd7cac4c, A) ;(15:48:17:663294, de094439, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 67
+complex | 15:48:17:731274 | AND(A,B) | 2 | (15:47:38:621241, 55b29b04, A) ;(15:48:17:663294, de094439, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 67
+complex | 15:48:17:731527 | AND(A,B) | 2 | (15:47:40:624914, 97a25146, A) ;(15:48:17:663294, de094439, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 68
+complex | 15:48:17:731742 | AND(A,B) | 2 | (15:47:48:638059, df13c18e, A) ;(15:48:17:663294, de094439, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 68
+complex | 15:48:17:731938 | AND(A,B) | 2 | (15:47:50:641195, 7f3c60eb, A) ;(15:48:17:663294, de094439, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 68
+complex | 15:48:17:732169 | AND(A,B) | 2 | (15:47:59:647138, 8de39871, A) ;(15:48:17:663294, de094439, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 68
+complex | 15:48:17:732372 | AND(A,B) | 2 | (15:48:14:661809, 332793fe, A) ;(15:48:17:663294, de094439, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 69
+simple | 9a1b32bd | 15:48:21:666820 | A was received at: 15:48:21:667658
+complex | 15:48:21:740565 | AND(A,B) | 2 | (15:47:49:639400, e94ad798, B) ;(15:48:21:666820, 9a1b32bd, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 73
+complex | 15:48:21:744544 | AND(A,B) | 2 | (15:47:50:640659, 6667d2e5, B) ;(15:48:21:666820, 9a1b32bd, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 77
+simple | d9417874 | 15:48:27:673106 | A was received at: 15:48:27:673956
+complex | 15:48:27:748615 | AND(A,B) | 2 | (15:47:49:639400, e94ad798, B) ;(15:48:27:673106, d9417874, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 75
+complex | 15:48:27:750847 | AND(A,B) | 2 | (15:47:50:640659, 6667d2e5, B) ;(15:48:27:673106, d9417874, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 77
+complex | 15:48:27:752760 | AND(A,B) | 2 | (15:48:17:663294, de094439, B) ;(15:48:27:673106, d9417874, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 79
+simple | 15060a49 | 15:48:29:675227 | A was received at: 15:48:29:676927
+simple | 0b58d0eb | 15:48:29:675885 | A was received at: 15:48:29:677863
+complex | 15:48:29:749167 | AND(A,B) | 2 | (15:47:49:639400, e94ad798, B) ;(15:48:29:675227, 15060a49, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 73
+complex | 15:48:29:749711 | AND(A,B) | 2 | (15:47:50:640659, 6667d2e5, B) ;(15:48:29:675227, 15060a49, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 74
+complex | 15:48:29:750064 | AND(A,B) | 2 | (15:48:17:663129, bcc57783, B) ;(15:48:29:675227, 15060a49, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 74
+complex | 15:48:29:750477 | AND(A,B) | 2 | (15:48:17:663294, de094439, B) ;(15:48:29:675227, 15060a49, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 75
+complex | 15:48:29:753928 | AND(A,B) | 2 | (15:47:49:639400, e94ad798, B) ;(15:48:29:675885, 0b58d0eb, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 78
+complex | 15:48:29:754542 | AND(A,B) | 2 | (15:48:17:663294, de094439, B) ;(15:48:29:675885, 0b58d0eb, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 78
+simple | b5a99016 | 15:48:33:679221 | B was received at: 15:48:33:680185
+complex | 15:48:33:765938 | AND(A,B) | 2 | (15:47:38:621241, 55b29b04, A) ;(15:48:33:679221, b5a99016, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 86
+complex | 15:48:33:768244 | AND(A,B) | 2 | (15:47:40:624914, 97a25146, A) ;(15:48:33:679221, b5a99016, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 89
+complex | 15:48:33:770115 | AND(A,B) | 2 | (15:47:44:631221, 2d2b102d, A) ;(15:48:33:679221, b5a99016, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 90
+complex | 15:48:33:775753 | AND(A,B) | 2 | (15:47:49:639150, 3168ba15, A) ;(15:48:33:679221, b5a99016, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 96
+complex | 15:48:33:777370 | AND(A,B) | 2 | (15:47:50:641195, 7f3c60eb, A) ;(15:48:33:679221, b5a99016, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 98
+complex | 15:48:33:778067 | AND(A,B) | 2 | (15:48:06:652857, bbdeacba, A) ;(15:48:33:679221, b5a99016, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 98
+complex | 15:48:33:778707 | AND(A,B) | 2 | (15:48:10:657587, 583ce3ce, A) ;(15:48:33:679221, b5a99016, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 99
+complex | 15:48:33:779226 | AND(A,B) | 2 | (15:48:14:661809, 332793fe, A) ;(15:48:33:679221, b5a99016, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 100
+simple | 1dda9ef6 | 15:48:37:682992 | A was received at: 15:48:37:684555
+complex | 15:48:37:767757 | AND(A,B) | 2 | (15:47:50:640659, 6667d2e5, B) ;(15:48:37:682992, 1dda9ef6, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 84
+complex | 15:48:37:769700 | AND(A,B) | 2 | (15:47:52:643371, 5a699726, B) ;(15:48:37:682992, 1dda9ef6, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 86
+simple | 1df3accb | 15:48:40:686860 | A was received at: 15:48:40:687779
+complex | 15:48:40:773562 | AND(A,B) | 2 | (15:47:50:640659, 6667d2e5, B) ;(15:48:40:686860, 1df3accb, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 86
+complex | 15:48:40:775892 | AND(A,B) | 2 | (15:47:52:643371, 5a699726, B) ;(15:48:40:686860, 1df3accb, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 89
+simple | 3b0f022e | 15:48:43:689949 | A was received at: 15:48:43:691087
+complex | 15:48:43:777900 | AND(A,B) | 2 | (15:47:49:639400, e94ad798, B) ;(15:48:43:689949, 3b0f022e, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 87
+simple | 119c5d92 | 15:48:44:691626 | A was received at: 15:48:44:692170
+complex | 15:48:44:777010 | AND(A,B) | 2 | (15:47:49:639400, e94ad798, B) ;(15:48:44:691626, 119c5d92, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 85
+complex | 15:48:44:777720 | AND(A,B) | 2 | (15:47:52:643371, 5a699726, B) ;(15:48:44:691626, 119c5d92, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 86
+complex | 15:48:44:778183 | AND(A,B) | 2 | (15:48:17:663129, bcc57783, B) ;(15:48:44:691626, 119c5d92, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 86
+complex | 15:48:44:778697 | AND(A,B) | 2 | (15:48:17:663294, de094439, B) ;(15:48:44:691626, 119c5d92, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 87
+complex | 15:48:44:783741 | AND(A,B) | 2 | (15:48:33:679221, b5a99016, B) ;(15:48:44:691626, 119c5d92, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 92
+simple | 83a5e44b | 15:48:48:695241 | A was received at: 15:48:48:695751
+complex | 15:48:48:784575 | AND(A,B) | 2 | (15:47:52:643371, 5a699726, B) ;(15:48:48:695241, 83a5e44b, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 89
+complex | 15:48:48:786011 | AND(A,B) | 2 | (15:48:17:663294, de094439, B) ;(15:48:48:695241, 83a5e44b, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 90
+simple | a84210a7 | 15:48:49:696513 | B was received at: 15:48:49:696965
+complex | 15:48:49:784966 | AND(A,B) | 2 | (15:47:50:641195, 7f3c60eb, A) ;(15:48:49:696513, a84210a7, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 88
+complex | 15:48:49:786337 | AND(A,B) | 2 | (15:48:06:652857, bbdeacba, A) ;(15:48:49:696513, a84210a7, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 89
+complex | 15:48:49:786957 | AND(A,B) | 2 | (15:48:21:666820, 9a1b32bd, A) ;(15:48:49:696513, a84210a7, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 90
+complex | 15:48:49:787532 | AND(A,B) | 2 | (15:48:27:673106, d9417874, A) ;(15:48:49:696513, a84210a7, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 91
+complex | 15:48:49:788207 | AND(A,B) | 2 | (15:48:29:675227, 15060a49, A) ;(15:48:49:696513, a84210a7, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 91
+complex | 15:48:49:788610 | AND(A,B) | 2 | (15:48:37:682992, 1dda9ef6, A) ;(15:48:49:696513, a84210a7, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 92
+complex | 15:48:49:789001 | AND(A,B) | 2 | (15:48:40:686860, 1df3accb, A) ;(15:48:49:696513, a84210a7, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 92
+complex | 15:48:49:789331 | AND(A,B) | 2 | (15:48:44:691626, 119c5d92, A) ;(15:48:49:696513, a84210a7, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 92
+simple | 6e07421f | 15:48:50:697098 | A was received at: 15:48:50:697648
+complex | 15:48:50:786766 | AND(A,B) | 2 | (15:48:33:679221, b5a99016, B) ;(15:48:50:697098, 6e07421f, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 89
+complex | 15:48:50:788981 | AND(A,B) | 2 | (15:48:49:696513, a84210a7, B) ;(15:48:50:697098, 6e07421f, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 91
+simple | 1ea3d09b | 15:48:51:697939 | A was received at: 15:48:51:699346
+complex | 15:48:51:786386 | AND(A,B) | 2 | (15:47:52:643371, 5a699726, B) ;(15:48:51:697939, 1ea3d09b, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 88
+complex | 15:48:51:786755 | AND(A,B) | 2 | (15:48:33:679221, b5a99016, B) ;(15:48:51:697939, 1ea3d09b, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 88
+simple | a992a324 | 15:48:59:704577 | B was received at: 15:48:59:704971
+complex | 15:48:59:801855 | AND(A,B) | 2 | (15:48:06:652857, bbdeacba, A) ;(15:48:59:704577, a992a324, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 97
+complex | 15:48:59:803388 | AND(A,B) | 2 | (15:48:29:675885, 0b58d0eb, A) ;(15:48:59:704577, a992a324, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 98
+complex | 15:48:59:804643 | AND(A,B) | 2 | (15:48:37:682992, 1dda9ef6, A) ;(15:48:59:704577, a992a324, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 100
+complex | 15:48:59:806449 | AND(A,B) | 2 | (15:48:43:689949, 3b0f022e, A) ;(15:48:59:704577, a992a324, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 101
+simple | af2bb9f5 | 15:49:00:705130 | B was received at: 15:49:00:705483
+complex | 15:49:00:798439 | AND(A,B) | 2 | (15:48:06:652857, bbdeacba, A) ;(15:49:00:705130, af2bb9f5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 93
+complex | 15:49:00:798751 | AND(A,B) | 2 | (15:48:14:661809, 332793fe, A) ;(15:49:00:705130, af2bb9f5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 93
+complex | 15:49:00:798968 | AND(A,B) | 2 | (15:48:40:686860, 1df3accb, A) ;(15:49:00:705130, af2bb9f5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 93
+complex | 15:49:00:799194 | AND(A,B) | 2 | (15:48:44:691626, 119c5d92, A) ;(15:49:00:705130, af2bb9f5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 94
+simple | e826edd0 | 15:49:10:715305 | B was received at: 15:49:10:716077
+simple | eacf1cfe | 15:49:10:715896 | A was received at: 15:49:10:716975
+complex | 15:49:10:823087 | AND(A,B) | 2 | (15:48:21:666820, 9a1b32bd, A) ;(15:49:10:715305, e826edd0, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 107
+complex | 15:49:10:825182 | AND(A,B) | 2 | (15:48:27:673106, d9417874, A) ;(15:49:10:715305, e826edd0, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 109
+complex | 15:49:10:826240 | AND(A,B) | 2 | (15:48:29:675227, 15060a49, A) ;(15:49:10:715305, e826edd0, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 110
+complex | 15:49:10:827174 | AND(A,B) | 2 | (15:48:29:675885, 0b58d0eb, A) ;(15:49:10:715305, e826edd0, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 111
+complex | 15:49:10:828152 | AND(A,B) | 2 | (15:48:37:682992, 1dda9ef6, A) ;(15:49:10:715305, e826edd0, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 112
+complex | 15:49:10:829602 | AND(A,B) | 2 | (15:48:40:686860, 1df3accb, A) ;(15:49:10:715305, e826edd0, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 114
+complex | 15:49:10:837259 | AND(A,B) | 2 | (15:48:17:663129, bcc57783, B) ;(15:49:10:715896, eacf1cfe, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 121
+complex | 15:49:10:838214 | AND(A,B) | 2 | (15:48:33:679221, b5a99016, B) ;(15:49:10:715896, eacf1cfe, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 122
+complex | 15:49:10:839687 | AND(A,B) | 2 | (15:49:00:705130, af2bb9f5, B) ;(15:49:10:715896, eacf1cfe, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 123
+simple | b03a2ce7 | 15:49:11:717314 | A was received at: 15:49:11:717618
+complex | 15:49:11:815817 | AND(A,B) | 2 | (15:48:17:663129, bcc57783, B) ;(15:49:11:717314, b03a2ce7, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 98
+complex | 15:49:11:816173 | AND(A,B) | 2 | (15:49:10:715305, e826edd0, B) ;(15:49:11:717314, b03a2ce7, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 98
+simple | c448e012 | 15:49:16:722528 | A was received at: 15:49:16:723535
+complex | 15:49:16:827391 | AND(A,B) | 2 | (15:48:33:679221, b5a99016, B) ;(15:49:16:722528, c448e012, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 104
+complex | 15:49:16:828914 | AND(A,B) | 2 | (15:48:49:696513, a84210a7, B) ;(15:49:16:722528, c448e012, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 106
+complex | 15:49:16:830301 | AND(A,B) | 2 | (15:48:59:704577, a992a324, B) ;(15:49:16:722528, c448e012, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 107
+complex | 15:49:16:831773 | AND(A,B) | 2 | (15:49:00:705130, af2bb9f5, B) ;(15:49:16:722528, c448e012, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 109
+complex | 15:49:16:832636 | AND(A,B) | 2 | (15:49:10:715305, e826edd0, B) ;(15:49:16:722528, c448e012, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 110
+simple | 411179ff | 15:49:17:724404 | A was received at: 15:49:17:725473
+complex | 15:49:17:829419 | AND(A,B) | 2 | (15:48:33:679221, b5a99016, B) ;(15:49:17:724404, 411179ff, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 105
+complex | 15:49:17:832712 | AND(A,B) | 2 | (15:49:10:715305, e826edd0, B) ;(15:49:17:724404, 411179ff, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 108
+simple | baddb5b2 | 15:49:20:727583 | A was received at: 15:49:20:728526
+complex | 15:49:20:835385 | AND(A,B) | 2 | (15:48:59:704577, a992a324, B) ;(15:49:20:727583, baddb5b2, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 107
+complex | 15:49:20:839445 | AND(A,B) | 2 | (15:49:10:715305, e826edd0, B) ;(15:49:20:727583, baddb5b2, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 111
+simple | 9330e8e8 | 15:49:25:731228 | A was received at: 15:49:25:732178
+complex | 15:49:25:744178 | AND(A,B) | 2 | (15:48:59:704577, a992a324, B) ;(15:49:25:731228, 9330e8e8, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 12
+complex | 15:49:25:747646 | AND(A,B) | 2 | (15:49:10:715305, e826edd0, B) ;(15:49:25:731228, 9330e8e8, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 16
+simple | c1246a1f | 15:49:27:734066 | B was received at: 15:49:27:734940
+complex | 15:49:27:747351 | AND(A,B) | 2 | (15:48:29:675227, 15060a49, A) ;(15:49:27:734066, c1246a1f, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 13
+complex | 15:49:27:748337 | AND(A,B) | 2 | (15:48:29:675885, 0b58d0eb, A) ;(15:49:27:734066, c1246a1f, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 14
+complex | 15:49:27:749025 | AND(A,B) | 2 | (15:48:37:682992, 1dda9ef6, A) ;(15:49:27:734066, c1246a1f, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 14
+complex | 15:49:27:749638 | AND(A,B) | 2 | (15:48:43:689949, 3b0f022e, A) ;(15:49:27:734066, c1246a1f, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 15
+complex | 15:49:27:750276 | AND(A,B) | 2 | (15:48:44:691626, 119c5d92, A) ;(15:49:27:734066, c1246a1f, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 16
+complex | 15:49:27:750916 | AND(A,B) | 2 | (15:48:48:695241, 83a5e44b, A) ;(15:49:27:734066, c1246a1f, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 16
+complex | 15:49:27:751607 | AND(A,B) | 2 | (15:48:50:697098, 6e07421f, A) ;(15:49:27:734066, c1246a1f, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 17
+complex | 15:49:27:752380 | AND(A,B) | 2 | (15:49:16:722528, c448e012, A) ;(15:49:27:734066, c1246a1f, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 18
+complex | 15:49:27:753188 | AND(A,B) | 2 | (15:49:25:731228, 9330e8e8, A) ;(15:49:27:734066, c1246a1f, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 19
+simple | 1a4c1e50 | 15:49:29:735512 | A was received at: 15:49:29:736433
+complex | 15:49:29:750495 | AND(A,B) | 2 | (15:48:33:679221, b5a99016, B) ;(15:49:29:735512, 1a4c1e50, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 14
+complex | 15:49:29:751891 | AND(A,B) | 2 | (15:48:49:696513, a84210a7, B) ;(15:49:29:735512, 1a4c1e50, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 16
+complex | 15:49:29:752672 | AND(A,B) | 2 | (15:48:59:704577, a992a324, B) ;(15:49:29:735512, 1a4c1e50, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 17
+complex | 15:49:29:754453 | AND(A,B) | 2 | (15:49:00:705130, af2bb9f5, B) ;(15:49:29:735512, 1a4c1e50, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 18
+complex | 15:49:29:755360 | AND(A,B) | 2 | (15:49:10:715305, e826edd0, B) ;(15:49:29:735512, 1a4c1e50, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 19
+simple | 5dea9684 | 15:49:30:737338 | A was received at: 15:49:30:738512
+complex | 15:49:30:753197 | AND(A,B) | 2 | (15:48:49:696513, a84210a7, B) ;(15:49:30:737338, 5dea9684, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 15
+complex | 15:49:30:755638 | AND(A,B) | 2 | (15:48:59:704577, a992a324, B) ;(15:49:30:737338, 5dea9684, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 18
+complex | 15:49:30:757280 | AND(A,B) | 2 | (15:49:00:705130, af2bb9f5, B) ;(15:49:30:737338, 5dea9684, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 19
+simple | c23dd36b | 15:49:32:739062 | A was received at: 15:49:32:740065
+simple | 611c633d | 15:49:32:739748 | A was received at: 15:49:32:740984
+complex | 15:49:32:752771 | AND(A,B) | 2 | (15:48:59:704577, a992a324, B) ;(15:49:32:739062, c23dd36b, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 13
+complex | 15:49:32:754080 | AND(A,B) | 2 | (15:49:10:715305, e826edd0, B) ;(15:49:32:739062, c23dd36b, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 15
+complex | 15:49:32:761437 | AND(A,B) | 2 | (15:48:59:704577, a992a324, B) ;(15:49:32:739748, 611c633d, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 21
+complex | 15:49:32:762988 | AND(A,B) | 2 | (15:49:00:705130, af2bb9f5, B) ;(15:49:32:739748, 611c633d, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 23
+complex | 15:49:32:763718 | AND(A,B) | 2 | (15:49:10:715305, e826edd0, B) ;(15:49:32:739748, 611c633d, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 23
+simple | a48a72fb | 15:49:34:741789 | A was received at: 15:49:34:742816
+complex | 15:49:34:756705 | AND(A,B) | 2 | (15:48:49:696513, a84210a7, B) ;(15:49:34:741789, a48a72fb, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 14
+complex | 15:49:34:758265 | AND(A,B) | 2 | (15:48:59:704577, a992a324, B) ;(15:49:34:741789, a48a72fb, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 16
+complex | 15:49:34:759669 | AND(A,B) | 2 | (15:49:00:705130, af2bb9f5, B) ;(15:49:34:741789, a48a72fb, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 17
+complex | 15:49:34:761235 | AND(A,B) | 2 | (15:49:10:715305, e826edd0, B) ;(15:49:34:741789, a48a72fb, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 19
+simple | 1e587ef2 | 15:49:40:747200 | B was received at: 15:49:40:748584
+simple | 0b5b7558 | 15:49:40:747904 | B was received at: 15:49:40:749591
+complex | 15:49:40:768369 | AND(A,B) | 2 | (15:49:25:731228, 9330e8e8, A) ;(15:49:40:747200, 1e587ef2, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 21
+complex | 15:49:40:770820 | AND(A,B) | 2 | (15:49:30:737338, 5dea9684, A) ;(15:49:40:747200, 1e587ef2, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 23
+complex | 15:49:40:771997 | AND(A,B) | 2 | (15:49:32:739062, c23dd36b, A) ;(15:49:40:747200, 1e587ef2, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 24
+complex | 15:49:40:779059 | AND(A,B) | 2 | (15:48:44:691626, 119c5d92, A) ;(15:49:40:747904, 0b5b7558, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 31
+complex | 15:49:40:779936 | AND(A,B) | 2 | (15:48:50:697098, 6e07421f, A) ;(15:49:40:747904, 0b5b7558, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 32
+complex | 15:49:40:780546 | AND(A,B) | 2 | (15:48:51:697939, 1ea3d09b, A) ;(15:49:40:747904, 0b5b7558, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 32
+complex | 15:49:40:781140 | AND(A,B) | 2 | (15:49:11:717314, b03a2ce7, A) ;(15:49:40:747904, 0b5b7558, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 33
+complex | 15:49:40:781963 | AND(A,B) | 2 | (15:49:16:722528, c448e012, A) ;(15:49:40:747904, 0b5b7558, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 34
+complex | 15:49:40:783728 | AND(A,B) | 2 | (15:49:29:735512, 1a4c1e50, A) ;(15:49:40:747904, 0b5b7558, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 35
+complex | 15:49:40:785404 | AND(A,B) | 2 | (15:49:30:737338, 5dea9684, A) ;(15:49:40:747904, 0b5b7558, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 37
+complex | 15:49:40:787537 | AND(A,B) | 2 | (15:49:32:739062, c23dd36b, A) ;(15:49:40:747904, 0b5b7558, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 39
+complex | 15:49:40:788276 | AND(A,B) | 2 | (15:49:32:739748, 611c633d, A) ;(15:49:40:747904, 0b5b7558, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 40
+simple | 23395110 | 15:49:43:751247 | A was received at: 15:49:43:752058
+simple | 2a4d42ec | 15:49:43:751878 | A was received at: 15:49:43:753069
+complex | 15:49:43:773362 | AND(A,B) | 2 | (15:49:00:705130, af2bb9f5, B) ;(15:49:43:751247, 23395110, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 22
+complex | 15:49:43:774246 | AND(A,B) | 2 | (15:49:10:715305, e826edd0, B) ;(15:49:43:751247, 23395110, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 22
+complex | 15:49:43:775253 | AND(A,B) | 2 | (15:49:40:747200, 1e587ef2, B) ;(15:49:43:751247, 23395110, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 24
+complex | 15:49:43:776080 | AND(A,B) | 2 | (15:49:40:747904, 0b5b7558, B) ;(15:49:43:751247, 23395110, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 24
+complex | 15:49:43:783871 | AND(A,B) | 2 | (15:48:49:696513, a84210a7, B) ;(15:49:43:751878, 2a4d42ec, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 31
+complex | 15:49:43:784799 | AND(A,B) | 2 | (15:48:59:704577, a992a324, B) ;(15:49:43:751878, 2a4d42ec, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 32
+complex | 15:49:43:785837 | AND(A,B) | 2 | (15:49:10:715305, e826edd0, B) ;(15:49:43:751878, 2a4d42ec, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 33
+complex | 15:49:43:786463 | AND(A,B) | 2 | (15:49:27:734066, c1246a1f, B) ;(15:49:43:751878, 2a4d42ec, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 34
+complex | 15:49:43:787364 | AND(A,B) | 2 | (15:49:40:747904, 0b5b7558, B) ;(15:49:43:751878, 2a4d42ec, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 35
+simple | 4abab14a | 15:49:44:753427 | A was received at: 15:49:44:754515
+complex | 15:49:44:774824 | AND(A,B) | 2 | (15:48:59:704577, a992a324, B) ;(15:49:44:753427, 4abab14a, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 21
+complex | 15:49:44:776013 | AND(A,B) | 2 | (15:49:00:705130, af2bb9f5, B) ;(15:49:44:753427, 4abab14a, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 22
+complex | 15:49:44:776921 | AND(A,B) | 2 | (15:49:10:715305, e826edd0, B) ;(15:49:44:753427, 4abab14a, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 23
+complex | 15:49:44:777542 | AND(A,B) | 2 | (15:49:40:747904, 0b5b7558, B) ;(15:49:44:753427, 4abab14a, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 24
+simple | 39874b38 | 15:49:46:755227 | A was received at: 15:49:46:756265
+complex | 15:49:46:782093 | AND(A,B) | 2 | (15:48:49:696513, a84210a7, B) ;(15:49:46:755227, 39874b38, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+complex | 15:49:46:784572 | AND(A,B) | 2 | (15:49:00:705130, af2bb9f5, B) ;(15:49:46:755227, 39874b38, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 29
+complex | 15:49:46:785385 | AND(A,B) | 2 | (15:49:10:715305, e826edd0, B) ;(15:49:46:755227, 39874b38, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 30
+complex | 15:49:46:787612 | AND(A,B) | 2 | (15:49:40:747200, 1e587ef2, B) ;(15:49:46:755227, 39874b38, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 32
+simple | 97f28258 | 15:49:47:757686 | A was received at: 15:49:47:758581
+complex | 15:49:47:779887 | AND(A,B) | 2 | (15:48:59:704577, a992a324, B) ;(15:49:47:757686, 97f28258, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 22
+complex | 15:49:47:782173 | AND(A,B) | 2 | (15:49:00:705130, af2bb9f5, B) ;(15:49:47:757686, 97f28258, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 24
+simple | b78bfe62 | 15:49:49:759840 | A was received at: 15:49:49:760804
+simple | 36eded8a | 15:49:49:760498 | A was received at: 15:49:49:761676
+complex | 15:49:49:783685 | AND(A,B) | 2 | (15:49:00:705130, af2bb9f5, B) ;(15:49:49:759840, b78bfe62, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 23
+complex | 15:49:49:785387 | AND(A,B) | 2 | (15:49:10:715305, e826edd0, B) ;(15:49:49:759840, b78bfe62, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 25
+complex | 15:49:49:786773 | AND(A,B) | 2 | (15:49:40:747200, 1e587ef2, B) ;(15:49:49:759840, b78bfe62, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+complex | 15:49:49:788162 | AND(A,B) | 2 | (15:49:40:747904, 0b5b7558, B) ;(15:49:49:759840, b78bfe62, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 28
+complex | 15:49:49:797088 | AND(A,B) | 2 | (15:49:27:734066, c1246a1f, B) ;(15:49:49:760498, 36eded8a, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+complex | 15:49:49:800152 | AND(A,B) | 2 | (15:49:40:747200, 1e587ef2, B) ;(15:49:49:760498, 36eded8a, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 39
+complex | 15:49:49:800878 | AND(A,B) | 2 | (15:49:40:747904, 0b5b7558, B) ;(15:49:49:760498, 36eded8a, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 40
+simple | 85ed6358 | 15:49:50:762050 | A was received at: 15:49:50:762392
+complex | 15:49:50:780609 | AND(A,B) | 2 | (15:48:59:704577, a992a324, B) ;(15:49:50:762050, 85ed6358, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 18
+simple | c9a462f3 | 15:50:02:773853 | B was received at: 15:50:02:775015
+simple | 6988dfa6 | 15:50:02:774811 | B was received at: 15:50:02:776182
+complex | 15:50:02:811033 | AND(A,B) | 2 | (15:49:11:717314, b03a2ce7, A) ;(15:50:02:773853, c9a462f3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 37
+complex | 15:50:02:812959 | AND(A,B) | 2 | (15:49:17:724404, 411179ff, A) ;(15:50:02:773853, c9a462f3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 39
+complex | 15:50:02:815977 | AND(A,B) | 2 | (15:49:20:727583, baddb5b2, A) ;(15:50:02:773853, c9a462f3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 42
+complex | 15:50:02:819283 | AND(A,B) | 2 | (15:49:29:735512, 1a4c1e50, A) ;(15:50:02:773853, c9a462f3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 45
+complex | 15:50:02:821542 | AND(A,B) | 2 | (15:49:32:739748, 611c633d, A) ;(15:50:02:773853, c9a462f3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 47
+complex | 15:50:02:823143 | AND(A,B) | 2 | (15:49:34:741789, a48a72fb, A) ;(15:50:02:773853, c9a462f3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 49
+complex | 15:50:02:824805 | AND(A,B) | 2 | (15:49:43:751247, 23395110, A) ;(15:50:02:773853, c9a462f3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 50
+complex | 15:50:02:827725 | AND(A,B) | 2 | (15:49:47:757686, 97f28258, A) ;(15:50:02:773853, c9a462f3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 53
+complex | 15:50:02:829628 | AND(A,B) | 2 | (15:49:49:759840, b78bfe62, A) ;(15:50:02:773853, c9a462f3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 55
+complex | 15:50:02:831081 | AND(A,B) | 2 | (15:49:50:762050, 85ed6358, A) ;(15:50:02:773853, c9a462f3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 57
+complex | 15:50:02:852952 | AND(A,B) | 2 | (15:49:16:722528, c448e012, A) ;(15:50:02:774811, 6988dfa6, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 78
+complex | 15:50:02:853936 | AND(A,B) | 2 | (15:49:25:731228, 9330e8e8, A) ;(15:50:02:774811, 6988dfa6, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 79
+complex | 15:50:02:854479 | AND(A,B) | 2 | (15:49:29:735512, 1a4c1e50, A) ;(15:50:02:774811, 6988dfa6, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 79
+complex | 15:50:02:856168 | AND(A,B) | 2 | (15:49:34:741789, a48a72fb, A) ;(15:50:02:774811, 6988dfa6, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 81
+complex | 15:50:02:858375 | AND(A,B) | 2 | (15:49:46:755227, 39874b38, A) ;(15:50:02:774811, 6988dfa6, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 83
+complex | 15:50:02:861202 | AND(A,B) | 2 | (15:49:47:757686, 97f28258, A) ;(15:50:02:774811, 6988dfa6, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 86
+complex | 15:50:02:864506 | AND(A,B) | 2 | (15:49:49:759840, b78bfe62, A) ;(15:50:02:774811, 6988dfa6, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 89
+simple | 8e57c992 | 15:50:03:775565 | A was received at: 15:50:03:776552
+simple | 6ae125cb | 15:50:03:776354 | A was received at: 15:50:03:777735
+complex | 15:50:03:809699 | AND(A,B) | 2 | (15:49:10:715305, e826edd0, B) ;(15:50:03:775565, 8e57c992, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 34
+complex | 15:50:03:811602 | AND(A,B) | 2 | (15:49:27:734066, c1246a1f, B) ;(15:50:03:775565, 8e57c992, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+complex | 15:50:03:812277 | AND(A,B) | 2 | (15:50:02:774811, 6988dfa6, B) ;(15:50:03:775565, 8e57c992, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+complex | 15:50:03:819782 | AND(A,B) | 2 | (15:49:10:715305, e826edd0, B) ;(15:50:03:776354, 6ae125cb, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 43
+complex | 15:50:03:820743 | AND(A,B) | 2 | (15:50:02:773853, c9a462f3, B) ;(15:50:03:776354, 6ae125cb, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 44
+simple | 9d77cac2 | 15:50:15:782012 | A was received at: 15:50:15:782702
+simple | 201daa86 | 15:50:15:782555 | A was received at: 15:50:15:783431
+complex | 15:50:15:822322 | AND(A,B) | 2 | (15:49:40:747904, 0b5b7558, B) ;(15:50:15:782012, 9d77cac2, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 40
+complex | 15:50:15:824394 | AND(A,B) | 2 | (15:49:40:747200, 1e587ef2, B) ;(15:50:15:782555, 201daa86, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 41
+simple | ef0ca620 | 15:50:20:787230 | A was received at: 15:50:20:788301
+complex | 15:50:20:830954 | AND(A,B) | 2 | (15:49:40:747200, 1e587ef2, B) ;(15:50:20:787230, ef0ca620, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 43
+complex | 15:50:20:832409 | AND(A,B) | 2 | (15:49:40:747904, 0b5b7558, B) ;(15:50:20:787230, ef0ca620, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 45
+complex | 15:50:20:834002 | AND(A,B) | 2 | (15:50:02:773853, c9a462f3, B) ;(15:50:20:787230, ef0ca620, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 46
+complex | 15:50:20:835970 | AND(A,B) | 2 | (15:50:02:774811, 6988dfa6, B) ;(15:50:20:787230, ef0ca620, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+simple | 84707cf1 | 15:50:22:789886 | A was received at: 15:50:22:790348
+simple | 466a157a | 15:50:22:790099 | A was received at: 15:50:22:790583
+complex | 15:50:22:831984 | AND(A,B) | 2 | (15:49:27:734066, c1246a1f, B) ;(15:50:22:789886, 84707cf1, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 42
+complex | 15:50:22:832252 | AND(A,B) | 2 | (15:49:40:747200, 1e587ef2, B) ;(15:50:22:789886, 84707cf1, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 42
+complex | 15:50:22:832396 | AND(A,B) | 2 | (15:50:02:773853, c9a462f3, B) ;(15:50:22:789886, 84707cf1, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 42
+complex | 15:50:22:832519 | AND(A,B) | 2 | (15:50:02:774811, 6988dfa6, B) ;(15:50:22:789886, 84707cf1, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 42
+complex | 15:50:22:834422 | AND(A,B) | 2 | (15:49:40:747200, 1e587ef2, B) ;(15:50:22:790099, 466a157a, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 44
+complex | 15:50:22:834696 | AND(A,B) | 2 | (15:50:02:773853, c9a462f3, B) ;(15:50:22:790099, 466a157a, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 44
+complex | 15:50:22:834863 | AND(A,B) | 2 | (15:50:02:774811, 6988dfa6, B) ;(15:50:22:790099, 466a157a, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 44
+simple | 2e659a04 | 15:50:29:795876 | A was received at: 15:50:29:797102
+simple | 6f5bd033 | 15:50:36:803274 | B was received at: 15:50:36:804768
+complex | 15:50:36:852738 | AND(A,B) | 2 | (15:49:43:751247, 23395110, A) ;(15:50:36:803274, 6f5bd033, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 49
+complex | 15:50:36:853514 | AND(A,B) | 2 | (15:49:47:757686, 97f28258, A) ;(15:50:36:803274, 6f5bd033, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 50
+complex | 15:50:36:853843 | AND(A,B) | 2 | (15:49:49:759840, b78bfe62, A) ;(15:50:36:803274, 6f5bd033, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 50
+complex | 15:50:36:854097 | AND(A,B) | 2 | (15:49:49:760498, 36eded8a, A) ;(15:50:36:803274, 6f5bd033, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 50
+complex | 15:50:36:854344 | AND(A,B) | 2 | (15:50:15:782012, 9d77cac2, A) ;(15:50:36:803274, 6f5bd033, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 51
+complex | 15:50:36:854590 | AND(A,B) | 2 | (15:50:15:782555, 201daa86, A) ;(15:50:36:803274, 6f5bd033, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 51
+complex | 15:50:36:854823 | AND(A,B) | 2 | (15:50:20:787230, ef0ca620, A) ;(15:50:36:803274, 6f5bd033, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 51
+complex | 15:50:36:855056 | AND(A,B) | 2 | (15:50:22:790099, 466a157a, A) ;(15:50:36:803274, 6f5bd033, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 51
+complex | 15:50:36:855332 | AND(A,B) | 2 | (15:50:29:795876, 2e659a04, A) ;(15:50:36:803274, 6f5bd033, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 52
+simple | 435ad01c | 15:50:38:805342 | A was received at: 15:50:38:808330
+simple | d185fe2b | 15:50:38:806422 | A was received at: 15:50:38:809658
+complex | 15:50:38:864671 | AND(A,B) | 2 | (15:49:40:747200, 1e587ef2, B) ;(15:50:38:805342, 435ad01c, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 59
+complex | 15:50:38:865730 | AND(A,B) | 2 | (15:49:40:747904, 0b5b7558, B) ;(15:50:38:805342, 435ad01c, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 60
+complex | 15:50:38:874695 | AND(A,B) | 2 | (15:50:02:773853, c9a462f3, B) ;(15:50:38:805342, 435ad01c, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 69
+complex | 15:50:38:879192 | AND(A,B) | 2 | (15:50:36:803274, 6f5bd033, B) ;(15:50:38:806422, d185fe2b, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+simple | b0199bd7 | 15:50:43:811205 | A was received at: 15:50:43:812321
+complex | 15:50:43:859004 | AND(A,B) | 2 | (15:50:02:773853, c9a462f3, B) ;(15:50:43:811205, b0199bd7, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 47
+simple | b0e04e53 | 15:50:54:822864 | A was received at: 15:50:54:824211
+simple | 4b6e2354 | 15:50:54:823513 | B was received at: 15:50:54:825340
+complex | 15:50:54:885822 | AND(A,B) | 2 | (15:50:02:773853, c9a462f3, B) ;(15:50:54:822864, b0e04e53, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 62
+complex | 15:50:54:895391 | AND(A,B) | 2 | (15:50:03:775565, 8e57c992, A) ;(15:50:54:823513, 4b6e2354, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 71
+complex | 15:50:54:897255 | AND(A,B) | 2 | (15:50:03:776354, 6ae125cb, A) ;(15:50:54:823513, 4b6e2354, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 73
+complex | 15:50:54:898699 | AND(A,B) | 2 | (15:50:15:782555, 201daa86, A) ;(15:50:54:823513, 4b6e2354, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 75
+complex | 15:50:54:900317 | AND(A,B) | 2 | (15:50:20:787230, ef0ca620, A) ;(15:50:54:823513, 4b6e2354, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 76
+complex | 15:50:54:901710 | AND(A,B) | 2 | (15:50:38:805342, 435ad01c, A) ;(15:50:54:823513, 4b6e2354, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 78
+complex | 15:50:54:902961 | AND(A,B) | 2 | (15:50:38:806422, d185fe2b, A) ;(15:50:54:823513, 4b6e2354, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 79
+complex | 15:50:54:904252 | AND(A,B) | 2 | (15:50:43:811205, b0199bd7, A) ;(15:50:54:823513, 4b6e2354, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 80
+simple | 4a6cb2c2 | 15:50:56:825252 | B was received at: 15:50:56:826058
+complex | 15:50:56:887526 | AND(A,B) | 2 | (15:50:03:775565, 8e57c992, A) ;(15:50:56:825252, 4a6cb2c2, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 62
+complex | 15:50:56:890682 | AND(A,B) | 2 | (15:50:03:776354, 6ae125cb, A) ;(15:50:56:825252, 4a6cb2c2, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 65
+complex | 15:50:56:892126 | AND(A,B) | 2 | (15:50:15:782012, 9d77cac2, A) ;(15:50:56:825252, 4a6cb2c2, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 66
+complex | 15:50:56:893107 | AND(A,B) | 2 | (15:50:15:782555, 201daa86, A) ;(15:50:56:825252, 4a6cb2c2, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 67
+complex | 15:50:56:893793 | AND(A,B) | 2 | (15:50:38:805342, 435ad01c, A) ;(15:50:56:825252, 4a6cb2c2, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 68
+complex | 15:50:56:894199 | AND(A,B) | 2 | (15:50:38:806422, d185fe2b, A) ;(15:50:56:825252, 4a6cb2c2, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 68
+complex | 15:50:56:894570 | AND(A,B) | 2 | (15:50:54:822864, b0e04e53, A) ;(15:50:56:825252, 4a6cb2c2, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 69
+simple | e4c7b9be | 15:51:06:835654 | A was received at: 15:51:06:837060
+complex | 15:51:06:901786 | AND(A,B) | 2 | (15:50:54:823513, 4b6e2354, B) ;(15:51:06:835654, e4c7b9be, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 66
+simple | 6080ec3a | 15:51:08:839566 | A was received at: 15:51:08:840790
+complex | 15:51:08:904926 | AND(A,B) | 2 | (15:50:36:803274, 6f5bd033, B) ;(15:51:08:839566, 6080ec3a, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 65
+simple | 161a596f | 15:51:17:847329 | B was received at: 15:51:17:848349
+complex | 15:51:17:918610 | AND(A,B) | 2 | (15:50:29:795876, 2e659a04, A) ;(15:51:17:847329, 161a596f, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 71
+complex | 15:51:17:919414 | AND(A,B) | 2 | (15:50:38:806422, d185fe2b, A) ;(15:51:17:847329, 161a596f, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:51:17:919932 | AND(A,B) | 2 | (15:51:08:839566, 6080ec3a, A) ;(15:51:17:847329, 161a596f, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+simple | 612d8e0e | 15:51:19:849784 | B was received at: 15:51:19:850812
+complex | 15:51:19:922338 | AND(A,B) | 2 | (15:50:22:789886, 84707cf1, A) ;(15:51:19:849784, 612d8e0e, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:51:19:924005 | AND(A,B) | 2 | (15:50:22:790099, 466a157a, A) ;(15:51:19:849784, 612d8e0e, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 74
+complex | 15:51:19:925034 | AND(A,B) | 2 | (15:50:29:795876, 2e659a04, A) ;(15:51:19:849784, 612d8e0e, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 75
+complex | 15:51:19:925961 | AND(A,B) | 2 | (15:50:38:805342, 435ad01c, A) ;(15:51:19:849784, 612d8e0e, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 76
+complex | 15:51:19:927538 | AND(A,B) | 2 | (15:50:38:806422, d185fe2b, A) ;(15:51:19:849784, 612d8e0e, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 77
+complex | 15:51:19:928523 | AND(A,B) | 2 | (15:50:54:822864, b0e04e53, A) ;(15:51:19:849784, 612d8e0e, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 78
+simple | 17aa89dd | 15:51:21:851500 | B was received at: 15:51:21:852405
+complex | 15:51:21:925722 | AND(A,B) | 2 | (15:50:22:789886, 84707cf1, A) ;(15:51:21:851500, 17aa89dd, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 74
+complex | 15:51:21:927042 | AND(A,B) | 2 | (15:50:22:790099, 466a157a, A) ;(15:51:21:851500, 17aa89dd, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 75
+complex | 15:51:21:927808 | AND(A,B) | 2 | (15:50:29:795876, 2e659a04, A) ;(15:51:21:851500, 17aa89dd, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 76
+complex | 15:51:21:928303 | AND(A,B) | 2 | (15:50:38:805342, 435ad01c, A) ;(15:51:21:851500, 17aa89dd, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 76
+complex | 15:51:21:929236 | AND(A,B) | 2 | (15:50:38:806422, d185fe2b, A) ;(15:51:21:851500, 17aa89dd, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 77
+complex | 15:51:21:930015 | AND(A,B) | 2 | (15:50:43:811205, b0199bd7, A) ;(15:51:21:851500, 17aa89dd, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 78
+complex | 15:51:21:930656 | AND(A,B) | 2 | (15:50:54:822864, b0e04e53, A) ;(15:51:21:851500, 17aa89dd, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 79
+complex | 15:51:21:931366 | AND(A,B) | 2 | (15:51:06:835654, e4c7b9be, A) ;(15:51:21:851500, 17aa89dd, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 79
+simple | eb1b1071 | 15:51:23:853226 | A was received at: 15:51:23:853477
+complex | 15:51:23:927084 | AND(A,B) | 2 | (15:50:36:803274, 6f5bd033, B) ;(15:51:23:853226, eb1b1071, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 73
+complex | 15:51:23:927477 | AND(A,B) | 2 | (15:50:54:823513, 4b6e2354, B) ;(15:51:23:853226, eb1b1071, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 74
+complex | 15:51:23:927616 | AND(A,B) | 2 | (15:50:56:825252, 4a6cb2c2, B) ;(15:51:23:853226, eb1b1071, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 74
+complex | 15:51:23:927733 | AND(A,B) | 2 | (15:51:17:847329, 161a596f, B) ;(15:51:23:853226, eb1b1071, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 74
+complex | 15:51:23:927844 | AND(A,B) | 2 | (15:51:19:849784, 612d8e0e, B) ;(15:51:23:853226, eb1b1071, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 74
+complex | 15:51:23:927959 | AND(A,B) | 2 | (15:51:21:851500, 17aa89dd, B) ;(15:51:23:853226, eb1b1071, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 74
+simple | 7e8bd034 | 15:51:26:855334 | B was received at: 15:51:26:856054
+complex | 15:51:26:930328 | AND(A,B) | 2 | (15:50:38:805342, 435ad01c, A) ;(15:51:26:855334, 7e8bd034, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 74
+complex | 15:51:26:932225 | AND(A,B) | 2 | (15:50:38:806422, d185fe2b, A) ;(15:51:26:855334, 7e8bd034, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 76
+complex | 15:51:26:932766 | AND(A,B) | 2 | (15:51:08:839566, 6080ec3a, A) ;(15:51:26:855334, 7e8bd034, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 77
+simple | 100dc6ba | 15:51:29:857942 | B was received at: 15:51:29:858235
+complex | 15:51:29:935826 | AND(A,B) | 2 | (15:50:54:822864, b0e04e53, A) ;(15:51:29:857942, 100dc6ba, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 77
+complex | 15:51:29:936811 | AND(A,B) | 2 | (15:51:06:835654, e4c7b9be, A) ;(15:51:29:857942, 100dc6ba, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 78
+simple | be2328d1 | 15:51:30:859406 | A was received at: 15:51:30:861247
+complex | 15:51:30:935476 | AND(A,B) | 2 | (15:50:54:823513, 4b6e2354, B) ;(15:51:30:859406, be2328d1, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 76
+complex | 15:51:30:935799 | AND(A,B) | 2 | (15:50:56:825252, 4a6cb2c2, B) ;(15:51:30:859406, be2328d1, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 76
+complex | 15:51:30:935974 | AND(A,B) | 2 | (15:51:17:847329, 161a596f, B) ;(15:51:30:859406, be2328d1, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 76
+complex | 15:51:30:936120 | AND(A,B) | 2 | (15:51:21:851500, 17aa89dd, B) ;(15:51:30:859406, be2328d1, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 76
+complex | 15:51:30:936260 | AND(A,B) | 2 | (15:51:26:855334, 7e8bd034, B) ;(15:51:30:859406, be2328d1, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 76
+complex | 15:51:30:936396 | AND(A,B) | 2 | (15:51:29:857942, 100dc6ba, B) ;(15:51:30:859406, be2328d1, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 76
+simple | 10119dec | 15:51:32:862948 | A was received at: 15:51:32:864039
+complex | 15:51:32:938335 | AND(A,B) | 2 | (15:50:54:823513, 4b6e2354, B) ;(15:51:32:862948, 10119dec, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 75
+complex | 15:51:32:938568 | AND(A,B) | 2 | (15:51:17:847329, 161a596f, B) ;(15:51:32:862948, 10119dec, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 75
+complex | 15:51:32:938678 | AND(A,B) | 2 | (15:51:26:855334, 7e8bd034, B) ;(15:51:32:862948, 10119dec, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 75
+simple | 7182c21f | 15:51:33:863933 | A was received at: 15:51:33:864649
+complex | 15:51:33:941312 | AND(A,B) | 2 | (15:50:36:803274, 6f5bd033, B) ;(15:51:33:863933, 7182c21f, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 77
+complex | 15:51:33:941844 | AND(A,B) | 2 | (15:51:19:849784, 612d8e0e, B) ;(15:51:33:863933, 7182c21f, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 77
+complex | 15:51:33:942204 | AND(A,B) | 2 | (15:51:21:851500, 17aa89dd, B) ;(15:51:33:863933, 7182c21f, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 78
+complex | 15:51:33:942502 | AND(A,B) | 2 | (15:51:26:855334, 7e8bd034, B) ;(15:51:33:863933, 7182c21f, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 78
+simple | 90a8b523 | 15:51:39:867140 | A was received at: 15:51:39:867404
+complex | 15:51:39:949670 | AND(A,B) | 2 | (15:50:54:823513, 4b6e2354, B) ;(15:51:39:867140, 90a8b523, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 82
+complex | 15:51:39:950461 | AND(A,B) | 2 | (15:50:56:825252, 4a6cb2c2, B) ;(15:51:39:867140, 90a8b523, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 83
+complex | 15:51:39:950857 | AND(A,B) | 2 | (15:51:19:849784, 612d8e0e, B) ;(15:51:39:867140, 90a8b523, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 83
+simple | da28ec8f | 15:51:40:868453 | A was received at: 15:51:40:869669
+complex | 15:51:40:951835 | AND(A,B) | 2 | (15:50:56:825252, 4a6cb2c2, B) ;(15:51:40:868453, da28ec8f, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 83
+complex | 15:51:40:953216 | AND(A,B) | 2 | (15:51:19:849784, 612d8e0e, B) ;(15:51:40:868453, da28ec8f, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 84
+complex | 15:51:40:954218 | AND(A,B) | 2 | (15:51:26:855334, 7e8bd034, B) ;(15:51:40:868453, da28ec8f, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 85
+simple | 8f3fdf6a | 15:51:43:870958 | B was received at: 15:51:43:872351
+complex | 15:51:43:958551 | AND(A,B) | 2 | (15:50:54:822864, b0e04e53, A) ;(15:51:43:870958, 8f3fdf6a, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 87
+complex | 15:51:43:960090 | AND(A,B) | 2 | (15:51:30:859406, be2328d1, A) ;(15:51:43:870958, 8f3fdf6a, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 89
+complex | 15:51:43:961349 | AND(A,B) | 2 | (15:51:33:863933, 7182c21f, A) ;(15:51:43:870958, 8f3fdf6a, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 90
+simple | 801126de | 15:51:49:875180 | B was received at: 15:51:49:875526
+complex | 15:51:49:971934 | AND(A,B) | 2 | (15:50:54:822864, b0e04e53, A) ;(15:51:49:875180, 801126de, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 96
+complex | 15:51:49:974012 | AND(A,B) | 2 | (15:51:06:835654, e4c7b9be, A) ;(15:51:49:875180, 801126de, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 98
+complex | 15:51:49:974697 | AND(A,B) | 2 | (15:51:08:839566, 6080ec3a, A) ;(15:51:49:875180, 801126de, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 99
+complex | 15:51:49:975349 | AND(A,B) | 2 | (15:51:23:853226, eb1b1071, A) ;(15:51:49:875180, 801126de, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 100
+complex | 15:51:49:975937 | AND(A,B) | 2 | (15:51:30:859406, be2328d1, A) ;(15:51:49:875180, 801126de, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 100
+complex | 15:51:49:977088 | AND(A,B) | 2 | (15:51:32:862948, 10119dec, A) ;(15:51:49:875180, 801126de, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 101
+complex | 15:51:49:977850 | AND(A,B) | 2 | (15:51:33:863933, 7182c21f, A) ;(15:51:49:875180, 801126de, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 102
+complex | 15:51:49:978714 | AND(A,B) | 2 | (15:51:40:868453, da28ec8f, A) ;(15:51:49:875180, 801126de, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 103
+simple | 6392b994 | 15:51:52:878605 | A was received at: 15:51:52:879393
+simple | 81274fda | 15:51:52:879298 | A was received at: 15:51:52:880684
+complex | 15:51:52:972976 | AND(A,B) | 2 | (15:51:17:847329, 161a596f, B) ;(15:51:52:878605, 6392b994, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 94
+complex | 15:51:52:974202 | AND(A,B) | 2 | (15:51:26:855334, 7e8bd034, B) ;(15:51:52:878605, 6392b994, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 95
+complex | 15:51:52:975071 | AND(A,B) | 2 | (15:51:29:857942, 100dc6ba, B) ;(15:51:52:878605, 6392b994, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 96
+complex | 15:51:52:979801 | AND(A,B) | 2 | (15:50:56:825252, 4a6cb2c2, B) ;(15:51:52:879298, 81274fda, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 100
+complex | 15:51:52:981760 | AND(A,B) | 2 | (15:51:17:847329, 161a596f, B) ;(15:51:52:879298, 81274fda, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 102
+complex | 15:51:52:982972 | AND(A,B) | 2 | (15:51:19:849784, 612d8e0e, B) ;(15:51:52:879298, 81274fda, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 103
+complex | 15:51:52:984725 | AND(A,B) | 2 | (15:51:21:851500, 17aa89dd, B) ;(15:51:52:879298, 81274fda, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 105
+complex | 15:51:52:987490 | AND(A,B) | 2 | (15:51:26:855334, 7e8bd034, B) ;(15:51:52:879298, 81274fda, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 108
+complex | 15:51:52:990823 | AND(A,B) | 2 | (15:51:43:870958, 8f3fdf6a, B) ;(15:51:52:879298, 81274fda, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 111
+simple | 23e8d3c3 | 15:51:55:882381 | A was received at: 15:51:55:883278
+simple | 4e080f2d | 15:51:55:883025 | B was received at: 15:51:55:884185
+complex | 15:51:55:984526 | AND(A,B) | 2 | (15:51:19:849784, 612d8e0e, B) ;(15:51:55:882381, 23e8d3c3, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 102
+complex | 15:51:55:985942 | AND(A,B) | 2 | (15:51:21:851500, 17aa89dd, B) ;(15:51:55:882381, 23e8d3c3, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 103
+complex | 15:51:55:986507 | AND(A,B) | 2 | (15:51:43:870958, 8f3fdf6a, B) ;(15:51:55:882381, 23e8d3c3, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 104
+complex | 15:51:55:986931 | AND(A,B) | 2 | (15:51:49:875180, 801126de, B) ;(15:51:55:882381, 23e8d3c3, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 104
+complex | 15:51:55:993578 | AND(A,B) | 2 | (15:51:06:835654, e4c7b9be, A) ;(15:51:55:883025, 4e080f2d, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 110
+complex | 15:51:55:994830 | AND(A,B) | 2 | (15:51:08:839566, 6080ec3a, A) ;(15:51:55:883025, 4e080f2d, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 111
+complex | 15:51:55:995756 | AND(A,B) | 2 | (15:51:23:853226, eb1b1071, A) ;(15:51:55:883025, 4e080f2d, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 112
+complex | 15:51:55:996330 | AND(A,B) | 2 | (15:51:30:859406, be2328d1, A) ;(15:51:55:883025, 4e080f2d, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 113
+complex | 15:51:55:996878 | AND(A,B) | 2 | (15:51:39:867140, 90a8b523, A) ;(15:51:55:883025, 4e080f2d, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 113
+complex | 15:51:56:003372 | AND(A,B) | 2 | (15:51:40:868453, da28ec8f, A) ;(15:51:55:883025, 4e080f2d, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 120
+complex | 15:51:56:004235 | AND(A,B) | 2 | (15:51:52:878605, 6392b994, A) ;(15:51:55:883025, 4e080f2d, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 121
+complex | 15:51:56:004686 | AND(A,B) | 2 | (15:51:52:879298, 81274fda, A) ;(15:51:55:883025, 4e080f2d, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 121
+complex | 15:51:56:005133 | AND(A,B) | 2 | (15:51:55:882381, 23e8d3c3, A) ;(15:51:55:883025, 4e080f2d, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 122
+simple | 3fd6d6e5 | 15:52:01:885391 | B was received at: 15:52:01:886233
+complex | 15:52:01:989172 | AND(A,B) | 2 | (15:51:08:839566, 6080ec3a, A) ;(15:52:01:885391, 3fd6d6e5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 103
+complex | 15:52:01:992056 | AND(A,B) | 2 | (15:51:30:859406, be2328d1, A) ;(15:52:01:885391, 3fd6d6e5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 106
+complex | 15:52:01:993441 | AND(A,B) | 2 | (15:51:32:862948, 10119dec, A) ;(15:52:01:885391, 3fd6d6e5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 108
+complex | 15:52:01:994111 | AND(A,B) | 2 | (15:51:40:868453, da28ec8f, A) ;(15:52:01:885391, 3fd6d6e5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 108
+simple | 01465f12 | 15:52:04:887620 | A was received at: 15:52:04:888383
+complex | 15:52:04:893464 | AND(A,B) | 2 | (15:51:19:849784, 612d8e0e, B) ;(15:52:04:887620, 01465f12, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 5
+complex | 15:52:04:894567 | AND(A,B) | 2 | (15:51:26:855334, 7e8bd034, B) ;(15:52:04:887620, 01465f12, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 6
+complex | 15:52:04:895146 | AND(A,B) | 2 | (15:51:29:857942, 100dc6ba, B) ;(15:52:04:887620, 01465f12, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 7
+complex | 15:52:04:895653 | AND(A,B) | 2 | (15:52:01:885391, 3fd6d6e5, B) ;(15:52:04:887620, 01465f12, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 8
+simple | 83fffd37 | 15:52:07:891263 | A was received at: 15:52:07:892679
+complex | 15:52:07:996943 | AND(A,B) | 2 | (15:51:19:849784, 612d8e0e, B) ;(15:52:07:891263, 83fffd37, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 105
+complex | 15:52:07:997172 | AND(A,B) | 2 | (15:51:21:851500, 17aa89dd, B) ;(15:52:07:891263, 83fffd37, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 105
+complex | 15:52:07:997289 | AND(A,B) | 2 | (15:51:26:855334, 7e8bd034, B) ;(15:52:07:891263, 83fffd37, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 106
+complex | 15:52:07:997372 | AND(A,B) | 2 | (15:51:49:875180, 801126de, B) ;(15:52:07:891263, 83fffd37, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 106
+simple | 853a23e5 | 15:52:08:893406 | A was received at: 15:52:08:893784
+complex | 15:52:08:902374 | AND(A,B) | 2 | (15:51:19:849784, 612d8e0e, B) ;(15:52:08:893406, 853a23e5, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 8
+complex | 15:52:08:903285 | AND(A,B) | 2 | (15:51:29:857942, 100dc6ba, B) ;(15:52:08:893406, 853a23e5, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 9
+complex | 15:52:08:903695 | AND(A,B) | 2 | (15:51:49:875180, 801126de, B) ;(15:52:08:893406, 853a23e5, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 10
+complex | 15:52:08:904182 | AND(A,B) | 2 | (15:52:01:885391, 3fd6d6e5, B) ;(15:52:08:893406, 853a23e5, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 10
+simple | 38165123 | 15:52:10:895870 | A was received at: 15:52:10:896792
+complex | 15:52:10:905738 | AND(A,B) | 2 | (15:51:17:847329, 161a596f, B) ;(15:52:10:895870, 38165123, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 9
+complex | 15:52:10:906339 | AND(A,B) | 2 | (15:51:21:851500, 17aa89dd, B) ;(15:52:10:895870, 38165123, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 10
+complex | 15:52:10:906766 | AND(A,B) | 2 | (15:51:26:855334, 7e8bd034, B) ;(15:52:10:895870, 38165123, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 10
+complex | 15:52:10:907137 | AND(A,B) | 2 | (15:51:43:870958, 8f3fdf6a, B) ;(15:52:10:895870, 38165123, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 11
+complex | 15:52:10:907486 | AND(A,B) | 2 | (15:51:49:875180, 801126de, B) ;(15:52:10:895870, 38165123, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 11
+complex | 15:52:10:907797 | AND(A,B) | 2 | (15:52:01:885391, 3fd6d6e5, B) ;(15:52:10:895870, 38165123, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 11
+simple | 960bf886 | 15:52:12:898511 | A was received at: 15:52:12:898745
+complex | 15:52:12:904239 | AND(A,B) | 2 | (15:51:17:847329, 161a596f, B) ;(15:52:12:898511, 960bf886, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 5
+complex | 15:52:12:904452 | AND(A,B) | 2 | (15:51:21:851500, 17aa89dd, B) ;(15:52:12:898511, 960bf886, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 5
+complex | 15:52:12:904549 | AND(A,B) | 2 | (15:51:55:883025, 4e080f2d, B) ;(15:52:12:898511, 960bf886, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 6
+complex | 15:52:12:904628 | AND(A,B) | 2 | (15:52:01:885391, 3fd6d6e5, B) ;(15:52:12:898511, 960bf886, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 6
+simple | 940bf73f | 15:52:13:899714 | A was received at: 15:52:13:900013
+complex | 15:52:13:905253 | AND(A,B) | 2 | (15:51:21:851500, 17aa89dd, B) ;(15:52:13:899714, 940bf73f, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 5
+complex | 15:52:13:905480 | AND(A,B) | 2 | (15:51:29:857942, 100dc6ba, B) ;(15:52:13:899714, 940bf73f, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 5
+simple | c789632e | 15:52:15:902079 | A was received at: 15:52:15:902533
+complex | 15:52:15:910083 | AND(A,B) | 2 | (15:51:19:849784, 612d8e0e, B) ;(15:52:15:902079, c789632e, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 8
+complex | 15:52:15:910585 | AND(A,B) | 2 | (15:51:21:851500, 17aa89dd, B) ;(15:52:15:902079, c789632e, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 8
+complex | 15:52:15:910931 | AND(A,B) | 2 | (15:51:26:855334, 7e8bd034, B) ;(15:52:15:902079, c789632e, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 8
+complex | 15:52:15:911470 | AND(A,B) | 2 | (15:51:29:857942, 100dc6ba, B) ;(15:52:15:902079, c789632e, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 9
+complex | 15:52:15:911902 | AND(A,B) | 2 | (15:51:49:875180, 801126de, B) ;(15:52:15:902079, c789632e, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 9
+complex | 15:52:15:912276 | AND(A,B) | 2 | (15:52:01:885391, 3fd6d6e5, B) ;(15:52:15:902079, c789632e, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 10
+simple | 3c4c4a94 | 15:52:16:903545 | B was received at: 15:52:16:904332
+complex | 15:52:16:912516 | AND(A,B) | 2 | (15:51:32:862948, 10119dec, A) ;(15:52:16:903545, 3c4c4a94, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 8
+complex | 15:52:16:913585 | AND(A,B) | 2 | (15:51:33:863933, 7182c21f, A) ;(15:52:16:903545, 3c4c4a94, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 10
+complex | 15:52:16:914730 | AND(A,B) | 2 | (15:51:55:882381, 23e8d3c3, A) ;(15:52:16:903545, 3c4c4a94, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 11
+complex | 15:52:16:915876 | AND(A,B) | 2 | (15:52:04:887620, 01465f12, A) ;(15:52:16:903545, 3c4c4a94, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 12
+complex | 15:52:16:916269 | AND(A,B) | 2 | (15:52:07:891263, 83fffd37, A) ;(15:52:16:903545, 3c4c4a94, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 12
+complex | 15:52:16:916617 | AND(A,B) | 2 | (15:52:08:893406, 853a23e5, A) ;(15:52:16:903545, 3c4c4a94, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 13
+complex | 15:52:16:916971 | AND(A,B) | 2 | (15:52:13:899714, 940bf73f, A) ;(15:52:16:903545, 3c4c4a94, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 13
+simple | eed2fbf3 | 15:52:19:904340 | A was received at: 15:52:19:905088
+complex | 15:52:19:918927 | AND(A,B) | 2 | (15:51:21:851500, 17aa89dd, B) ;(15:52:19:904340, eed2fbf3, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 14
+complex | 15:52:19:920326 | AND(A,B) | 2 | (15:51:26:855334, 7e8bd034, B) ;(15:52:19:904340, eed2fbf3, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 15
+complex | 15:52:19:921295 | AND(A,B) | 2 | (15:51:29:857942, 100dc6ba, B) ;(15:52:19:904340, eed2fbf3, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 16
+complex | 15:52:19:922616 | AND(A,B) | 2 | (15:51:55:883025, 4e080f2d, B) ;(15:52:19:904340, eed2fbf3, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 18
+complex | 15:52:19:923241 | AND(A,B) | 2 | (15:52:01:885391, 3fd6d6e5, B) ;(15:52:19:904340, eed2fbf3, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 18
+complex | 15:52:19:923763 | AND(A,B) | 2 | (15:52:16:903545, 3c4c4a94, B) ;(15:52:19:904340, eed2fbf3, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 19
+simple | 8dcb53a5 | 15:52:20:905989 | B was received at: 15:52:20:906751
+complex | 15:52:20:920237 | AND(A,B) | 2 | (15:51:23:853226, eb1b1071, A) ;(15:52:20:905989, 8dcb53a5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 14
+complex | 15:52:20:921434 | AND(A,B) | 2 | (15:51:30:859406, be2328d1, A) ;(15:52:20:905989, 8dcb53a5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 15
+complex | 15:52:20:921988 | AND(A,B) | 2 | (15:51:55:882381, 23e8d3c3, A) ;(15:52:20:905989, 8dcb53a5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 15
+complex | 15:52:20:922615 | AND(A,B) | 2 | (15:52:07:891263, 83fffd37, A) ;(15:52:20:905989, 8dcb53a5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 16
+complex | 15:52:20:923937 | AND(A,B) | 2 | (15:52:10:895870, 38165123, A) ;(15:52:20:905989, 8dcb53a5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 17
+complex | 15:52:20:924434 | AND(A,B) | 2 | (15:52:13:899714, 940bf73f, A) ;(15:52:20:905989, 8dcb53a5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 18
+simple | 103f16fa | 15:52:28:913619 | A was received at: 15:52:28:914439
+complex | 15:52:28:932807 | AND(A,B) | 2 | (15:51:29:857942, 100dc6ba, B) ;(15:52:28:913619, 103f16fa, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 19
+complex | 15:52:28:935043 | AND(A,B) | 2 | (15:51:43:870958, 8f3fdf6a, B) ;(15:52:28:913619, 103f16fa, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 21
+complex | 15:52:28:936086 | AND(A,B) | 2 | (15:51:55:883025, 4e080f2d, B) ;(15:52:28:913619, 103f16fa, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 22
+simple | 20d56929 | 15:52:29:915165 | B was received at: 15:52:29:915518
+complex | 15:52:29:930635 | AND(A,B) | 2 | (15:51:33:863933, 7182c21f, A) ;(15:52:29:915165, 20d56929, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 15
+complex | 15:52:29:930899 | AND(A,B) | 2 | (15:51:55:882381, 23e8d3c3, A) ;(15:52:29:915165, 20d56929, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 15
+complex | 15:52:29:943647 | AND(A,B) | 2 | (15:52:07:891263, 83fffd37, A) ;(15:52:29:915165, 20d56929, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 28
+complex | 15:52:29:943896 | AND(A,B) | 2 | (15:52:08:893406, 853a23e5, A) ;(15:52:29:915165, 20d56929, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 28
+complex | 15:52:29:944213 | AND(A,B) | 2 | (15:52:12:898511, 960bf886, A) ;(15:52:29:915165, 20d56929, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 29
+complex | 15:52:29:944415 | AND(A,B) | 2 | (15:52:15:902079, c789632e, A) ;(15:52:29:915165, 20d56929, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 29
+complex | 15:52:29:944609 | AND(A,B) | 2 | (15:52:28:913619, 103f16fa, A) ;(15:52:29:915165, 20d56929, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 29
+simple | f7936d06 | 15:52:32:916993 | A was received at: 15:52:32:917730
+complex | 15:52:32:938919 | AND(A,B) | 2 | (15:51:43:870958, 8f3fdf6a, B) ;(15:52:32:916993, f7936d06, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 21
+complex | 15:52:32:940210 | AND(A,B) | 2 | (15:51:49:875180, 801126de, B) ;(15:52:32:916993, f7936d06, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 23
+complex | 15:52:32:940799 | AND(A,B) | 2 | (15:51:55:883025, 4e080f2d, B) ;(15:52:32:916993, f7936d06, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 23
+complex | 15:52:32:941466 | AND(A,B) | 2 | (15:52:01:885391, 3fd6d6e5, B) ;(15:52:32:916993, f7936d06, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 24
+complex | 15:52:32:941933 | AND(A,B) | 2 | (15:52:16:903545, 3c4c4a94, B) ;(15:52:32:916993, f7936d06, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 24
+complex | 15:52:32:942334 | AND(A,B) | 2 | (15:52:20:905989, 8dcb53a5, B) ;(15:52:32:916993, f7936d06, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 25
+simple | 99a948a6 | 15:52:34:919279 | B was received at: 15:52:34:920122
+complex | 15:52:34:943462 | AND(A,B) | 2 | (15:51:55:882381, 23e8d3c3, A) ;(15:52:34:919279, 99a948a6, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 24
+complex | 15:52:34:945805 | AND(A,B) | 2 | (15:52:04:887620, 01465f12, A) ;(15:52:34:919279, 99a948a6, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+complex | 15:52:34:946274 | AND(A,B) | 2 | (15:52:08:893406, 853a23e5, A) ;(15:52:34:919279, 99a948a6, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+complex | 15:52:34:946715 | AND(A,B) | 2 | (15:52:13:899714, 940bf73f, A) ;(15:52:34:919279, 99a948a6, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+complex | 15:52:34:947080 | AND(A,B) | 2 | (15:52:15:902079, c789632e, A) ;(15:52:34:919279, 99a948a6, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+complex | 15:52:34:947556 | AND(A,B) | 2 | (15:52:28:913619, 103f16fa, A) ;(15:52:34:919279, 99a948a6, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 28
+simple | 5f2788f3 | 15:52:36:920712 | B was received at: 15:52:36:921744
+complex | 15:52:36:947174 | AND(A,B) | 2 | (15:51:39:867140, 90a8b523, A) ;(15:52:36:920712, 5f2788f3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+complex | 15:52:36:948631 | AND(A,B) | 2 | (15:51:40:868453, da28ec8f, A) ;(15:52:36:920712, 5f2788f3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+complex | 15:52:36:949067 | AND(A,B) | 2 | (15:51:52:878605, 6392b994, A) ;(15:52:36:920712, 5f2788f3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 28
+complex | 15:52:36:949416 | AND(A,B) | 2 | (15:51:55:882381, 23e8d3c3, A) ;(15:52:36:920712, 5f2788f3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 28
+complex | 15:52:36:950058 | AND(A,B) | 2 | (15:52:04:887620, 01465f12, A) ;(15:52:36:920712, 5f2788f3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 29
+complex | 15:52:36:951422 | AND(A,B) | 2 | (15:52:07:891263, 83fffd37, A) ;(15:52:36:920712, 5f2788f3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 30
+complex | 15:52:36:951900 | AND(A,B) | 2 | (15:52:08:893406, 853a23e5, A) ;(15:52:36:920712, 5f2788f3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 31
+complex | 15:52:36:952383 | AND(A,B) | 2 | (15:52:10:895870, 38165123, A) ;(15:52:36:920712, 5f2788f3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 31
+complex | 15:52:36:952814 | AND(A,B) | 2 | (15:52:12:898511, 960bf886, A) ;(15:52:36:920712, 5f2788f3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 32
+complex | 15:52:36:953233 | AND(A,B) | 2 | (15:52:15:902079, c789632e, A) ;(15:52:36:920712, 5f2788f3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 32
+complex | 15:52:36:953654 | AND(A,B) | 2 | (15:52:32:916993, f7936d06, A) ;(15:52:36:920712, 5f2788f3, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 32
+simple | b9af19c9 | 15:52:37:922160 | B was received at: 15:52:37:923053
+complex | 15:52:37:952584 | AND(A,B) | 2 | (15:51:39:867140, 90a8b523, A) ;(15:52:37:922160, b9af19c9, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 30
+complex | 15:52:37:954140 | AND(A,B) | 2 | (15:51:52:878605, 6392b994, A) ;(15:52:37:922160, b9af19c9, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 31
+complex | 15:52:37:954649 | AND(A,B) | 2 | (15:51:52:879298, 81274fda, A) ;(15:52:37:922160, b9af19c9, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 32
+complex | 15:52:37:954899 | AND(A,B) | 2 | (15:51:55:882381, 23e8d3c3, A) ;(15:52:37:922160, b9af19c9, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 32
+complex | 15:52:37:955058 | AND(A,B) | 2 | (15:52:04:887620, 01465f12, A) ;(15:52:37:922160, b9af19c9, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 32
+complex | 15:52:37:957919 | AND(A,B) | 2 | (15:52:10:895870, 38165123, A) ;(15:52:37:922160, b9af19c9, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 35
+complex | 15:52:37:958221 | AND(A,B) | 2 | (15:52:13:899714, 940bf73f, A) ;(15:52:37:922160, b9af19c9, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+complex | 15:52:37:958333 | AND(A,B) | 2 | (15:52:28:913619, 103f16fa, A) ;(15:52:37:922160, b9af19c9, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+simple | 108d6d11 | 15:52:40:923158 | A was received at: 15:52:40:923867
+simple | 45d54e96 | 15:52:40:923442 | B was received at: 15:52:40:924056
+complex | 15:52:40:949577 | AND(A,B) | 2 | (15:51:43:870958, 8f3fdf6a, B) ;(15:52:40:923158, 108d6d11, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+complex | 15:52:40:949837 | AND(A,B) | 2 | (15:52:20:905989, 8dcb53a5, B) ;(15:52:40:923158, 108d6d11, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+complex | 15:52:40:949968 | AND(A,B) | 2 | (15:52:29:915165, 20d56929, B) ;(15:52:40:923158, 108d6d11, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+complex | 15:52:40:950075 | AND(A,B) | 2 | (15:52:34:919279, 99a948a6, B) ;(15:52:40:923158, 108d6d11, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+complex | 15:52:40:950173 | AND(A,B) | 2 | (15:52:36:920712, 5f2788f3, B) ;(15:52:40:923158, 108d6d11, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+complex | 15:52:40:950277 | AND(A,B) | 2 | (15:52:37:922160, b9af19c9, B) ;(15:52:40:923158, 108d6d11, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+complex | 15:52:40:952076 | AND(A,B) | 2 | (15:52:04:887620, 01465f12, A) ;(15:52:40:923442, 45d54e96, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 28
+complex | 15:52:40:955992 | AND(A,B) | 2 | (15:52:28:913619, 103f16fa, A) ;(15:52:40:923442, 45d54e96, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 32
+complex | 15:52:40:956949 | AND(A,B) | 2 | (15:52:40:923158, 108d6d11, A) ;(15:52:40:923442, 45d54e96, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 33
+simple | 87b692d2 | 15:52:44:927686 | B was received at: 15:52:44:928012
+complex | 15:52:44:954334 | AND(A,B) | 2 | (15:51:52:878605, 6392b994, A) ;(15:52:44:927686, 87b692d2, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+complex | 15:52:44:954591 | AND(A,B) | 2 | (15:51:52:879298, 81274fda, A) ;(15:52:44:927686, 87b692d2, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+complex | 15:52:44:954712 | AND(A,B) | 2 | (15:52:13:899714, 940bf73f, A) ;(15:52:44:927686, 87b692d2, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+complex | 15:52:44:954851 | AND(A,B) | 2 | (15:52:15:902079, c789632e, A) ;(15:52:44:927686, 87b692d2, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+complex | 15:52:44:954963 | AND(A,B) | 2 | (15:52:19:904340, eed2fbf3, A) ;(15:52:44:927686, 87b692d2, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+complex | 15:52:44:955088 | AND(A,B) | 2 | (15:52:32:916993, f7936d06, A) ;(15:52:44:927686, 87b692d2, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+simple | af4f08b7 | 15:52:53:936060 | A was received at: 15:52:53:936381
+complex | 15:52:53:966866 | AND(A,B) | 2 | (15:52:20:905989, 8dcb53a5, B) ;(15:52:53:936060, af4f08b7, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 30
+complex | 15:52:53:967169 | AND(A,B) | 2 | (15:52:34:919279, 99a948a6, B) ;(15:52:53:936060, af4f08b7, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 31
+simple | 612b1381 | 15:52:55:938403 | A was received at: 15:52:55:939873
+complex | 15:52:55:972869 | AND(A,B) | 2 | (15:52:01:885391, 3fd6d6e5, B) ;(15:52:55:938403, 612b1381, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 34
+complex | 15:52:55:973983 | AND(A,B) | 2 | (15:52:16:903545, 3c4c4a94, B) ;(15:52:55:938403, 612b1381, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 35
+complex | 15:52:55:975220 | AND(A,B) | 2 | (15:52:20:905989, 8dcb53a5, B) ;(15:52:55:938403, 612b1381, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+complex | 15:52:55:976348 | AND(A,B) | 2 | (15:52:29:915165, 20d56929, B) ;(15:52:55:938403, 612b1381, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 37
+complex | 15:52:55:977486 | AND(A,B) | 2 | (15:52:36:920712, 5f2788f3, B) ;(15:52:55:938403, 612b1381, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 39
+complex | 15:52:55:981179 | AND(A,B) | 2 | (15:52:37:922160, b9af19c9, B) ;(15:52:55:938403, 612b1381, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 42
+complex | 15:52:55:983615 | AND(A,B) | 2 | (15:52:40:923442, 45d54e96, B) ;(15:52:55:938403, 612b1381, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 45
+complex | 15:52:55:984947 | AND(A,B) | 2 | (15:52:44:927686, 87b692d2, B) ;(15:52:55:938403, 612b1381, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 46
+simple | 3bd7aded | 15:52:56:939243 | B was received at: 15:52:56:940435
+complex | 15:52:56:970697 | AND(A,B) | 2 | (15:52:10:895870, 38165123, A) ;(15:52:56:939243, 3bd7aded, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 31
+complex | 15:52:56:970979 | AND(A,B) | 2 | (15:52:12:898511, 960bf886, A) ;(15:52:56:939243, 3bd7aded, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 31
+complex | 15:52:56:975524 | AND(A,B) | 2 | (15:52:13:899714, 940bf73f, A) ;(15:52:56:939243, 3bd7aded, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+complex | 15:52:56:976187 | AND(A,B) | 2 | (15:52:19:904340, eed2fbf3, A) ;(15:52:56:939243, 3bd7aded, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+complex | 15:52:56:976746 | AND(A,B) | 2 | (15:52:28:913619, 103f16fa, A) ;(15:52:56:939243, 3bd7aded, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 37
+complex | 15:52:56:977396 | AND(A,B) | 2 | (15:52:32:916993, f7936d06, A) ;(15:52:56:939243, 3bd7aded, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 38
+simple | cb2b3749 | 15:52:57:940895 | B was received at: 15:52:57:941375
+complex | 15:52:57:974526 | AND(A,B) | 2 | (15:52:07:891263, 83fffd37, A) ;(15:52:57:940895, cb2b3749, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 33
+complex | 15:52:57:977106 | AND(A,B) | 2 | (15:52:08:893406, 853a23e5, A) ;(15:52:57:940895, cb2b3749, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+complex | 15:52:57:977430 | AND(A,B) | 2 | (15:52:12:898511, 960bf886, A) ;(15:52:57:940895, cb2b3749, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+complex | 15:52:57:977687 | AND(A,B) | 2 | (15:52:15:902079, c789632e, A) ;(15:52:57:940895, cb2b3749, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+complex | 15:52:57:977906 | AND(A,B) | 2 | (15:52:19:904340, eed2fbf3, A) ;(15:52:57:940895, cb2b3749, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 37
+complex | 15:52:57:978180 | AND(A,B) | 2 | (15:52:28:913619, 103f16fa, A) ;(15:52:57:940895, cb2b3749, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 37
+complex | 15:52:57:978432 | AND(A,B) | 2 | (15:52:32:916993, f7936d06, A) ;(15:52:57:940895, cb2b3749, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 37
+complex | 15:52:57:978985 | AND(A,B) | 2 | (15:52:40:923158, 108d6d11, A) ;(15:52:57:940895, cb2b3749, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 38
+complex | 15:52:57:979218 | AND(A,B) | 2 | (15:52:53:936060, af4f08b7, A) ;(15:52:57:940895, cb2b3749, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 38
+simple | be7bab1e | 15:53:05:947329 | B was received at: 15:53:05:948571
+complex | 15:53:05:982962 | AND(A,B) | 2 | (15:52:07:891263, 83fffd37, A) ;(15:53:05:947329, be7bab1e, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 35
+complex | 15:53:05:983293 | AND(A,B) | 2 | (15:52:10:895870, 38165123, A) ;(15:53:05:947329, be7bab1e, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 35
+complex | 15:53:05:983411 | AND(A,B) | 2 | (15:52:15:902079, c789632e, A) ;(15:53:05:947329, be7bab1e, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+complex | 15:53:05:983521 | AND(A,B) | 2 | (15:52:32:916993, f7936d06, A) ;(15:53:05:947329, be7bab1e, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+complex | 15:53:05:983673 | AND(A,B) | 2 | (15:52:55:938403, 612b1381, A) ;(15:53:05:947329, be7bab1e, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+simple | c3cc549a | 15:53:17:959297 | A was received at: 15:53:17:960216
+complex | 15:53:18:001746 | AND(A,B) | 2 | (15:52:20:905989, 8dcb53a5, B) ;(15:53:17:959297, c3cc549a, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 42
+complex | 15:53:18:003968 | AND(A,B) | 2 | (15:52:40:923442, 45d54e96, B) ;(15:53:17:959297, c3cc549a, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 44
+complex | 15:53:18:004432 | AND(A,B) | 2 | (15:52:44:927686, 87b692d2, B) ;(15:53:17:959297, c3cc549a, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 45
+complex | 15:53:18:005457 | AND(A,B) | 2 | (15:52:56:939243, 3bd7aded, B) ;(15:53:17:959297, c3cc549a, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 46
+simple | a5c8dca6 | 15:53:19:960235 | A was received at: 15:53:19:961191
+complex | 15:53:20:007347 | AND(A,B) | 2 | (15:52:20:905989, 8dcb53a5, B) ;(15:53:19:960235, a5c8dca6, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 47
+complex | 15:53:20:007641 | AND(A,B) | 2 | (15:52:29:915165, 20d56929, B) ;(15:53:19:960235, a5c8dca6, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 47
+complex | 15:53:20:007826 | AND(A,B) | 2 | (15:52:34:919279, 99a948a6, B) ;(15:53:19:960235, a5c8dca6, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 47
+complex | 15:53:20:007975 | AND(A,B) | 2 | (15:52:36:920712, 5f2788f3, B) ;(15:53:19:960235, a5c8dca6, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 47
+complex | 15:53:20:008128 | AND(A,B) | 2 | (15:52:40:923442, 45d54e96, B) ;(15:53:19:960235, a5c8dca6, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 47
+complex | 15:53:20:008285 | AND(A,B) | 2 | (15:52:56:939243, 3bd7aded, B) ;(15:53:19:960235, a5c8dca6, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+complex | 15:53:20:008480 | AND(A,B) | 2 | (15:52:57:940895, cb2b3749, B) ;(15:53:19:960235, a5c8dca6, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+complex | 15:53:20:008647 | AND(A,B) | 2 | (15:53:05:947329, be7bab1e, B) ;(15:53:19:960235, a5c8dca6, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+simple | d0c89856 | 15:53:22:963553 | A was received at: 15:53:22:965252
+complex | 15:53:23:011186 | AND(A,B) | 2 | (15:52:29:915165, 20d56929, B) ;(15:53:22:963553, d0c89856, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 47
+complex | 15:53:23:011423 | AND(A,B) | 2 | (15:52:34:919279, 99a948a6, B) ;(15:53:22:963553, d0c89856, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 47
+complex | 15:53:23:011556 | AND(A,B) | 2 | (15:52:40:923442, 45d54e96, B) ;(15:53:22:963553, d0c89856, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+complex | 15:53:23:011673 | AND(A,B) | 2 | (15:52:57:940895, cb2b3749, B) ;(15:53:22:963553, d0c89856, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+complex | 15:53:23:011790 | AND(A,B) | 2 | (15:53:05:947329, be7bab1e, B) ;(15:53:22:963553, d0c89856, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+simple | 8cfdee6b | 15:53:23:965248 | B was received at: 15:53:23:966385
+simple | fb6b80de | 15:53:23:967448 | B was received at: 15:53:23:968219
+complex | 15:53:24:013138 | AND(A,B) | 2 | (15:52:55:938403, 612b1381, A) ;(15:53:23:965248, 8cfdee6b, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 47
+complex | 15:53:24:013495 | AND(A,B) | 2 | (15:53:17:959297, c3cc549a, A) ;(15:53:23:965248, 8cfdee6b, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+complex | 15:53:24:013654 | AND(A,B) | 2 | (15:53:19:960235, a5c8dca6, A) ;(15:53:23:965248, 8cfdee6b, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+complex | 15:53:24:016030 | AND(A,B) | 2 | (15:52:55:938403, 612b1381, A) ;(15:53:23:967448, fb6b80de, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+complex | 15:53:24:016367 | AND(A,B) | 2 | (15:53:17:959297, c3cc549a, A) ;(15:53:23:967448, fb6b80de, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+complex | 15:53:24:016546 | AND(A,B) | 2 | (15:53:22:963553, d0c89856, A) ;(15:53:23:967448, fb6b80de, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 49
+simple | 4135849f | 15:53:24:969108 | B was received at: 15:53:24:969374
+complex | 15:53:25:016013 | AND(A,B) | 2 | (15:52:28:913619, 103f16fa, A) ;(15:53:24:969108, 4135849f, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 46
+complex | 15:53:25:016225 | AND(A,B) | 2 | (15:52:32:916993, f7936d06, A) ;(15:53:24:969108, 4135849f, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 47
+complex | 15:53:25:016315 | AND(A,B) | 2 | (15:52:53:936060, af4f08b7, A) ;(15:53:24:969108, 4135849f, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 47
+complex | 15:53:25:016391 | AND(A,B) | 2 | (15:53:17:959297, c3cc549a, A) ;(15:53:24:969108, 4135849f, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 47
+complex | 15:53:25:016463 | AND(A,B) | 2 | (15:53:19:960235, a5c8dca6, A) ;(15:53:24:969108, 4135849f, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 47
+simple | 54bae3d9 | 15:53:26:971207 | A was received at: 15:53:26:972927
+complex | 15:53:27:016702 | AND(A,B) | 2 | (15:52:29:915165, 20d56929, B) ;(15:53:26:971207, 54bae3d9, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 45
+complex | 15:53:27:016925 | AND(A,B) | 2 | (15:52:34:919279, 99a948a6, B) ;(15:53:26:971207, 54bae3d9, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 45
+complex | 15:53:27:017018 | AND(A,B) | 2 | (15:52:36:920712, 5f2788f3, B) ;(15:53:26:971207, 54bae3d9, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 45
+complex | 15:53:27:017118 | AND(A,B) | 2 | (15:52:44:927686, 87b692d2, B) ;(15:53:26:971207, 54bae3d9, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 45
+complex | 15:53:27:017211 | AND(A,B) | 2 | (15:52:56:939243, 3bd7aded, B) ;(15:53:26:971207, 54bae3d9, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 46
+complex | 15:53:27:017306 | AND(A,B) | 2 | (15:52:57:940895, cb2b3749, B) ;(15:53:26:971207, 54bae3d9, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 46
+complex | 15:53:27:017388 | AND(A,B) | 2 | (15:53:05:947329, be7bab1e, B) ;(15:53:26:971207, 54bae3d9, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 46
+complex | 15:53:27:017460 | AND(A,B) | 2 | (15:53:23:965248, 8cfdee6b, B) ;(15:53:26:971207, 54bae3d9, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 46
+complex | 15:53:27:017536 | AND(A,B) | 2 | (15:53:23:967448, fb6b80de, B) ;(15:53:26:971207, 54bae3d9, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 46
+simple | 5e183266 | 15:53:29:972696 | A was received at: 15:53:29:973067
+complex | 15:53:30:021045 | AND(A,B) | 2 | (15:52:34:919279, 99a948a6, B) ;(15:53:29:972696, 5e183266, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+complex | 15:53:30:021298 | AND(A,B) | 2 | (15:52:36:920712, 5f2788f3, B) ;(15:53:29:972696, 5e183266, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+complex | 15:53:30:021450 | AND(A,B) | 2 | (15:52:37:922160, b9af19c9, B) ;(15:53:29:972696, 5e183266, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+complex | 15:53:30:021553 | AND(A,B) | 2 | (15:52:44:927686, 87b692d2, B) ;(15:53:29:972696, 5e183266, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+complex | 15:53:30:021664 | AND(A,B) | 2 | (15:53:05:947329, be7bab1e, B) ;(15:53:29:972696, 5e183266, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+complex | 15:53:30:021759 | AND(A,B) | 2 | (15:53:23:965248, 8cfdee6b, B) ;(15:53:29:972696, 5e183266, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 49
+complex | 15:53:30:021853 | AND(A,B) | 2 | (15:53:24:969108, 4135849f, B) ;(15:53:29:972696, 5e183266, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 49
+simple | f5fc2741 | 15:53:41:977809 | A was received at: 15:53:41:978879
+complex | 15:53:42:040712 | AND(A,B) | 2 | (15:52:44:927686, 87b692d2, B) ;(15:53:41:977809, f5fc2741, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 62
+complex | 15:53:42:041844 | AND(A,B) | 2 | (15:53:23:967448, fb6b80de, B) ;(15:53:41:977809, f5fc2741, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 64
+simple | 7139fc41 | 15:53:43:979749 | A was received at: 15:53:43:980015
+complex | 15:53:44:043351 | AND(A,B) | 2 | (15:52:44:927686, 87b692d2, B) ;(15:53:43:979749, 7139fc41, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 63
+complex | 15:53:44:043629 | AND(A,B) | 2 | (15:52:57:940895, cb2b3749, B) ;(15:53:43:979749, 7139fc41, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 63
+complex | 15:53:44:043758 | AND(A,B) | 2 | (15:53:23:965248, 8cfdee6b, B) ;(15:53:43:979749, 7139fc41, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 64
+complex | 15:53:44:043872 | AND(A,B) | 2 | (15:53:23:967448, fb6b80de, B) ;(15:53:43:979749, 7139fc41, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 64
+complex | 15:53:44:043984 | AND(A,B) | 2 | (15:53:24:969108, 4135849f, B) ;(15:53:43:979749, 7139fc41, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 64
+simple | 2124f1ae | 15:53:47:983734 | A was received at: 15:53:47:984306
+complex | 15:53:48:048027 | AND(A,B) | 2 | (15:52:56:939243, 3bd7aded, B) ;(15:53:47:983734, 2124f1ae, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 64
+complex | 15:53:48:048285 | AND(A,B) | 2 | (15:52:57:940895, cb2b3749, B) ;(15:53:47:983734, 2124f1ae, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 64
+complex | 15:53:48:048459 | AND(A,B) | 2 | (15:53:24:969108, 4135849f, B) ;(15:53:47:983734, 2124f1ae, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 64
+simple | a457618e | 15:53:52:987172 | A was received at: 15:53:52:987620
+simple | 5e419078 | 15:53:52:987515 | A was received at: 15:53:52:988018
+complex | 15:53:53:055657 | AND(A,B) | 2 | (15:53:23:965248, 8cfdee6b, B) ;(15:53:52:987172, a457618e, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 68
+complex | 15:53:53:056002 | AND(A,B) | 2 | (15:53:23:967448, fb6b80de, B) ;(15:53:52:987172, a457618e, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 68
+complex | 15:53:53:059244 | AND(A,B) | 2 | (15:52:56:939243, 3bd7aded, B) ;(15:53:52:987515, 5e419078, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 71
+complex | 15:53:53:059612 | AND(A,B) | 2 | (15:52:57:940895, cb2b3749, B) ;(15:53:52:987515, 5e419078, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:53:53:059828 | AND(A,B) | 2 | (15:53:23:967448, fb6b80de, B) ;(15:53:52:987515, 5e419078, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+simple | ff56fd77 | 15:53:53:987944 | A was received at: 15:53:53:988620
+complex | 15:53:54:058708 | AND(A,B) | 2 | (15:52:56:939243, 3bd7aded, B) ;(15:53:53:987944, ff56fd77, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 70
+complex | 15:53:54:059019 | AND(A,B) | 2 | (15:53:05:947329, be7bab1e, B) ;(15:53:53:987944, ff56fd77, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 71
+complex | 15:53:54:059168 | AND(A,B) | 2 | (15:53:23:965248, 8cfdee6b, B) ;(15:53:53:987944, ff56fd77, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 71
+simple | fa1e73cf | 15:53:55:990182 | A was received at: 15:53:55:990935
+simple | dac1a8c4 | 15:53:57:992583 | A was received at: 15:53:57:993689
+complex | 15:53:58:063059 | AND(A,B) | 2 | (15:53:05:947329, be7bab1e, B) ;(15:53:57:992583, dac1a8c4, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 70
+simple | 1223bcf4 | 15:53:58:994543 | A was received at: 15:53:58:996008
+complex | 15:53:59:064885 | AND(A,B) | 2 | (15:53:23:965248, 8cfdee6b, B) ;(15:53:58:994543, 1223bcf4, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 70
+complex | 15:53:59:065233 | AND(A,B) | 2 | (15:53:23:967448, fb6b80de, B) ;(15:53:58:994543, 1223bcf4, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 70
+complex | 15:53:59:065428 | AND(A,B) | 2 | (15:53:24:969108, 4135849f, B) ;(15:53:58:994543, 1223bcf4, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 70
+simple | c006a56a | 15:54:07:000273 | A was received at: 15:54:07:000815
+complex | 15:54:07:079062 | AND(A,B) | 2 | (15:53:23:967448, fb6b80de, B) ;(15:54:07:000273, c006a56a, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 78
+complex | 15:54:07:079372 | AND(A,B) | 2 | (15:53:24:969108, 4135849f, B) ;(15:54:07:000273, c006a56a, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 79
+simple | 4a7fc3df | 15:54:10:003165 | A was received at: 15:54:10:003526
+complex | 15:54:10:082908 | AND(A,B) | 2 | (15:53:23:967448, fb6b80de, B) ;(15:54:10:003165, 4a7fc3df, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 79
+complex | 15:54:10:083234 | AND(A,B) | 2 | (15:53:24:969108, 4135849f, B) ;(15:54:10:003165, 4a7fc3df, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 80
+simple | a0005d43 | 15:54:12:004050 | A was received at: 15:54:12:005018
+complex | 15:54:12:085219 | AND(A,B) | 2 | (15:53:24:969108, 4135849f, B) ;(15:54:12:004050, a0005d43, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 81
+simple | 27e07132 | 15:54:13:005720 | A was received at: 15:54:13:006912
+complex | 15:54:13:089537 | AND(A,B) | 2 | (15:53:23:965248, 8cfdee6b, B) ;(15:54:13:005720, 27e07132, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 83
+complex | 15:54:13:090875 | AND(A,B) | 2 | (15:53:24:969108, 4135849f, B) ;(15:54:13:005720, 27e07132, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 85
+simple | b1493aae | 15:54:14:007809 | A was received at: 15:54:14:008138
+complex | 15:54:14:089082 | AND(A,B) | 2 | (15:53:23:965248, 8cfdee6b, B) ;(15:54:14:007809, b1493aae, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 81
+simple | e02927d1 | 15:54:20:009853 | A was received at: 15:54:20:010146
+complex | 15:54:20:098351 | AND(A,B) | 2 | (15:53:23:965248, 8cfdee6b, B) ;(15:54:20:009853, e02927d1, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 88
+complex | 15:54:20:098586 | AND(A,B) | 2 | (15:53:23:967448, fb6b80de, B) ;(15:54:20:009853, e02927d1, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 88
+complex | 15:54:20:098700 | AND(A,B) | 2 | (15:53:24:969108, 4135849f, B) ;(15:54:20:009853, e02927d1, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 88
+simple | ec76db8f | 15:54:24:014009 | A was received at: 15:54:24:014913
+complex | 15:54:24:104461 | AND(A,B) | 2 | (15:53:24:969108, 4135849f, B) ;(15:54:24:014009, ec76db8f, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 90
+simple | 5ca2fecd | 15:54:25:015776 | B was received at: 15:54:25:016518
+complex | 15:54:25:107634 | AND(A,B) | 2 | (15:53:29:972696, 5e183266, A) ;(15:54:25:015776, 5ca2fecd, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 91
+complex | 15:54:25:110575 | AND(A,B) | 2 | (15:53:41:977809, f5fc2741, A) ;(15:54:25:015776, 5ca2fecd, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 94
+complex | 15:54:25:111872 | AND(A,B) | 2 | (15:53:43:979749, 7139fc41, A) ;(15:54:25:015776, 5ca2fecd, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 96
+complex | 15:54:25:112868 | AND(A,B) | 2 | (15:53:47:983734, 2124f1ae, A) ;(15:54:25:015776, 5ca2fecd, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 97
+complex | 15:54:25:113327 | AND(A,B) | 2 | (15:53:53:987944, ff56fd77, A) ;(15:54:25:015776, 5ca2fecd, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 97
+complex | 15:54:25:113842 | AND(A,B) | 2 | (15:53:55:990182, fa1e73cf, A) ;(15:54:25:015776, 5ca2fecd, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 98
+complex | 15:54:25:114369 | AND(A,B) | 2 | (15:53:57:992583, dac1a8c4, A) ;(15:54:25:015776, 5ca2fecd, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 98
+complex | 15:54:25:114785 | AND(A,B) | 2 | (15:53:58:994543, 1223bcf4, A) ;(15:54:25:015776, 5ca2fecd, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 99
+complex | 15:54:25:115288 | AND(A,B) | 2 | (15:54:07:000273, c006a56a, A) ;(15:54:25:015776, 5ca2fecd, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 99
+complex | 15:54:25:115941 | AND(A,B) | 2 | (15:54:14:007809, b1493aae, A) ;(15:54:25:015776, 5ca2fecd, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 100
+complex | 15:54:25:116620 | AND(A,B) | 2 | (15:54:24:014009, ec76db8f, A) ;(15:54:25:015776, 5ca2fecd, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 100
+simple | c5fee537 | 15:54:27:018025 | B was received at: 15:54:27:018790
+complex | 15:54:27:110625 | AND(A,B) | 2 | (15:53:29:972696, 5e183266, A) ;(15:54:27:018025, c5fee537, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 92
+complex | 15:54:27:110922 | AND(A,B) | 2 | (15:53:41:977809, f5fc2741, A) ;(15:54:27:018025, c5fee537, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 92
+complex | 15:54:27:111158 | AND(A,B) | 2 | (15:53:47:983734, 2124f1ae, A) ;(15:54:27:018025, c5fee537, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 93
+complex | 15:54:27:111350 | AND(A,B) | 2 | (15:53:53:987944, ff56fd77, A) ;(15:54:27:018025, c5fee537, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 93
+complex | 15:54:27:111495 | AND(A,B) | 2 | (15:53:57:992583, dac1a8c4, A) ;(15:54:27:018025, c5fee537, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 93
+complex | 15:54:27:111635 | AND(A,B) | 2 | (15:53:58:994543, 1223bcf4, A) ;(15:54:27:018025, c5fee537, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 93
+complex | 15:54:27:111791 | AND(A,B) | 2 | (15:54:10:003165, 4a7fc3df, A) ;(15:54:27:018025, c5fee537, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 93
+complex | 15:54:27:111910 | AND(A,B) | 2 | (15:54:12:004050, a0005d43, A) ;(15:54:27:018025, c5fee537, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 93
+complex | 15:54:27:112032 | AND(A,B) | 2 | (15:54:14:007809, b1493aae, A) ;(15:54:27:018025, c5fee537, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 94
+complex | 15:54:27:112155 | AND(A,B) | 2 | (15:54:20:009853, e02927d1, A) ;(15:54:27:018025, c5fee537, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 94
+simple | 035f2927 | 15:54:28:019179 | A was received at: 15:54:28:019782
+complex | 15:54:28:112328 | AND(A,B) | 2 | (15:54:27:018025, c5fee537, B) ;(15:54:28:019179, 035f2927, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 93
+simple | 05b4a5db | 15:54:30:020606 | A was received at: 15:54:30:021056
+complex | 15:54:30:115412 | AND(A,B) | 2 | (15:54:25:015776, 5ca2fecd, B) ;(15:54:30:020606, 05b4a5db, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 94
+simple | 0ea0db6a | 15:54:37:028134 | A was received at: 15:54:37:029041
+complex | 15:54:37:125159 | AND(A,B) | 2 | (15:54:25:015776, 5ca2fecd, B) ;(15:54:37:028134, 0ea0db6a, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 97
+complex | 15:54:37:125400 | AND(A,B) | 2 | (15:54:27:018025, c5fee537, B) ;(15:54:37:028134, 0ea0db6a, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 97
+simple | 2aa3dda9 | 15:54:39:029773 | A was received at: 15:54:39:030707
+simple | 4420f30b | 15:54:41:031276 | A was received at: 15:54:41:031538
+complex | 15:54:41:131264 | AND(A,B) | 2 | (15:54:25:015776, 5ca2fecd, B) ;(15:54:41:031276, 4420f30b, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 99
+complex | 15:54:41:131484 | AND(A,B) | 2 | (15:54:27:018025, c5fee537, B) ;(15:54:41:031276, 4420f30b, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 100
+simple | 97682d7a | 15:54:42:032539 | A was received at: 15:54:42:032757
+simple | 78a76baa | 15:54:42:032700 | A was received at: 15:54:42:032976
+complex | 15:54:42:140180 | AND(A,B) | 2 | (15:54:27:018025, c5fee537, B) ;(15:54:42:032700, 78a76baa, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 107
+simple | f8201e73 | 15:54:47:036273 | A was received at: 15:54:47:037826
+complex | 15:54:47:143595 | AND(A,B) | 2 | (15:54:25:015776, 5ca2fecd, B) ;(15:54:47:036273, f8201e73, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 107
+simple | d24346ea | 15:54:48:037992 | A was received at: 15:54:48:038264
+complex | 15:54:48:043708 | AND(A,B) | 2 | (15:54:27:018025, c5fee537, B) ;(15:54:48:037992, d24346ea, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 5
+simple | d173cf85 | 15:54:52:041133 | A was received at: 15:54:52:041426
+simple | a38b77d2 | 15:54:57:044357 | A was received at: 15:54:57:044666
+complex | 15:54:57:059506 | AND(A,B) | 2 | (15:54:25:015776, 5ca2fecd, B) ;(15:54:57:044357, a38b77d2, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 15
+simple | 2894fdb3 | 15:54:58:045378 | A was received at: 15:54:58:045746
+simple | 14632ddd | 15:55:03:048668 | A was received at: 15:55:03:048941
+simple | c022d256 | 15:55:03:048871 | B was received at: 15:55:03:049169
+complex | 15:55:03:069152 | AND(A,B) | 2 | (15:54:25:015776, 5ca2fecd, B) ;(15:55:03:048668, 14632ddd, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 20
+complex | 15:55:03:070301 | AND(A,B) | 2 | (15:54:10:003165, 4a7fc3df, A) ;(15:55:03:048871, c022d256, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 21
+complex | 15:55:03:070437 | AND(A,B) | 2 | (15:54:12:004050, a0005d43, A) ;(15:55:03:048871, c022d256, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 21
+complex | 15:55:03:070508 | AND(A,B) | 2 | (15:54:13:005720, 27e07132, A) ;(15:55:03:048871, c022d256, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 21
+complex | 15:55:03:070596 | AND(A,B) | 2 | (15:54:14:007809, b1493aae, A) ;(15:55:03:048871, c022d256, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 21
+complex | 15:55:03:070663 | AND(A,B) | 2 | (15:54:20:009853, e02927d1, A) ;(15:55:03:048871, c022d256, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 21
+complex | 15:55:03:070726 | AND(A,B) | 2 | (15:54:24:014009, ec76db8f, A) ;(15:55:03:048871, c022d256, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 21
+complex | 15:55:03:070793 | AND(A,B) | 2 | (15:54:37:028134, 0ea0db6a, A) ;(15:55:03:048871, c022d256, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 21
+complex | 15:55:03:070861 | AND(A,B) | 2 | (15:54:39:029773, 2aa3dda9, A) ;(15:55:03:048871, c022d256, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 21
+complex | 15:55:03:070924 | AND(A,B) | 2 | (15:54:42:032539, 97682d7a, A) ;(15:55:03:048871, c022d256, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 22
+complex | 15:55:03:070988 | AND(A,B) | 2 | (15:54:48:037992, d24346ea, A) ;(15:55:03:048871, c022d256, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 22
+complex | 15:55:03:071051 | AND(A,B) | 2 | (15:54:52:041133, d173cf85, A) ;(15:55:03:048871, c022d256, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 22
+complex | 15:55:03:071154 | AND(A,B) | 2 | (15:54:57:044357, a38b77d2, A) ;(15:55:03:048871, c022d256, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 22
+complex | 15:55:03:071252 | AND(A,B) | 2 | (15:55:03:048668, 14632ddd, A) ;(15:55:03:048871, c022d256, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 22
+simple | f8fe35e5 | 15:55:05:049456 | A was received at: 15:55:05:049867
+simple | 96c465fa | 15:55:06:050689 | A was received at: 15:55:06:051224
+simple | 430c8b0a | 15:55:06:050927 | B was received at: 15:55:06:051433
+complex | 15:55:06:078228 | AND(A,B) | 2 | (15:54:25:015776, 5ca2fecd, B) ;(15:55:06:050689, 96c465fa, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+complex | 15:55:06:084053 | AND(A,B) | 2 | (15:54:20:009853, e02927d1, A) ;(15:55:06:050927, 430c8b0a, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 33
+complex | 15:55:06:085337 | AND(A,B) | 2 | (15:54:24:014009, ec76db8f, A) ;(15:55:06:050927, 430c8b0a, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 34
+complex | 15:55:06:086233 | AND(A,B) | 2 | (15:54:28:019179, 035f2927, A) ;(15:55:06:050927, 430c8b0a, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 35
+complex | 15:55:06:086991 | AND(A,B) | 2 | (15:54:30:020606, 05b4a5db, A) ;(15:55:06:050927, 430c8b0a, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+complex | 15:55:06:087536 | AND(A,B) | 2 | (15:54:37:028134, 0ea0db6a, A) ;(15:55:06:050927, 430c8b0a, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+complex | 15:55:06:087797 | AND(A,B) | 2 | (15:54:39:029773, 2aa3dda9, A) ;(15:55:06:050927, 430c8b0a, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+complex | 15:55:06:088037 | AND(A,B) | 2 | (15:54:42:032539, 97682d7a, A) ;(15:55:06:050927, 430c8b0a, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 37
+complex | 15:55:06:088398 | AND(A,B) | 2 | (15:54:42:032700, 78a76baa, A) ;(15:55:06:050927, 430c8b0a, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 37
+complex | 15:55:06:088651 | AND(A,B) | 2 | (15:54:52:041133, d173cf85, A) ;(15:55:06:050927, 430c8b0a, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 37
+complex | 15:55:06:088946 | AND(A,B) | 2 | (15:54:57:044357, a38b77d2, A) ;(15:55:06:050927, 430c8b0a, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 38
+complex | 15:55:06:095669 | AND(A,B) | 2 | (15:54:58:045378, 2894fdb3, A) ;(15:55:06:050927, 430c8b0a, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 44
+complex | 15:55:06:095813 | AND(A,B) | 2 | (15:55:03:048668, 14632ddd, A) ;(15:55:06:050927, 430c8b0a, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 44
+complex | 15:55:06:095934 | AND(A,B) | 2 | (15:55:05:049456, f8fe35e5, A) ;(15:55:06:050927, 430c8b0a, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 45
+complex | 15:55:06:096029 | AND(A,B) | 2 | (15:55:06:050689, 96c465fa, A) ;(15:55:06:050927, 430c8b0a, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 45
+simple | e7a339e9 | 15:55:07:051421 | B was received at: 15:55:07:052134
+complex | 15:55:07:075255 | AND(A,B) | 2 | (15:54:10:003165, 4a7fc3df, A) ;(15:55:07:051421, e7a339e9, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 23
+complex | 15:55:07:075464 | AND(A,B) | 2 | (15:54:13:005720, 27e07132, A) ;(15:55:07:051421, e7a339e9, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 24
+complex | 15:55:07:075575 | AND(A,B) | 2 | (15:54:14:007809, b1493aae, A) ;(15:55:07:051421, e7a339e9, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 24
+complex | 15:55:07:075664 | AND(A,B) | 2 | (15:54:20:009853, e02927d1, A) ;(15:55:07:051421, e7a339e9, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 24
+complex | 15:55:07:075755 | AND(A,B) | 2 | (15:54:30:020606, 05b4a5db, A) ;(15:55:07:051421, e7a339e9, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 24
+complex | 15:55:07:075833 | AND(A,B) | 2 | (15:54:41:031276, 4420f30b, A) ;(15:55:07:051421, e7a339e9, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 24
+complex | 15:55:07:075915 | AND(A,B) | 2 | (15:54:42:032539, 97682d7a, A) ;(15:55:07:051421, e7a339e9, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 24
+complex | 15:55:07:076009 | AND(A,B) | 2 | (15:54:47:036273, f8201e73, A) ;(15:55:07:051421, e7a339e9, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 24
+complex | 15:55:07:076090 | AND(A,B) | 2 | (15:54:57:044357, a38b77d2, A) ;(15:55:07:051421, e7a339e9, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 24
+complex | 15:55:07:076169 | AND(A,B) | 2 | (15:54:58:045378, 2894fdb3, A) ;(15:55:07:051421, e7a339e9, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 24
+complex | 15:55:07:076252 | AND(A,B) | 2 | (15:55:06:050689, 96c465fa, A) ;(15:55:07:051421, e7a339e9, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 24
+simple | af7c4a71 | 15:55:12:055216 | A was received at: 15:55:12:056001
+complex | 15:55:12:084580 | AND(A,B) | 2 | (15:54:27:018025, c5fee537, B) ;(15:55:12:055216, af7c4a71, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 29
+complex | 15:55:12:084838 | AND(A,B) | 2 | (15:55:03:048871, c022d256, B) ;(15:55:12:055216, af7c4a71, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 29
+simple | 1aba0668 | 15:55:13:057010 | A was received at: 15:55:13:058150
+simple | 0b7e7130 | 15:55:13:059802 | A was received at: 15:55:13:061189
+complex | 15:55:13:088157 | AND(A,B) | 2 | (15:54:25:015776, 5ca2fecd, B) ;(15:55:13:057010, 1aba0668, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 31
+complex | 15:55:13:088889 | AND(A,B) | 2 | (15:54:27:018025, c5fee537, B) ;(15:55:13:057010, 1aba0668, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 31
+complex | 15:55:13:177350 | AND(A,B) | 2 | (15:55:07:051421, e7a339e9, B) ;(15:55:13:057010, 1aba0668, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 120
+simple | 9279305e | 15:55:14:061303 | A was received at: 15:55:14:061857
+complex | 15:55:14:088041 | AND(A,B) | 2 | (15:54:25:015776, 5ca2fecd, B) ;(15:55:14:061303, 9279305e, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+complex | 15:55:14:088249 | AND(A,B) | 2 | (15:54:27:018025, c5fee537, B) ;(15:55:14:061303, 9279305e, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+complex | 15:55:14:088338 | AND(A,B) | 2 | (15:55:07:051421, e7a339e9, B) ;(15:55:14:061303, 9279305e, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+simple | 139430a9 | 15:55:15:062621 | A was received at: 15:55:15:063736
+complex | 15:55:15:089522 | AND(A,B) | 2 | (15:54:25:015776, 5ca2fecd, B) ;(15:55:15:062621, 139430a9, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+complex | 15:55:15:089769 | AND(A,B) | 2 | (15:54:27:018025, c5fee537, B) ;(15:55:15:062621, 139430a9, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+complex | 15:55:15:089870 | AND(A,B) | 2 | (15:55:03:048871, c022d256, B) ;(15:55:15:062621, 139430a9, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+complex | 15:55:15:089957 | AND(A,B) | 2 | (15:55:06:050927, 430c8b0a, B) ;(15:55:15:062621, 139430a9, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+simple | ddeed0ff | 15:55:16:064551 | B was received at: 15:55:16:066320
+complex | 15:55:16:090931 | AND(A,B) | 2 | (15:54:20:009853, e02927d1, A) ;(15:55:16:064551, ddeed0ff, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+complex | 15:55:16:091192 | AND(A,B) | 2 | (15:54:24:014009, ec76db8f, A) ;(15:55:16:064551, ddeed0ff, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+complex | 15:55:16:091298 | AND(A,B) | 2 | (15:54:28:019179, 035f2927, A) ;(15:55:16:064551, ddeed0ff, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+complex | 15:55:16:091392 | AND(A,B) | 2 | (15:54:30:020606, 05b4a5db, A) ;(15:55:16:064551, ddeed0ff, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+complex | 15:55:16:091505 | AND(A,B) | 2 | (15:54:39:029773, 2aa3dda9, A) ;(15:55:16:064551, ddeed0ff, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+complex | 15:55:16:091621 | AND(A,B) | 2 | (15:54:41:031276, 4420f30b, A) ;(15:55:16:064551, ddeed0ff, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+complex | 15:55:16:091714 | AND(A,B) | 2 | (15:54:42:032539, 97682d7a, A) ;(15:55:16:064551, ddeed0ff, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+complex | 15:55:16:091797 | AND(A,B) | 2 | (15:54:42:032700, 78a76baa, A) ;(15:55:16:064551, ddeed0ff, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+complex | 15:55:16:091894 | AND(A,B) | 2 | (15:54:47:036273, f8201e73, A) ;(15:55:16:064551, ddeed0ff, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+complex | 15:55:16:092036 | AND(A,B) | 2 | (15:54:57:044357, a38b77d2, A) ;(15:55:16:064551, ddeed0ff, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+complex | 15:55:16:092129 | AND(A,B) | 2 | (15:55:05:049456, f8fe35e5, A) ;(15:55:16:064551, ddeed0ff, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+complex | 15:55:16:092235 | AND(A,B) | 2 | (15:55:12:055216, af7c4a71, A) ;(15:55:16:064551, ddeed0ff, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+complex | 15:55:16:092339 | AND(A,B) | 2 | (15:55:13:059802, 0b7e7130, A) ;(15:55:16:064551, ddeed0ff, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+complex | 15:55:16:092508 | AND(A,B) | 2 | (15:55:15:062621, 139430a9, A) ;(15:55:16:064551, ddeed0ff, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 27
+simple | b1f77c0b | 15:55:19:069978 | A was received at: 15:55:19:070351
+complex | 15:55:19:096356 | AND(A,B) | 2 | (15:54:25:015776, 5ca2fecd, B) ;(15:55:19:069978, b1f77c0b, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+complex | 15:55:19:096614 | AND(A,B) | 2 | (15:54:27:018025, c5fee537, B) ;(15:55:19:069978, b1f77c0b, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 26
+simple | 70e436ae | 15:55:24:075197 | B was received at: 15:55:24:075544
+complex | 15:55:24:104982 | AND(A,B) | 2 | (15:54:28:019179, 035f2927, A) ;(15:55:24:075197, 70e436ae, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 29
+complex | 15:55:24:106899 | AND(A,B) | 2 | (15:54:30:020606, 05b4a5db, A) ;(15:55:24:075197, 70e436ae, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 31
+complex | 15:55:24:107045 | AND(A,B) | 2 | (15:54:37:028134, 0ea0db6a, A) ;(15:55:24:075197, 70e436ae, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 31
+complex | 15:55:24:107183 | AND(A,B) | 2 | (15:54:39:029773, 2aa3dda9, A) ;(15:55:24:075197, 70e436ae, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 31
+complex | 15:55:24:107515 | AND(A,B) | 2 | (15:54:41:031276, 4420f30b, A) ;(15:55:24:075197, 70e436ae, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 32
+complex | 15:55:24:108097 | AND(A,B) | 2 | (15:54:42:032700, 78a76baa, A) ;(15:55:24:075197, 70e436ae, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 32
+complex | 15:55:24:108839 | AND(A,B) | 2 | (15:54:47:036273, f8201e73, A) ;(15:55:24:075197, 70e436ae, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 33
+complex | 15:55:24:109581 | AND(A,B) | 2 | (15:54:48:037992, d24346ea, A) ;(15:55:24:075197, 70e436ae, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 34
+complex | 15:55:24:110084 | AND(A,B) | 2 | (15:55:03:048668, 14632ddd, A) ;(15:55:24:075197, 70e436ae, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 34
+complex | 15:55:24:110547 | AND(A,B) | 2 | (15:55:06:050689, 96c465fa, A) ;(15:55:24:075197, 70e436ae, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 35
+complex | 15:55:24:111073 | AND(A,B) | 2 | (15:55:13:057010, 1aba0668, A) ;(15:55:24:075197, 70e436ae, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 35
+complex | 15:55:24:111226 | AND(A,B) | 2 | (15:55:13:059802, 0b7e7130, A) ;(15:55:24:075197, 70e436ae, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+complex | 15:55:24:111372 | AND(A,B) | 2 | (15:55:15:062621, 139430a9, A) ;(15:55:24:075197, 70e436ae, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+complex | 15:55:24:111631 | AND(A,B) | 2 | (15:55:19:069978, b1f77c0b, A) ;(15:55:24:075197, 70e436ae, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+simple | 5e5a817b | 15:55:25:076606 | B was received at: 15:55:25:078495
+complex | 15:55:25:109808 | AND(A,B) | 2 | (15:54:37:028134, 0ea0db6a, A) ;(15:55:25:076606, 5e5a817b, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 33
+complex | 15:55:25:113441 | AND(A,B) | 2 | (15:54:39:029773, 2aa3dda9, A) ;(15:55:25:076606, 5e5a817b, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 36
+complex | 15:55:25:114944 | AND(A,B) | 2 | (15:54:42:032700, 78a76baa, A) ;(15:55:25:076606, 5e5a817b, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 38
+complex | 15:55:25:115773 | AND(A,B) | 2 | (15:54:48:037992, d24346ea, A) ;(15:55:25:076606, 5e5a817b, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 39
+complex | 15:55:25:116358 | AND(A,B) | 2 | (15:55:13:059802, 0b7e7130, A) ;(15:55:25:076606, 5e5a817b, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 39
+complex | 15:55:25:116992 | AND(A,B) | 2 | (15:55:15:062621, 139430a9, A) ;(15:55:25:076606, 5e5a817b, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 40
+simple | 1f6cbca7 | 15:55:27:079359 | A was received at: 15:55:27:080102
+complex | 15:55:27:110332 | AND(A,B) | 2 | (15:55:03:048871, c022d256, B) ;(15:55:27:079359, 1f6cbca7, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 30
+complex | 15:55:27:110993 | AND(A,B) | 2 | (15:55:07:051421, e7a339e9, B) ;(15:55:27:079359, 1f6cbca7, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 31
+complex | 15:55:27:111407 | AND(A,B) | 2 | (15:55:25:076606, 5e5a817b, B) ;(15:55:27:079359, 1f6cbca7, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 32
+simple | 88c01bff | 15:55:28:080893 | A was received at: 15:55:28:081986
+complex | 15:55:28:111355 | AND(A,B) | 2 | (15:55:06:050927, 430c8b0a, B) ;(15:55:28:080893, 88c01bff, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 30
+complex | 15:55:28:111564 | AND(A,B) | 2 | (15:55:07:051421, e7a339e9, B) ;(15:55:28:080893, 88c01bff, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 30
+simple | 61098a3e | 15:55:34:087429 | B was received at: 15:55:34:087722
+complex | 15:55:34:120883 | AND(A,B) | 2 | (15:54:37:028134, 0ea0db6a, A) ;(15:55:34:087429, 61098a3e, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 33
+complex | 15:55:34:121132 | AND(A,B) | 2 | (15:54:42:032700, 78a76baa, A) ;(15:55:34:087429, 61098a3e, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 33
+complex | 15:55:34:121247 | AND(A,B) | 2 | (15:54:47:036273, f8201e73, A) ;(15:55:34:087429, 61098a3e, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 33
+complex | 15:55:34:121324 | AND(A,B) | 2 | (15:55:12:055216, af7c4a71, A) ;(15:55:34:087429, 61098a3e, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 33
+complex | 15:55:34:121406 | AND(A,B) | 2 | (15:55:13:057010, 1aba0668, A) ;(15:55:34:087429, 61098a3e, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 33
+complex | 15:55:34:121489 | AND(A,B) | 2 | (15:55:13:059802, 0b7e7130, A) ;(15:55:34:087429, 61098a3e, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 34
+complex | 15:55:34:121574 | AND(A,B) | 2 | (15:55:14:061303, 9279305e, A) ;(15:55:34:087429, 61098a3e, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 34
+simple | 677f2637 | 15:55:35:087993 | A was received at: 15:55:35:088813
+complex | 15:55:35:122547 | AND(A,B) | 2 | (15:55:06:050927, 430c8b0a, B) ;(15:55:35:087993, 677f2637, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 34
+complex | 15:55:35:122812 | AND(A,B) | 2 | (15:55:07:051421, e7a339e9, B) ;(15:55:35:087993, 677f2637, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 34
+complex | 15:55:35:122915 | AND(A,B) | 2 | (15:55:16:064551, ddeed0ff, B) ;(15:55:35:087993, 677f2637, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 34
+complex | 15:55:35:123005 | AND(A,B) | 2 | (15:55:24:075197, 70e436ae, B) ;(15:55:35:087993, 677f2637, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 35
+simple | df766f79 | 15:55:37:090270 | A was received at: 15:55:37:090628
+complex | 15:55:37:129459 | AND(A,B) | 2 | (15:55:06:050927, 430c8b0a, B) ;(15:55:37:090270, df766f79, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 39
+complex | 15:55:37:133932 | AND(A,B) | 2 | (15:55:07:051421, e7a339e9, B) ;(15:55:37:090270, df766f79, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 43
+complex | 15:55:37:135331 | AND(A,B) | 2 | (15:55:24:075197, 70e436ae, B) ;(15:55:37:090270, df766f79, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 45
+complex | 15:55:37:135528 | AND(A,B) | 2 | (15:55:34:087429, 61098a3e, B) ;(15:55:37:090270, df766f79, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 45
+simple | 14c48bed | 15:55:39:092294 | A was received at: 15:55:39:092642
+complex | 15:55:39:130486 | AND(A,B) | 2 | (15:55:03:048871, c022d256, B) ;(15:55:39:092294, 14c48bed, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 38
+complex | 15:55:39:130711 | AND(A,B) | 2 | (15:55:25:076606, 5e5a817b, B) ;(15:55:39:092294, 14c48bed, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 38
+complex | 15:55:39:130801 | AND(A,B) | 2 | (15:55:34:087429, 61098a3e, B) ;(15:55:39:092294, 14c48bed, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 38
+simple | 3e369f41 | 15:55:41:094619 | A was received at: 15:55:41:095616
+complex | 15:55:41:137842 | AND(A,B) | 2 | (15:55:24:075197, 70e436ae, B) ;(15:55:41:094619, 3e369f41, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 43
+complex | 15:55:41:138598 | AND(A,B) | 2 | (15:55:25:076606, 5e5a817b, B) ;(15:55:41:094619, 3e369f41, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 43
+simple | e1c0ec60 | 15:55:42:096185 | A was received at: 15:55:42:096999
+complex | 15:55:42:140940 | AND(A,B) | 2 | (15:55:03:048871, c022d256, B) ;(15:55:42:096185, e1c0ec60, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 44
+complex | 15:55:42:142645 | AND(A,B) | 2 | (15:55:16:064551, ddeed0ff, B) ;(15:55:42:096185, e1c0ec60, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 46
+complex | 15:55:42:143079 | AND(A,B) | 2 | (15:55:25:076606, 5e5a817b, B) ;(15:55:42:096185, e1c0ec60, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 46
+simple | 2369766c | 15:55:43:097586 | A was received at: 15:55:43:098578
+complex | 15:55:43:145719 | AND(A,B) | 2 | (15:55:03:048871, c022d256, B) ;(15:55:43:097586, 2369766c, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+complex | 15:55:43:146177 | AND(A,B) | 2 | (15:55:06:050927, 430c8b0a, B) ;(15:55:43:097586, 2369766c, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+complex | 15:55:43:146320 | AND(A,B) | 2 | (15:55:07:051421, e7a339e9, B) ;(15:55:43:097586, 2369766c, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+simple | ed246a90 | 15:55:45:100187 | B was received at: 15:55:45:100551
+complex | 15:55:45:143021 | AND(A,B) | 2 | (15:54:47:036273, f8201e73, A) ;(15:55:45:100187, ed246a90, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 42
+complex | 15:55:45:143294 | AND(A,B) | 2 | (15:54:52:041133, d173cf85, A) ;(15:55:45:100187, ed246a90, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 43
+complex | 15:55:45:143449 | AND(A,B) | 2 | (15:55:05:049456, f8fe35e5, A) ;(15:55:45:100187, ed246a90, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 43
+complex | 15:55:45:143576 | AND(A,B) | 2 | (15:55:13:057010, 1aba0668, A) ;(15:55:45:100187, ed246a90, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 43
+complex | 15:55:45:143694 | AND(A,B) | 2 | (15:55:13:059802, 0b7e7130, A) ;(15:55:45:100187, ed246a90, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 43
+complex | 15:55:45:143807 | AND(A,B) | 2 | (15:55:14:061303, 9279305e, A) ;(15:55:45:100187, ed246a90, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 43
+complex | 15:55:45:143965 | AND(A,B) | 2 | (15:55:28:080893, 88c01bff, A) ;(15:55:45:100187, ed246a90, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 43
+complex | 15:55:45:144083 | AND(A,B) | 2 | (15:55:37:090270, df766f79, A) ;(15:55:45:100187, ed246a90, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 43
+complex | 15:55:45:144215 | AND(A,B) | 2 | (15:55:41:094619, 3e369f41, A) ;(15:55:45:100187, ed246a90, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 44
+complex | 15:55:45:144330 | AND(A,B) | 2 | (15:55:42:096185, e1c0ec60, A) ;(15:55:45:100187, ed246a90, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 44
+complex | 15:55:45:144456 | AND(A,B) | 2 | (15:55:43:097586, 2369766c, A) ;(15:55:45:100187, ed246a90, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 44
+simple | 5ade0607 | 15:55:57:111140 | A was received at: 15:55:57:111456
+complex | 15:55:57:159771 | AND(A,B) | 2 | (15:55:03:048871, c022d256, B) ;(15:55:57:111140, 5ade0607, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+complex | 15:55:57:159965 | AND(A,B) | 2 | (15:55:07:051421, e7a339e9, B) ;(15:55:57:111140, 5ade0607, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+complex | 15:55:57:160049 | AND(A,B) | 2 | (15:55:34:087429, 61098a3e, B) ;(15:55:57:111140, 5ade0607, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+complex | 15:55:57:160117 | AND(A,B) | 2 | (15:55:45:100187, ed246a90, B) ;(15:55:57:111140, 5ade0607, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 48
+simple | 76294a94 | 15:56:03:115180 | B was received at: 15:56:03:115539
+complex | 15:56:03:170984 | AND(A,B) | 2 | (15:55:05:049456, f8fe35e5, A) ;(15:56:03:115180, 76294a94, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 55
+complex | 15:56:03:171858 | AND(A,B) | 2 | (15:55:06:050689, 96c465fa, A) ;(15:56:03:115180, 76294a94, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 56
+complex | 15:56:03:172318 | AND(A,B) | 2 | (15:55:12:055216, af7c4a71, A) ;(15:56:03:115180, 76294a94, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 57
+complex | 15:56:03:174420 | AND(A,B) | 2 | (15:55:15:062621, 139430a9, A) ;(15:56:03:115180, 76294a94, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 59
+complex | 15:56:03:175947 | AND(A,B) | 2 | (15:55:19:069978, b1f77c0b, A) ;(15:56:03:115180, 76294a94, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 60
+complex | 15:56:03:176715 | AND(A,B) | 2 | (15:55:27:079359, 1f6cbca7, A) ;(15:56:03:115180, 76294a94, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 61
+complex | 15:56:03:176886 | AND(A,B) | 2 | (15:55:28:080893, 88c01bff, A) ;(15:56:03:115180, 76294a94, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 61
+complex | 15:56:03:177001 | AND(A,B) | 2 | (15:55:39:092294, 14c48bed, A) ;(15:56:03:115180, 76294a94, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 61
+complex | 15:56:03:177104 | AND(A,B) | 2 | (15:55:41:094619, 3e369f41, A) ;(15:56:03:115180, 76294a94, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 61
+complex | 15:56:03:177223 | AND(A,B) | 2 | (15:55:42:096185, e1c0ec60, A) ;(15:56:03:115180, 76294a94, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 62
+complex | 15:56:03:177348 | AND(A,B) | 2 | (15:55:43:097586, 2369766c, A) ;(15:56:03:115180, 76294a94, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 62
+simple | 1c81521e | 15:56:05:117044 | A was received at: 15:56:05:119182
+simple | 1a30d299 | 15:56:05:117767 | A was received at: 15:56:05:121355
+simple | 79428cd3 | 15:56:05:118299 | A was received at: 15:56:05:122018
+complex | 15:56:05:170657 | AND(A,B) | 2 | (15:55:34:087429, 61098a3e, B) ;(15:56:05:117044, 1c81521e, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 53
+complex | 15:56:05:170891 | AND(A,B) | 2 | (15:55:45:100187, ed246a90, B) ;(15:56:05:117044, 1c81521e, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 53
+complex | 15:56:05:170996 | AND(A,B) | 2 | (15:56:03:115180, 76294a94, B) ;(15:56:05:117044, 1c81521e, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 53
+complex | 15:56:05:174324 | AND(A,B) | 2 | (15:55:07:051421, e7a339e9, B) ;(15:56:05:117767, 1a30d299, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 56
+complex | 15:56:05:174865 | AND(A,B) | 2 | (15:55:16:064551, ddeed0ff, B) ;(15:56:05:117767, 1a30d299, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 57
+complex | 15:56:05:175224 | AND(A,B) | 2 | (15:55:24:075197, 70e436ae, B) ;(15:56:05:117767, 1a30d299, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 57
+complex | 15:56:05:175532 | AND(A,B) | 2 | (15:55:25:076606, 5e5a817b, B) ;(15:56:05:117767, 1a30d299, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 57
+complex | 15:56:05:175834 | AND(A,B) | 2 | (15:55:34:087429, 61098a3e, B) ;(15:56:05:117767, 1a30d299, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 58
+complex | 15:56:05:176095 | AND(A,B) | 2 | (15:56:03:115180, 76294a94, B) ;(15:56:05:117767, 1a30d299, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 58
+complex | 15:56:05:177308 | AND(A,B) | 2 | (15:55:24:075197, 70e436ae, B) ;(15:56:05:118299, 79428cd3, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 59
+simple | 16c764d2 | 15:56:09:121492 | A was received at: 15:56:09:122208
+complex | 15:56:09:177334 | AND(A,B) | 2 | (15:55:16:064551, ddeed0ff, B) ;(15:56:09:121492, 16c764d2, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 55
+complex | 15:56:09:177573 | AND(A,B) | 2 | (15:55:24:075197, 70e436ae, B) ;(15:56:09:121492, 16c764d2, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 56
+simple | 148dd13d | 15:56:14:123217 | A was received at: 15:56:14:123895
+complex | 15:56:14:184263 | AND(A,B) | 2 | (15:55:34:087429, 61098a3e, B) ;(15:56:14:123217, 148dd13d, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 61
+complex | 15:56:14:184473 | AND(A,B) | 2 | (15:55:45:100187, ed246a90, B) ;(15:56:14:123217, 148dd13d, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 61
+simple | 79234248 | 15:56:15:124716 | A was received at: 15:56:15:124971
+complex | 15:56:15:189353 | AND(A,B) | 2 | (15:55:16:064551, ddeed0ff, B) ;(15:56:15:124716, 79234248, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 64
+complex | 15:56:15:190564 | AND(A,B) | 2 | (15:55:24:075197, 70e436ae, B) ;(15:56:15:124716, 79234248, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 65
+complex | 15:56:15:190933 | AND(A,B) | 2 | (15:55:34:087429, 61098a3e, B) ;(15:56:15:124716, 79234248, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 66
+simple | c7988cc0 | 15:56:18:127144 | A was received at: 15:56:18:127458
+complex | 15:56:18:195391 | AND(A,B) | 2 | (15:55:24:075197, 70e436ae, B) ;(15:56:18:127144, c7988cc0, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 68
+complex | 15:56:18:196731 | AND(A,B) | 2 | (15:55:34:087429, 61098a3e, B) ;(15:56:18:127144, c7988cc0, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 69
+complex | 15:56:18:198363 | AND(A,B) | 2 | (15:55:45:100187, ed246a90, B) ;(15:56:18:127144, c7988cc0, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 71
+complex | 15:56:18:199827 | AND(A,B) | 2 | (15:56:03:115180, 76294a94, B) ;(15:56:18:127144, c7988cc0, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+simple | 1a2b0242 | 15:56:20:129431 | B was received at: 15:56:20:129913
+complex | 15:56:20:197909 | AND(A,B) | 2 | (15:55:28:080893, 88c01bff, A) ;(15:56:20:129431, 1a2b0242, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 68
+complex | 15:56:20:198605 | AND(A,B) | 2 | (15:55:37:090270, df766f79, A) ;(15:56:20:129431, 1a2b0242, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 69
+complex | 15:56:20:199196 | AND(A,B) | 2 | (15:55:41:094619, 3e369f41, A) ;(15:56:20:129431, 1a2b0242, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 69
+complex | 15:56:20:199702 | AND(A,B) | 2 | (15:55:42:096185, e1c0ec60, A) ;(15:56:20:129431, 1a2b0242, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 70
+complex | 15:56:20:200202 | AND(A,B) | 2 | (15:55:43:097586, 2369766c, A) ;(15:56:20:129431, 1a2b0242, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 70
+complex | 15:56:20:200681 | AND(A,B) | 2 | (15:55:57:111140, 5ade0607, A) ;(15:56:20:129431, 1a2b0242, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 71
+complex | 15:56:20:201161 | AND(A,B) | 2 | (15:56:05:117044, 1c81521e, A) ;(15:56:20:129431, 1a2b0242, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 71
+complex | 15:56:20:201517 | AND(A,B) | 2 | (15:56:14:123217, 148dd13d, A) ;(15:56:20:129431, 1a2b0242, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+simple | 2843dd46 | 15:56:21:130490 | A was received at: 15:56:21:131588
+simple | bca8da67 | 15:56:21:131356 | A was received at: 15:56:21:132449
+complex | 15:56:21:198195 | AND(A,B) | 2 | (15:55:34:087429, 61098a3e, B) ;(15:56:21:130490, 2843dd46, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 67
+complex | 15:56:21:198992 | AND(A,B) | 2 | (15:55:45:100187, ed246a90, B) ;(15:56:21:130490, 2843dd46, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 68
+complex | 15:56:21:203332 | AND(A,B) | 2 | (15:55:34:087429, 61098a3e, B) ;(15:56:21:131356, bca8da67, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 71
+complex | 15:56:21:204027 | AND(A,B) | 2 | (15:56:03:115180, 76294a94, B) ;(15:56:21:131356, bca8da67, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+simple | 0c4bffe5 | 15:56:23:133213 | B was received at: 15:56:23:134118
+complex | 15:56:23:201829 | AND(A,B) | 2 | (15:55:35:087993, 677f2637, A) ;(15:56:23:133213, 0c4bffe5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 68
+complex | 15:56:23:206113 | AND(A,B) | 2 | (15:55:41:094619, 3e369f41, A) ;(15:56:23:133213, 0c4bffe5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:56:23:206742 | AND(A,B) | 2 | (15:55:42:096185, e1c0ec60, A) ;(15:56:23:133213, 0c4bffe5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 73
+complex | 15:56:23:206967 | AND(A,B) | 2 | (15:55:43:097586, 2369766c, A) ;(15:56:23:133213, 0c4bffe5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 73
+complex | 15:56:23:207069 | AND(A,B) | 2 | (15:56:05:117044, 1c81521e, A) ;(15:56:23:133213, 0c4bffe5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 73
+complex | 15:56:23:207210 | AND(A,B) | 2 | (15:56:05:117767, 1a30d299, A) ;(15:56:23:133213, 0c4bffe5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 73
+complex | 15:56:23:207452 | AND(A,B) | 2 | (15:56:09:121492, 16c764d2, A) ;(15:56:23:133213, 0c4bffe5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 74
+complex | 15:56:23:207589 | AND(A,B) | 2 | (15:56:15:124716, 79234248, A) ;(15:56:23:133213, 0c4bffe5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 74
+complex | 15:56:23:207697 | AND(A,B) | 2 | (15:56:21:131356, bca8da67, A) ;(15:56:23:133213, 0c4bffe5, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 74
+simple | 6654cf76 | 15:56:28:137591 | B was received at: 15:56:28:138069
+complex | 15:56:28:209325 | AND(A,B) | 2 | (15:55:37:090270, df766f79, A) ;(15:56:28:137591, 6654cf76, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 71
+complex | 15:56:28:209570 | AND(A,B) | 2 | (15:55:42:096185, e1c0ec60, A) ;(15:56:28:137591, 6654cf76, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 71
+complex | 15:56:28:209674 | AND(A,B) | 2 | (15:55:57:111140, 5ade0607, A) ;(15:56:28:137591, 6654cf76, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:56:28:209766 | AND(A,B) | 2 | (15:56:05:118299, 79428cd3, A) ;(15:56:28:137591, 6654cf76, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:56:28:209873 | AND(A,B) | 2 | (15:56:09:121492, 16c764d2, A) ;(15:56:28:137591, 6654cf76, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:56:28:209968 | AND(A,B) | 2 | (15:56:14:123217, 148dd13d, A) ;(15:56:28:137591, 6654cf76, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:56:28:210074 | AND(A,B) | 2 | (15:56:15:124716, 79234248, A) ;(15:56:28:137591, 6654cf76, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:56:28:210169 | AND(A,B) | 2 | (15:56:18:127144, c7988cc0, A) ;(15:56:28:137591, 6654cf76, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:56:28:210272 | AND(A,B) | 2 | (15:56:21:130490, 2843dd46, A) ;(15:56:28:137591, 6654cf76, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:56:28:210357 | AND(A,B) | 2 | (15:56:21:131356, bca8da67, A) ;(15:56:28:137591, 6654cf76, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+simple | 44661993 | 15:56:29:138941 | B was received at: 15:56:29:139414
+complex | 15:56:29:210902 | AND(A,B) | 2 | (15:55:43:097586, 2369766c, A) ;(15:56:29:138941, 44661993, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 71
+complex | 15:56:29:211227 | AND(A,B) | 2 | (15:56:05:117767, 1a30d299, A) ;(15:56:29:138941, 44661993, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:56:29:211393 | AND(A,B) | 2 | (15:56:05:118299, 79428cd3, A) ;(15:56:29:138941, 44661993, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:56:29:211557 | AND(A,B) | 2 | (15:56:09:121492, 16c764d2, A) ;(15:56:29:138941, 44661993, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:56:29:211740 | AND(A,B) | 2 | (15:56:14:123217, 148dd13d, A) ;(15:56:29:138941, 44661993, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:56:29:211888 | AND(A,B) | 2 | (15:56:15:124716, 79234248, A) ;(15:56:29:138941, 44661993, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:56:29:212015 | AND(A,B) | 2 | (15:56:21:130490, 2843dd46, A) ;(15:56:29:138941, 44661993, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 73
+complex | 15:56:29:212117 | AND(A,B) | 2 | (15:56:21:131356, bca8da67, A) ;(15:56:29:138941, 44661993, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 73
+simple | d4e3eb97 | 15:56:30:139856 | A was received at: 15:56:30:140138
+simple | 72dedc60 | 15:56:30:140107 | A was received at: 15:56:30:140832
+complex | 15:56:30:212449 | AND(A,B) | 2 | (15:55:34:087429, 61098a3e, B) ;(15:56:30:139856, d4e3eb97, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:56:30:212706 | AND(A,B) | 2 | (15:56:03:115180, 76294a94, B) ;(15:56:30:139856, d4e3eb97, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:56:30:212832 | AND(A,B) | 2 | (15:56:20:129431, 1a2b0242, B) ;(15:56:30:139856, d4e3eb97, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:56:30:212931 | AND(A,B) | 2 | (15:56:28:137591, 6654cf76, B) ;(15:56:30:139856, d4e3eb97, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 73
+complex | 15:56:30:213023 | AND(A,B) | 2 | (15:56:29:138941, 44661993, B) ;(15:56:30:139856, d4e3eb97, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 73
+complex | 15:56:30:215472 | AND(A,B) | 2 | (15:55:34:087429, 61098a3e, B) ;(15:56:30:140107, 72dedc60, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 75
+complex | 15:56:30:217459 | AND(A,B) | 2 | (15:55:45:100187, ed246a90, B) ;(15:56:30:140107, 72dedc60, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 77
+complex | 15:56:30:219326 | AND(A,B) | 2 | (15:56:03:115180, 76294a94, B) ;(15:56:30:140107, 72dedc60, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 79
+complex | 15:56:30:219942 | AND(A,B) | 2 | (15:56:23:133213, 0c4bffe5, B) ;(15:56:30:140107, 72dedc60, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 79
+simple | 550231b6 | 15:56:31:141411 | B was received at: 15:56:31:142250
+complex | 15:56:31:213610 | AND(A,B) | 2 | (15:55:37:090270, df766f79, A) ;(15:56:31:141411, 550231b6, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:56:31:213879 | AND(A,B) | 2 | (15:55:42:096185, e1c0ec60, A) ;(15:56:31:141411, 550231b6, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:56:31:213980 | AND(A,B) | 2 | (15:55:43:097586, 2369766c, A) ;(15:56:31:141411, 550231b6, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:56:31:214057 | AND(A,B) | 2 | (15:55:57:111140, 5ade0607, A) ;(15:56:31:141411, 550231b6, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+complex | 15:56:31:214131 | AND(A,B) | 2 | (15:56:21:131356, bca8da67, A) ;(15:56:31:141411, 550231b6, B)
+LATENCYYYYYYYYYYYYYYYYYYYY 72
+simple | 07ff47ea | 15:56:35:146065 | A was received at: 15:56:35:147203
+complex | 15:56:35:224786 | AND(A,B) | 2 | (15:55:45:100187, ed246a90, B) ;(15:56:35:146065, 07ff47ea, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 78
+complex | 15:56:35:225002 | AND(A,B) | 2 | (15:56:03:115180, 76294a94, B) ;(15:56:35:146065, 07ff47ea, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 78
+complex | 15:56:35:225117 | AND(A,B) | 2 | (15:56:20:129431, 1a2b0242, B) ;(15:56:35:146065, 07ff47ea, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 79
+complex | 15:56:35:225218 | AND(A,B) | 2 | (15:56:23:133213, 0c4bffe5, B) ;(15:56:35:146065, 07ff47ea, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 79
+complex | 15:56:35:225355 | AND(A,B) | 2 | (15:56:29:138941, 44661993, B) ;(15:56:35:146065, 07ff47ea, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 79
+complex | 15:56:35:225452 | AND(A,B) | 2 | (15:56:31:141411, 550231b6, B) ;(15:56:35:146065, 07ff47ea, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 79
+simple | 48880466 | 15:56:47:158286 | A was received at: 15:56:47:159254
+simple | b4fbc1cd | 15:56:47:159056 | A was received at: 15:56:47:160132
+complex | 15:56:47:236217 | AND(A,B) | 2 | (15:56:20:129431, 1a2b0242, B) ;(15:56:47:158286, 48880466, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 77
+complex | 15:56:47:236605 | AND(A,B) | 2 | (15:56:28:137591, 6654cf76, B) ;(15:56:47:158286, 48880466, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 78
+complex | 15:56:47:238057 | AND(A,B) | 2 | (15:56:20:129431, 1a2b0242, B) ;(15:56:47:159056, b4fbc1cd, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 79
+complex | 15:56:47:238255 | AND(A,B) | 2 | (15:56:28:137591, 6654cf76, B) ;(15:56:47:159056, b4fbc1cd, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 79
+simple | 21f58b45 | 15:56:48:160621 | A was received at: 15:56:48:161571
+15:56:48,162 INFO  com.huberlin.communication.OldSourceFunction                 [] - Reached the end of the stream for /127.0.0.1:47566->57408160621
+complex | 15:56:48:237166 | AND(A,B) | 2 | (15:56:29:138941, 44661993, B) ;(15:56:48:160621, 21f58b45, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 76
+complex | 15:56:48:237332 | AND(A,B) | 2 | (15:56:31:141411, 550231b6, B) ;(15:56:48:160621, 21f58b45, A)
+LATENCYYYYYYYYYYYYYYYYYYYY 76
+16:11:30,862 INFO  org.apache.flink.runtime.state.TaskExecutorStateChangelogStoragesManager [] - Shutting down TaskExecutorStateChangelogStoragesManager.
+16:11:30,875 INFO  org.apache.flink.runtime.state.TaskExecutorLocalStateStoresManager [] - Shutting down TaskExecutorLocalStateStoresManager.
+16:11:30,893 INFO  org.apache.flink.runtime.blob.PermanentBlobCache             [] - Shutting down BLOB cache

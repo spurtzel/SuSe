@@ -1,0 +1,1 @@
+S:CSV:./susequeries/streams/stream_size_2048.txt

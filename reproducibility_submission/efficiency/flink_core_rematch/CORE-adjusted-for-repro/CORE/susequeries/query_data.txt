@@ -1,0 +1,2 @@
+FILE:./susequeries/descriptions/CORE_description.txt
+FILE:./susequeries/CORE_query.txt
