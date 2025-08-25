@@ -1,5 +1,7 @@
 ## Comments on figure differences (small sample sizes)
 
+This directory includes `reference_output.pdf` - the `paper_plots_reproduced.pdf` from a successful *full-pipeline* run. The original plots are in `paper_plots.pdf`.
+
 The reproduced plots closely match the original plots. Below we note minor differences, explain their causes, and detail the significant discrepancy in Fig. 11 caused by a bug.
 
 ### Figure 7a - Ablation study
