@@ -39,15 +39,10 @@ echo "Symbols in query: ${QUERY_CHARS}"
 PROB_FILENAME=$(mktemp)
 echo "Storing probabilities in: ${PROB_FILENAME}"
 
-if [ -f ${PROB_FILENAME} ]; then
-        echo "...already exists, reusing"
-else
-        echo "...does not exist yet, creating"
-        python3 real_world_data_set_stream_generator.py \
-                --file_name="${FILE_NAME}" \
-                --produce_alphabet_probs \
-        > ${PROB_FILENAME}
-fi
+python3 real_world_data_set_stream_generator.py \
+    --file_name="${FILE_NAME}" \
+    --produce_alphabet_probs \
+> ${PROB_FILENAME}
 
 declare -A report_files
 for strategy in "suse" "fifo" "random"

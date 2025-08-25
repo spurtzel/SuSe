@@ -553,7 +553,9 @@ def adjust_num_runs(root: Path, extensive: bool):
                 continue
             name = child.as_posix()
             scripts = [child / 'evaluation_script.sh', child / 'evaluation_script_suse.sh']
-            if 'changing_number_of_disjunction_operators' in name:
+            if 'overlapping_characters' in name or 'changing_number_of_eval_timestamps' in name:
+                val = 50
+            elif 'changing_number_of_disjunction_operators' in name:
                 val = 25 if extensive else 5
             else:
                 val = 50 if extensive else 10

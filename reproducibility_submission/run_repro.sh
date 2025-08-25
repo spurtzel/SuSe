@@ -113,5 +113,5 @@ docker run --rm -v "$PWD":/work -w /work \
          -o \( -path "*/FLINK/flink_cep/deploying/*" ! -name "*.*" \) \
       \) -exec chmod +x {} + 2>/dev/null || true
      echo "[run_repro] execute permissions set."
-     python3 -u run_all.py # add --extensive-reproducibilty for same sample size per experiment as in the paper
+     python3 -u run_all.py --keep-going # add --extensive-reproducibilty for same sample size per experiment as in the paper
   '

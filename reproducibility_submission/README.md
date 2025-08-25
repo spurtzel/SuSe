@@ -122,30 +122,30 @@ Moved paper/summarySelector_sigmod25_cameraReady.pdf -> runs/paper_plots_reprodu
 
 ## 3. How long will it take? (Experiment durations)
 
-In total, the experiments took about **5 days** on our specified hardware with the *smaller* sample sizes. We estimate roughly twice as long when using the larger sample sizes. 
+In total, the experiments took about **5 days** on our specified hardware with the *smaller* sample sizes. We estimate roughly twice as long per affected experiment when using the larger sample sizes. 
 
-| Experiment Group         | Experiment                               | Figures    | Runtime (approx.)                     |
-| ------------------------ | ---------------------------------------- | ---------- | ------------------------------------- |
-| **Effectiveness (~30h)** |                                          |            |                                       |
-|                          | Changing summary / time window sizes     | Fig. 6a    | **11h**                               |
-|                          | Changing probability distribution        | Fig. 6b    | **1.5h**                              |
-|                          | Ablation study                           | Fig. 7a    | **16h**                               |
-|                          | Recall experiment                        | Fig. 7b,7c | **1.5h**                              |
-| **Sensitivity (~5.5h)**  |                                          |            |                                       |
-|                          | Changing number of evaluation timestamps | Fig. 8a    | **0.5h**                              |
-|                          | Changing pattern length                  | Fig. 8b    | **0.5h**                              |
-|                          | Changing number of Kleene operators      | Fig. 8c    | **2h**                                |
-|                          | Changing Kleene position                 | Fig. 8d    | **0.5h**                              |
-|                          | Changing number of disjunction operators | Fig. 8e    | **1h**                                |
-|                          | Changing pattern character overlap       | Fig. 8f    | **1h**                                |
-| **Efficiency (~52h)**    |                                          |            |                                       |
-|                          | StateSummary / Flink / CORE / REmatch    | Fig. 9a,9b | **2h**                                |
-|                          | Execution time, Throughput, Latencies    | Fig. 10a-c | **48h**                               |
-|                          | Memory usage                             | Fig. 10d   | **2h**                                |
-| **Real-world (~32h)**    |                                          |            |                                       |
-|                          | Citi Bike                                | Fig. 11a-c | **28h**                               |
-|                          | NASDAQ                                   | Fig. 12a-c | **4h**                                |
-| **Total**                | -                                        | -          | **119.5h<br>~5 days (small samples)** |
+| Experiment Group         | Experiment                               | Figures    | Runtime (approx.)                   |
+| ------------------------ | ---------------------------------------- | ---------- | ----------------------------------- |
+| **Effectiveness (~30h)** |                                          |            |                                     |
+|                          | Changing summary / time window sizes     | Fig. 6a    | **11h**                             |
+|                          | Changing probability distribution        | Fig. 6b    | **1.5h**                            |
+|                          | Ablation study                           | Fig. 7a    | **16h**                             |
+|                          | Recall experiment                        | Fig. 7b,7c | **1.5h**                            |
+| **Sensitivity (~7h)**    |                                          |            |                                     |
+|                          | Changing number of evaluation timestamps | Fig. 8a    | **1h**                              |
+|                          | Changing pattern length                  | Fig. 8b    | **0.5h**                            |
+|                          | Changing number of Kleene operators      | Fig. 8c    | **2h**                              |
+|                          | Changing Kleene position                 | Fig. 8d    | **0.5h**                            |
+|                          | Changing number of disjunction operators | Fig. 8e    | **1h**                              |
+|                          | Changing pattern character overlap       | Fig. 8f    | **2h**                              |
+| **Efficiency (~52h)**    |                                          |            |                                     |
+|                          | StateSummary / Flink / CORE / REmatch    | Fig. 9a,9b | **2h**                              |
+|                          | Execution time, Throughput, Latencies    | Fig. 10a-c | **48h**                             |
+|                          | Memory usage                             | Fig. 10d   | **2h**                              |
+| **Real-world (~28h)**    |                                          |            |                                     |
+|                          | Citi Bike                                | Fig. 11a-c | **24h**                             |
+|                          | NASDAQ                                   | Fig. 12a-c | **4h**                              |
+| **Total**                | -                                        | -          | **117h<br>~5 days (small samples)** |
 
 **Note**
 - We also ran parts of the experiments on a **virtual machine (4 cores @ 3GHz, 32GB RAM)**, where execution was approximately **> 2 times slower** per experiment.
@@ -157,7 +157,10 @@ Many of the experiments average results over **multiple independent runs** (diff
 - **What changes?** Only the **number of repeated runs per parameter configuration**. Seeds are fixed and propagated, so results remain deterministic; fewer runs may increase variance in some metrics (e.g., relative recall improvement, throughput).
 
 - **Which experiments?**  
-  - All `sensitivity_analysis/` experiments  
+  - `sensitivity_analysis/changing_query_length`
+  - `sensitivity_analysis/changing_number_of_kleene_operators` 
+  - `sensitivity_analysis/positional_kleene`
+  - `sensitivity_analysis/changing_number_of_disjunction_operators`
   - `effectiveness/ablation_study`  
   - `effectiveness/changing_summary_time_window_sizes`  
   - `efficiency/flink_core_rematch`: reduced length of tested words from 4096 to 2048 for REmatch and CORE. The two dropped data points add ~2 days runtime, and the trend is already clear with the given word lengths.
@@ -242,6 +245,7 @@ The repository is organized into four main parts:
  - **Experiment directories**. Contain scripts and configurations per experiment.
  - **LaTeX paper sources**. For reproducing the paper (with reproduced plots).
  - **Results & logs**. Includes experiment outputs, logs, reproduced paper, and original paper.
+ - **Reference output.** Includes the result of a successful reproducibility run with comments on plot differences.
 
 ```
 ../SuSe/reproducibility_submission
@@ -263,6 +267,9 @@ The repository is organized into four main parts:
 	
     # contains experiment results, logs, reproduced paper, original paper, ..
 	runs
+	
+	# contains a reproduced version of the paper (by authors) and comments on plots
+	docs/reference_output
 ```
 
 ### Experiment directory structure
@@ -438,7 +445,13 @@ All artifact directories below live at `./runs/<experiment_group>/<artifact_dir>
 - The repository includes scripts and configuration to reproduce both **synthetic** experiments and two **real‑world** case studies (Citi Bike and NASDAQ). For descriptions of character types and queries, we refer to the paper.
 - Real‑world datasets summarized in the paper: Citi Bike (~3.8M events for one month) and NASDAQ minute‑level trades (~462K events).
 
-## 9. Troubleshooting
+
+## 9. Reference output
+
+We include a **reference PDF** in `docs/reference_output/` that was generated from a successful run of our pipeline. It was **not** produced in your environment. The folder also contains brief notes on any plot‑by‑plot deviations. Overall, the reproduced plots closely match the figures in the paper; the main exception is **Fig. 11a**, which differs due to a bug we found in the Citi Bike experiment’s `run_test.sh` that could make the baselines appear to outperform SuSe. We describe the fix and its effect in the notes.
+
+
+## 10. Troubleshooting
 
 - **No plots but CSVs are present.** Re-run quickstart command to trigger plot post‑processing.
 - **Paper PDF wasn’t produced.** Ensure the `paper/` directory and `summarySelector_sigmod25_cameraReady.tex` are present; inspect `./runs/_logs/paper__pdflatex__*.log`.
