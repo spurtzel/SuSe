@@ -75,25 +75,25 @@ def main():
 	values["Total Ratio FIFO/SuSe"] = int(fifo_report["final_matches"])/safe_zero(suse_report["final_matches"])
 	values["Total Ratio SuSe/FIFO"] = int(suse_report["final_matches"])/safe_zero(fifo_report["final_matches"])
 	
-	values["Execution Time SuSe"] = fifo_report["runtime_ns"]
+	values["Execution Time SuSe"] = suse_report["runtime_ns"]
 	values["Execution Time Random"] = random_report["runtime_ns"]
-	values["Execution Time FIFO"] = random_report["runtime_ns"]
+	values["Execution Time FIFO"] = fifo_report["runtime_ns"]
 	
-	values["Initialization Time SuSe"] = fifo_report["initialization_time_ns"]
+	values["Initialization Time SuSe"] = suse_report["initialization_time_ns"]
 	values["Initialization Time Random"] = random_report["initialization_time_ns"]
-	values["Initialization Time FIFO"] = random_report["initialization_time_ns"]
+	values["Initialization Time FIFO"] = fifo_report["initialization_time_ns"]
 	
-	values["Average Latency SuSe"] = fifo_report["average_latency_ns"]
+	values["Average Latency SuSe"] = suse_report["average_latency_ns"]
 	values["Average Latency Random"] = random_report["average_latency_ns"]
-	values["Average Latency FIFO"] = random_report["average_latency_ns"]
+	values["Average Latency FIFO"] = fifo_report["average_latency_ns"]
 	
-	values["Max Latency SuSe"] = fifo_report["max_latency_ns"]
+	values["Max Latency SuSe"] = suse_report["max_latency_ns"]
 	values["Max Latency Random"] = random_report["max_latency_ns"]
-	values["Max Latency FIFO"] = random_report["max_latency_ns"]
+	values["Max Latency FIFO"] = fifo_report["max_latency_ns"]
 	
-	values["Min Latency SuSe"] = fifo_report["min_latency_ns"]
+	values["Min Latency SuSe"] = suse_report["min_latency_ns"]
 	values["Min Latency Random"] = random_report["min_latency_ns"]
-	values["Min Latency FIFO"] = random_report["min_latency_ns"]
+	values["Min Latency FIFO"] = fifo_report["min_latency_ns"]
 
 	if not os.path.exists(args.target) or os.path.getsize(args.target)<=0:
 		with open(args.target,'w',newline='') as csv:

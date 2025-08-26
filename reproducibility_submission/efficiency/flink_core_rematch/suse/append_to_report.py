@@ -2,6 +2,9 @@ import argparse
 import json
 import os
 
+def safe_zero(value):
+	return int(value) if int(value)!=0 else 0.1
+
 def main():
 	parser = argparse.ArgumentParser(description='Merge data in plot format')
 	parser.add_argument('--summary_size', default=None, type=int)
@@ -52,37 +55,45 @@ def main():
 	values["Final Random Partial Matches"] = random_report["final_partial_matches"]
 	values["Final FIFO Partial Matches"] = fifo_report["final_partial_matches"]
 	
-	values["Ratio Random/SuSe"] = [ int(r)/int(s) if int(r) > 0 and int(s) > 0 else 1/int(s) if int(r) == 0 and int(s) > 0 else int(r)/1 if int(r) > 0 and int(s) == 0 else 0 for r,s in zip(random_report["observed_matches"], suse_report["observed_matches"]) ]
-	values["Ratio SuSe/Random"] = [ int(s)/int(r) if int(r) > 0 and int(s) > 0 else 1/int(r) if int(s) == 0 and int(r) > 0 else int(s)/1 if int(s) > 0 and int(r) == 0 else 0 for r,s in zip(random_report["observed_matches"], suse_report["observed_matches"]) ]
+	values["SuSe Total Detected Partial Matches"] = suse_report["detected_partial_matches"]
+	values["Random Total Detected Partial Matches"] = random_report["detected_partial_matches"]
+	values["FIFO Total Detected Partial Matches"] = fifo_report["detected_partial_matches"]
 	
-	values["Ratio FIFO/SuSe"] = [ int(f)/int(s) if int(f) > 0 and int(s) > 0 else 1/int(s) if int(f) == 0 and int(s) > 0 else int(f)/1 if int(f) > 0 and int(s) == 0 else 0 for f,s in zip(fifo_report["observed_matches"], suse_report["observed_matches"]) ]
-	values["Ratio SuSe/FIFO"] = [ int(s)/int(f) if int(f) > 0 and int(s) > 0 else 1/int(f) if int(s) == 0 and int(f) > 0 else int(s)/1 if int(s) > 0 and int(f) == 0 else 0 for f,s in zip(fifo_report["observed_matches"], suse_report["observed_matches"]) ]
+	values["SuSe Total Detected Matches"] = suse_report["detected_matches"]
+	values["Random Total Detected Matches"] = random_report["detected_matches"]
+	values["FIFO Total Detected Matches"] = fifo_report["detected_matches"]
+
+	values["Ratio Random/SuSe"] = [ int(r)/safe_zero(s) for r,s in zip(random_report["observed_matches"],suse_report["observed_matches"])]
+	values["Ratio SuSe/Random"] = [ int(s)/safe_zero(r) for r,s in zip(random_report["observed_matches"],suse_report["observed_matches"])]
 	
-	values["Total Ratio Random/SuSe"] = int(random_report["final_matches"])/int(suse_report["final_matches"]) if int(random_report["final_matches"]) > 0 and int(suse_report["final_matches"]) > 0 else 1/int(suse_report["final_matches"]) if int(random_report["final_matches"]) == 0 and int(suse_report["final_matches"]) > 0 else int(random_report["final_matches"])/1 if int(random_report["final_matches"]) > 0 and int(suse_report["final_matches"]) == 0 else 0
-	values["Total Ratio SuSe/Random"] = int(suse_report["final_matches"])/int(random_report["final_matches"]) if int(random_report["final_matches"]) > 0 and int(suse_report["final_matches"]) > 0 else 1/int(random_report["final_matches"]) if int(suse_report["final_matches"]) == 0 and int(random_report["final_matches"]) > 0 else int(suse_report["final_matches"])/1 if int(suse_report["final_matches"]) > 0 and int(random_report["final_matches"]) == 0 else 0
+	values["Ratio FIFO/SuSe"] = [ int(f)/safe_zero(s) for f,s in zip(fifo_report["observed_matches"],suse_report["observed_matches"])]
+	values["Ratio SuSe/FIFO"] = [ int(s)/safe_zero(f) for f,s in zip(fifo_report["observed_matches"],suse_report["observed_matches"])]
 	
-	values["Total Ratio FIFO/SuSe"] = int(fifo_report["final_matches"])/int(suse_report["final_matches"]) if int(fifo_report["final_matches"]) > 0 and int(suse_report["final_matches"]) > 0 else 1/int(suse_report["final_matches"]) if int(fifo_report["final_matches"]) == 0 and int(suse_report["final_matches"]) > 0 else int(fifo_report["final_matches"])/1 if int(fifo_report["final_matches"]) > 0 and int(suse_report["final_matches"]) == 0 else 0
-	values["Total Ratio SuSe/FIFO"] = int(suse_report["final_matches"])/int(fifo_report["final_matches"]) if int(fifo_report["final_matches"]) > 0 and int(suse_report["final_matches"]) > 0 else 1/int(fifo_report["final_matches"]) if int(suse_report["final_matches"]) == 0 and int(fifo_report["final_matches"]) > 0 else int(suse_report["final_matches"])/1 if int(suse_report["final_matches"]) > 0 and int(fifo_report["final_matches"]) == 0 else 0
+	values["Total Ratio Random/SuSe"] = int(random_report["final_matches"])/safe_zero(suse_report["final_matches"])
+	values["Total Ratio SuSe/Random"] = int(suse_report["final_matches"])/safe_zero(random_report["final_matches"])
 	
-	values["Execution Time SuSe"] = fifo_report["runtime_ns"]
+	values["Total Ratio FIFO/SuSe"] = int(fifo_report["final_matches"])/safe_zero(suse_report["final_matches"])
+	values["Total Ratio SuSe/FIFO"] = int(suse_report["final_matches"])/safe_zero(fifo_report["final_matches"])
+	
+	values["Execution Time SuSe"] = suse_report["runtime_ns"]
 	values["Execution Time Random"] = random_report["runtime_ns"]
-	values["Execution Time FIFO"] = random_report["runtime_ns"]
+	values["Execution Time FIFO"] = fifo_report["runtime_ns"]
 	
-	values["Initialization Time SuSe"] = fifo_report["initialization_time_ns"]
+	values["Initialization Time SuSe"] = suse_report["initialization_time_ns"]
 	values["Initialization Time Random"] = random_report["initialization_time_ns"]
-	values["Initialization Time FIFO"] = random_report["initialization_time_ns"]
+	values["Initialization Time FIFO"] = fifo_report["initialization_time_ns"]
 	
-	values["Average Latency SuSe"] = fifo_report["average_latency_ns"]
+	values["Average Latency SuSe"] = suse_report["average_latency_ns"]
 	values["Average Latency Random"] = random_report["average_latency_ns"]
-	values["Average Latency FIFO"] = random_report["average_latency_ns"]
+	values["Average Latency FIFO"] = fifo_report["average_latency_ns"]
 	
-	values["Max Latency SuSe"] = fifo_report["max_latency_ns"]
+	values["Max Latency SuSe"] = suse_report["max_latency_ns"]
 	values["Max Latency Random"] = random_report["max_latency_ns"]
-	values["Max Latency FIFO"] = random_report["max_latency_ns"]
+	values["Max Latency FIFO"] = fifo_report["max_latency_ns"]
 	
-	values["Min Latency SuSe"] = fifo_report["min_latency_ns"]
+	values["Min Latency SuSe"] = suse_report["min_latency_ns"]
 	values["Min Latency Random"] = random_report["min_latency_ns"]
-	values["Min Latency FIFO"] = random_report["min_latency_ns"]
+	values["Min Latency FIFO"] = fifo_report["min_latency_ns"]
 
 	if not os.path.exists(args.target) or os.path.getsize(args.target)<=0:
 		with open(args.target,'w',newline='') as csv:
