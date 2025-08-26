@@ -169,6 +169,7 @@ int main(int argc, char* argv[]) try
 		("summary-size,s","Size of the summary cache",cxxopts::value<std::size_t>())
 		("time-window-size,t","Size of one time window",cxxopts::value<std::size_t>())
 		("time-to-live","The maximum amount of time an event stays in the cache",cxxopts::value<std::size_t>()->default_value(std::to_string(std::numeric_limits<std::size_t>::max())))
+		("seed,S","For random eviction stragety: Seed used",cxxopts::value<std::size_t>())
 		("evaluation-timestamps,e","Timestamps to evaluate at",cxxopts::value<std::vector<std::size_t>>())
 		("output-nfa","File to write the graphviz-dot representation of the compiled NFA to",cxxopts::value<std::string>())
 		("report,r","File to write results to",cxxopts::value<std::string>())
@@ -251,9 +252,20 @@ int main(int argc, char* argv[]) try
 	};
 	
 	if(strategy=="fifo")
+	{
 		measured_run(suse::eviction_strategies::fifo);
+	}
 	else if(strategy=="random")
-		measured_run(suse::eviction_strategies::random);
+	{
+		if(parsed_args.count("seed")>0)
+		{
+			const auto seed = parsed_args["seed"].template as<std::size_t>();
+			suse::eviction_strategies::seeded_pseudorandom pseudorandom(seed);
+			measured_run(pseudorandom);
+		}
+		else
+			measured_run(suse::eviction_strategies::random);
+	}
 	else
 	{
 		const auto probabilities = parsed_args.count("probabilities-file")>0?

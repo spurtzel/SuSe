@@ -8,44 +8,47 @@ TIMES_TO_LIVE=(4000)
 PROB_DISTRIBUTIONS=("zipf" "normal")
 EVAL_TIMESTAMPS_COUNTS=(20)
 EVAL_TIMESTAMPS_PROB_DISTS=("uniform")
+NUM_OF_RUNS=(10)
 
-rm report.csv
+rm -f report.csv
 
 for query in "${QUERIES[@]}"
 do
-	for summary_size in "${SUMMARY_SIZES[@]}"
-	do
-		for time_window_size in "${TIME_WINDOW_SIZES[@]}"
-		do
-			for stream_size in "${STREAM_SIZES[@]}"
-			do
-				for time_to_live in "${TIMES_TO_LIVE[@]}"
-				do
-					for prob_distribution in "${PROB_DISTRIBUTIONS[@]}"
-					do
-						for eval_timestamp_count in "${EVAL_TIMESTAMPS_COUNTS[@]}"
-						do
-							for eval_timestamp_dist in "${EVAL_TIMESTAMPS_PROB_DISTS[@]}"
-							do
-								bash run_test.sh \
-									${summary_size} \
-									${time_window_size} \
-									${stream_size} \
-									${time_to_live} \
-									${prob_distribution} \
-									${eval_timestamp_count} \
-									${eval_timestamp_dist} \
-									${RANDOM} \
-									"${query}"
-							done
-						done
-					done
-				done
-			done
-		done
-	done
+        for summary_size in "${SUMMARY_SIZES[@]}"
+        do
+                for time_window_size in "${TIME_WINDOW_SIZES[@]}"
+                do
+                        for stream_size in "${STREAM_SIZES[@]}"
+                        do
+                                for time_to_live in "${TIMES_TO_LIVE[@]}"
+                                do
+                                        for prob_distribution in "${PROB_DISTRIBUTIONS[@]}"
+                                        do
+                                                for eval_timestamp_count in "${EVAL_TIMESTAMPS_COUNTS[@]}"
+                                                do
+                                                        for eval_timestamp_dist in "${EVAL_TIMESTAMPS_PROB_DISTS[@]}"
+                                                        do
+                                                                for ((run=1; run<=NUM_OF_RUNS; run++))
+                                                                do
+                                                                        bash run_test.sh \
+                                                                                ${summary_size} \
+                                                                                ${time_window_size} \
+                                                                                ${stream_size} \
+                                                                                ${time_to_live} \
+                                                                                ${prob_distribution} \
+                                                                                ${eval_timestamp_count} \
+                                                                                ${eval_timestamp_dist} \
+                                                                                ${RANDOM} \
+                                                                                "${query}" >/dev/null &
+                                                                done
+                                                        done
+                                                done
+                                        done
+                                done
+                        done
+                        wait
+                done
+        done
 done
 
 wait
-
-rm *.probs

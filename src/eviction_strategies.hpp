@@ -27,6 +27,24 @@ namespace suse::eviction_strategies
 		return dist(random_gen);
 	};
 
+	class seeded_pseudorandom
+	{
+		public:
+		explicit seeded_pseudorandom(std::mt19937::result_type seed):
+			random_gen_{seed}
+		{}
+
+		template <typename counter_type>
+		std::optional<std::size_t> select(const summary_selector<counter_type>& selector, const event& event) const
+		{
+			std::uniform_int_distribution<std::size_t> dist(0,selector.cached_events().size()-1);
+			return dist(random_gen_);
+		}
+
+		private:
+		mutable std::mt19937 random_gen_;
+	};
+
 	template <typename counter_type, typename factor_type>
 	class suse
 	{

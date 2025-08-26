@@ -34,21 +34,16 @@ echo "Selected Timestamps: [${EVAL_TIMESTAMPS}]"
 QUERY_CHARS=$(echo ${QUERY//[^[:alpha:]]} | grep -o . | sort | uniq | tr -d "\n")
 echo "Symbols in query: ${QUERY_CHARS}"
 
-PROB_FILENAME="${QUERY_CHARS}_${PROB_DISTRIBUTION}.probs"
+PROB_FILENAME=$(mktemp)
 echo "Storing probabilities in: ${PROB_FILENAME}"
 
-if [ -f ${PROB_FILENAME} ]; then
-	echo "...already exists, reusing"
-else
-	echo "...does not exist yet, creating"
-	python3 event_stream_generator.py \
-		--query="${QUERY}" \
-		--distribution_name=${PROB_DISTRIBUTION} \
-		--produce_alphabet_probs \
-		--stream_size=${STREAM_SIZE} \
-		--random_seed=${RANDOM_SEED} \
-	> ${PROB_FILENAME}
-fi
+python3 event_stream_generator.py \
+	--query="${QUERY}" \
+	--distribution_name=${PROB_DISTRIBUTION} \
+	--produce_alphabet_probs \
+	--stream_size=${STREAM_SIZE} \
+	--random_seed=${RANDOM_SEED} \
+> ${PROB_FILENAME}
 
 declare -A report_files
 for strategy in "suse" "fifo" "random"
@@ -72,7 +67,8 @@ do
 		--time-window-size=${TIME_WINDOW_SIZE} \
 		--time-to-live=${TIME_TO_LIVE} \
 		--evaluation-timestamps=${EVAL_TIMESTAMPS} \
-		--report="${temp_report_file}"
+		--report="${temp_report_file}" \
+        --seed=${RANDOM_SEED}
 
 	cat ${temp_report_file}
 done
@@ -99,5 +95,6 @@ do
 	echo ${report_files[${strategy}]}
 	rm ${report_files[${strategy}]}
 done
+rm ${PROB_FILENAME}
 
 echo "..done. Bye :)"

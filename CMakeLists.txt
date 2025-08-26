@@ -15,6 +15,7 @@ set(EXECUTABLE_OUTPUT_PATH "${CMAKE_BINARY_DIR}")
 
 include(FetchContent)
 set(FETCHCONTENT_QUIET FALSE)
+set(CMAKE_POLICY_VERSION_MINIMUM 3.5)
 
 FetchContent_Declare(
 	doctest
@@ -38,7 +39,7 @@ set(BOOST_ENABLE_CMAKE ON)
 
 FetchContent_Declare(
 	Boost
-	URL https://github.com/boostorg/boost/releases/download/boost-1.82.0/boost-1.82.0.7z
+	URL https://github.com/boostorg/boost/releases/download/boost-1.84.0/boost-1.84.0.7z
 	USES_TERMINAL_DOWNLOAD TRUE 
 	GIT_PROGRESS TRUE   
 	DOWNLOAD_NO_EXTRACT FALSE
@@ -51,6 +52,7 @@ FetchContent_Declare(
 	GIT_REPOSITORY https://github.com/fmtlib/fmt.git
 	GIT_TAG 10.0.0
 	GIT_SHALLOW TRUE
+	SYSTEM
 )
 FetchContent_MakeAvailable(fmt)
 
@@ -150,6 +152,22 @@ add_executable(benchmarks
 target_link_libraries(benchmarks PRIVATE fmt::fmt Boost::multiprecision doctest nanobench)
 set_property(TARGET benchmarks PROPERTY CXX_STANDARD 20)
 
+
+add_executable(summary_selector_fat
+
+	${suse_sources}
+
+	src/summary_selector.cpp
+)
+target_compile_options(summary_selector_fat PRIVATE -Wall -pedantic -Werror)
+target_compile_definitions(summary_selector_fat PRIVATE DOCTEST_CONFIG_DISABLE)
+target_link_libraries(summary_selector_fat PRIVATE fmt::fmt Boost::multiprecision doctest cxxopts)
+set_property(TARGET summary_selector_fat PROPERTY CXX_STANDARD 20)
+set_target_properties(summary_selector_fat PROPERTIES LINK_SEARCH_START_STATIC ON)
+set_target_properties(summary_selector_fat PROPERTIES LINK_SEARCH_END_STATIC ON)
+target_link_options(summary_selector_fat PRIVATE -static-libgcc -static-libstdc++ -static)
+
+set_target_properties(summary_selector_fat PROPERTIES EXCLUDE_FROM_ALL TRUE)
 
 add_executable(match_enumerator
 

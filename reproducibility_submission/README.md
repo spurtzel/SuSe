@@ -40,7 +40,7 @@ This makes it easy to monitor progress or terminate the application if needed.
 
   
 - Prepares the **FlinkCEP** baseline (used in Fig. 9a-9b). If
-  `reproducibility_submission/efficiency/flink_core_rematch/FLINK/flink_cep/java-cep/target/beispiel-1.0-SNAPSHOT.jar`  is missing, the script unpacks it from
+  `efficiency/flink_core_rematch/FLINK/flink_cep/java-cep/target/beispiel-1.0-SNAPSHOT.jar`  is missing, the script unpacks it from
   `.../target/beispiel-1.0-SNAPSHOT.jar.tar.gz`. 
 
 - Starts a progress watcher, adjusted by `PROGRESS_PERIOD` (default 600 seconds). The progress watcher prints the progress of the current experiment every 10 minutes. To change the delay, set the `PROGRESS_PERIOD` environment variable (e.g., `PROGRESS_PERIOD=300 nohup ./run_repro.sh ...`). 
@@ -240,7 +240,7 @@ The plot script (e.g., `combined_num_disjunction_operators_plot.py`) is not exec
 
 ## 6. Repository & experiment layout
 ### Repository structure
-The repository is organized into four main parts:
+The repository is organized into five main parts:
  - **Dockerfile & reproducibility scripts**. For setting up and running reproducibility.
  - **Experiment directories**. Contain scripts and configurations per experiment.
  - **LaTeX paper sources**. For reproducing the paper (with reproduced plots).
@@ -465,7 +465,8 @@ find . -type f \
      -o \( -path '*/FLINK/flink_cep/deploying/*' -not -name '*.*' \) \
   \) -exec chmod +x {} +
 ```
-  and re-run the experiment.
+ and re-run the experiment.
+ 
   - **Citi Bike dataset download failed.** Check internet connectivity and, as a fallback, pre‑seed the data directory:
   1) Manually download the Citi Bike trip data CSV file: https://box.hu-berlin.de/f/b791c68aedcc4b578e29/
   2) Place it in `real_world_experiments/citi_bike/query0/` and `real_world_experiments/citi_bike/query1/`.
